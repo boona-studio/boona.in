@@ -1,0 +1,251 @@
+/* Generated from design/tokens.json by design/scripts/build-tokens.mjs. Do not edit. */
+
+:root {
+  color-scheme: light dark;
+  --color-ground: #FFFFFF;
+  --color-surface: #F3F3F1;
+  --color-ink: #000000;
+  --color-quiet: #5A5A5A;
+  --color-line: #DEDEDE;
+  --color-on-ink: #FFFFFF;
+  --color-bar: #000000;
+  --color-on-bar: #FFFFFF;
+  --color-quiet-on-bar: #B8B8B8;
+  --color-proof: #FFFFFF;
+  --color-warning-outage: #FF8A80;
+  --color-warning-outage-ink: #B3261E;
+  --color-link: #000000;
+  --color-focus: #1D4ED8;
+  --color-error: #B3261E;
+  --color-success: #0F766E;
+  --color-selection: #DEDEDE;
+  --product-azhagi-accent: #E06A5F;
+  --product-azhagi-ink: #C8453A;
+  --product-cue-accent: #A98BDC;
+  --product-cue-ink: #6B3FA0;
+  --product-automation-accent: #3FC9B0;
+  --product-automation-ink: #0F766E;
+  --font-family-sans: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-17: 17px;
+  --font-size-19: 19px;
+  --font-size-21: 21px;
+  --font-size-24: 24px;
+  --font-size-30: 30px;
+  --font-size-40: 40px;
+  --font-size-52: 52px;
+  --font-size-64: 64px;
+  --font-line-height-tight: 1;
+  --font-line-height-snug: 1.15;
+  --font-line-height-normal: 1.5;
+  --font-line-height-relaxed: 1.6;
+  --font-letter-spacing-display: -0.03em;
+  --font-letter-spacing-heading: -0.02em;
+  --font-letter-spacing-body: 0em;
+  --font-feature-numbers: tabular-nums;
+  --text-hero-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-hero-font-size: 64px;
+  --text-hero-font-weight: 700;
+  --text-hero-line-height: 1;
+  --text-hero-letter-spacing: -0.03em;
+  --text-display-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-display-font-size: 52px;
+  --text-display-font-weight: 700;
+  --text-display-line-height: 1;
+  --text-display-letter-spacing: -0.03em;
+  --text-h1-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-h1-font-size: 40px;
+  --text-h1-font-weight: 700;
+  --text-h1-line-height: 1.15;
+  --text-h1-letter-spacing: -0.02em;
+  --text-h2-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-h2-font-size: 30px;
+  --text-h2-font-weight: 600;
+  --text-h2-line-height: 1.15;
+  --text-h2-letter-spacing: -0.02em;
+  --text-h3-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-h3-font-size: 24px;
+  --text-h3-font-weight: 600;
+  --text-h3-line-height: 1.15;
+  --text-h3-letter-spacing: -0.02em;
+  --text-h4-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-h4-font-size: 21px;
+  --text-h4-font-weight: 600;
+  --text-h4-line-height: 1.5;
+  --text-h4-letter-spacing: 0em;
+  --text-lead-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-lead-font-size: 19px;
+  --text-lead-font-weight: 400;
+  --text-lead-line-height: 1.5;
+  --text-lead-letter-spacing: 0em;
+  --text-body-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-body-font-size: 17px;
+  --text-body-font-weight: 400;
+  --text-body-line-height: 1.6;
+  --text-body-letter-spacing: 0em;
+  --text-small-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-small-font-size: 15px;
+  --text-small-font-weight: 400;
+  --text-small-line-height: 1.5;
+  --text-small-letter-spacing: 0em;
+  --text-caption-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-caption-font-size: 13px;
+  --text-caption-font-weight: 500;
+  --text-caption-line-height: 1.5;
+  --text-caption-letter-spacing: 0em;
+  --text-readout-number-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-readout-number-font-size: 30px;
+  --text-readout-number-font-weight: 700;
+  --text-readout-number-line-height: 1;
+  --text-readout-number-letter-spacing: -0.02em;
+  --text-readout-label-font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-readout-label-font-size: 15px;
+  --text-readout-label-font-weight: 500;
+  --text-readout-label-line-height: 1;
+  --text-readout-label-letter-spacing: 0em;
+  --text-code-font-family: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+  --text-code-font-size: 15px;
+  --text-code-font-weight: 400;
+  --text-code-line-height: 1.6;
+  --text-code-letter-spacing: 0em;
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --size-touch: 44px;
+  --size-control-sm: 36px;
+  --size-control-md: 44px;
+  --size-control-lg: 48px;
+  --size-bar-sm: 48px;
+  --size-bar-md: 56px;
+  --size-bar-lg: 64px;
+  --size-accent-square: 12px;
+  --size-container: 1200px;
+  --size-measure: 68ch;
+  --size-gutter: 24px;
+  --size-icon: 20px;
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-full: 9999px;
+  --border-hairline: 1px;
+  --border-rule: 1.5px;
+  --border-heavy: 2px;
+  --border-focus-offset: 2px;
+  --elevation-0: none;
+  --elevation-1: 0px 1px 0px 0px #DEDEDE;
+  --elevation-2: 0px 8px 24px 0px #0000001F;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-overlay: 1000;
+  --z-toast: 1100;
+  --motion-duration-fast: 120ms;
+  --motion-duration-base: 200ms;
+  --motion-duration-slow: 320ms;
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+/* Dark: follows the system unless data-theme is set explicitly. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --color-ground: #1F2023;
+  --color-surface: #26272B;
+  --color-ink: #F2F2F0;
+  --color-quiet: #A5A6AC;
+  --color-line: #3A3B40;
+  --color-on-ink: #1F2023;
+  --color-bar: #000000;
+  --color-on-bar: #FFFFFF;
+  --color-quiet-on-bar: #B8B8B8;
+  --color-proof: #FFFFFF;
+  --color-warning-outage: #FF8A80;
+  --color-warning-outage-ink: #FFB4AE;
+  --color-link: #F2F2F0;
+  --color-focus: #8AB0FF;
+  --color-error: #FFB4AE;
+  --color-success: #5EEAD4;
+  --color-selection: #3A3B40;
+  --product-azhagi-accent: #E06A5F;
+  --product-azhagi-ink: #F28B82;
+  --product-cue-accent: #A98BDC;
+  --product-cue-ink: #C4A5F0;
+  --product-automation-accent: #3FC9B0;
+  --product-automation-ink: #5EEAD4;
+  }
+}
+:root[data-theme="dark"] {
+  --color-ground: #1F2023;
+  --color-surface: #26272B;
+  --color-ink: #F2F2F0;
+  --color-quiet: #A5A6AC;
+  --color-line: #3A3B40;
+  --color-on-ink: #1F2023;
+  --color-bar: #000000;
+  --color-on-bar: #FFFFFF;
+  --color-quiet-on-bar: #B8B8B8;
+  --color-proof: #FFFFFF;
+  --color-warning-outage: #FF8A80;
+  --color-warning-outage-ink: #FFB4AE;
+  --color-link: #F2F2F0;
+  --color-focus: #8AB0FF;
+  --color-error: #FFB4AE;
+  --color-success: #5EEAD4;
+  --color-selection: #3A3B40;
+  --product-azhagi-accent: #E06A5F;
+  --product-azhagi-ink: #F28B82;
+  --product-cue-accent: #A98BDC;
+  --product-cue-ink: #C4A5F0;
+  --product-automation-accent: #3FC9B0;
+  --product-automation-ink: #5EEAD4;
+}
+
+/* Base rules the tokens imply */
+html { background: var(--color-ground); color: var(--color-ink); font-family: var(--font-family-sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body { margin: 0; font-size: var(--text-body-font-size); line-height: var(--text-body-line-height); }
+::selection { background: var(--color-selection); }
+a { color: var(--color-link); text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+:focus-visible { outline: var(--border-heavy) solid var(--color-focus); outline-offset: var(--border-focus-offset); }
+.tnum, .readout, table, [data-number] { font-variant-numeric: var(--font-feature-numbers); }
+.measure { max-width: var(--size-measure); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+@media (max-width: 639px) { :root { --text-hero-font-size: var(--font-size-40); --text-display-font-size: var(--font-size-40); --text-h1-font-size: var(--font-size-30); --size-gutter: 20px; } }
+@media (min-width: 1024px) { :root { --size-gutter: 56px; } }
+
+/* Text style classes (same names as Figma text styles) */
+.text-hero { font-family: var(--text-hero-font-family); font-size: var(--text-hero-font-size); font-weight: var(--text-hero-font-weight); line-height: var(--text-hero-line-height); letter-spacing: var(--text-hero-letter-spacing); }
+.text-display { font-family: var(--text-display-font-family); font-size: var(--text-display-font-size); font-weight: var(--text-display-font-weight); line-height: var(--text-display-line-height); letter-spacing: var(--text-display-letter-spacing); }
+.text-h1 { font-family: var(--text-h1-font-family); font-size: var(--text-h1-font-size); font-weight: var(--text-h1-font-weight); line-height: var(--text-h1-line-height); letter-spacing: var(--text-h1-letter-spacing); }
+.text-h2 { font-family: var(--text-h2-font-family); font-size: var(--text-h2-font-size); font-weight: var(--text-h2-font-weight); line-height: var(--text-h2-line-height); letter-spacing: var(--text-h2-letter-spacing); }
+.text-h3 { font-family: var(--text-h3-font-family); font-size: var(--text-h3-font-size); font-weight: var(--text-h3-font-weight); line-height: var(--text-h3-line-height); letter-spacing: var(--text-h3-letter-spacing); }
+.text-h4 { font-family: var(--text-h4-font-family); font-size: var(--text-h4-font-size); font-weight: var(--text-h4-font-weight); line-height: var(--text-h4-line-height); letter-spacing: var(--text-h4-letter-spacing); }
+.text-lead { font-family: var(--text-lead-font-family); font-size: var(--text-lead-font-size); font-weight: var(--text-lead-font-weight); line-height: var(--text-lead-line-height); letter-spacing: var(--text-lead-letter-spacing); }
+.text-body { font-family: var(--text-body-font-family); font-size: var(--text-body-font-size); font-weight: var(--text-body-font-weight); line-height: var(--text-body-line-height); letter-spacing: var(--text-body-letter-spacing); }
+.text-small { font-family: var(--text-small-font-family); font-size: var(--text-small-font-size); font-weight: var(--text-small-font-weight); line-height: var(--text-small-line-height); letter-spacing: var(--text-small-letter-spacing); }
+.text-caption { font-family: var(--text-caption-font-family); font-size: var(--text-caption-font-size); font-weight: var(--text-caption-font-weight); line-height: var(--text-caption-line-height); letter-spacing: var(--text-caption-letter-spacing); }
+.text-readout-number { font-family: var(--text-readout-number-font-family); font-size: var(--text-readout-number-font-size); font-weight: var(--text-readout-number-font-weight); line-height: var(--text-readout-number-line-height); letter-spacing: var(--text-readout-number-letter-spacing); }
+.text-readout-label { font-family: var(--text-readout-label-font-family); font-size: var(--text-readout-label-font-size); font-weight: var(--text-readout-label-font-weight); line-height: var(--text-readout-label-line-height); letter-spacing: var(--text-readout-label-letter-spacing); }
+.text-code { font-family: var(--text-code-font-family); font-size: var(--text-code-font-size); font-weight: var(--text-code-font-weight); line-height: var(--text-code-line-height); letter-spacing: var(--text-code-letter-spacing); }

@@ -1,0 +1,1379 @@
+{
+  "generatedFrom": "design/tokens.json",
+  "version": "0.1.0",
+  "collections": [
+    {
+      "name": "Boona",
+      "modes": [
+        "Light",
+        "Dark"
+      ],
+      "variables": [
+        {
+          "name": "color/ground",
+          "type": "COLOR",
+          "description": "Page background.",
+          "cssVar": "var(--color-ground)",
+          "valuesByMode": {
+            "Light": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.12156862745098039,
+              "g": 0.12549019607843137,
+              "b": 0.13725490196078433,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "color/surface",
+          "type": "COLOR",
+          "description": "Cards, code blocks, form fields. One step off the ground, no shadow.",
+          "cssVar": "var(--color-surface)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.9529411764705882,
+              "g": 0.9529411764705882,
+              "b": 0.9450980392156862,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.14901960784313725,
+              "g": 0.15294117647058825,
+              "b": 0.16862745098039217,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "color/ink",
+          "type": "COLOR",
+          "description": "Primary text, primary button fill, rules. True black, not tinted.",
+          "cssVar": "var(--color-ink)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.9490196078431372,
+              "g": 0.9490196078431372,
+              "b": 0.9411764705882353,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/quiet",
+          "type": "COLOR",
+          "description": "Secondary text, captions, windows. 6.9:1 on ground.",
+          "cssVar": "var(--color-quiet)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.35294117647058826,
+              "g": 0.35294117647058826,
+              "b": 0.35294117647058826,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.6470588235294118,
+              "g": 0.6509803921568628,
+              "b": 0.6745098039215687,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/line",
+          "type": "COLOR",
+          "description": "Dividers, outlines, table rules. Non-text only.",
+          "cssVar": "var(--color-line)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.8705882352941177,
+              "g": 0.8705882352941177,
+              "b": 0.8705882352941177,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.22745098039215686,
+              "g": 0.23137254901960785,
+              "b": 0.25098039215686274,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/on-ink",
+          "type": "COLOR",
+          "description": "Text on ink fills (primary button).",
+          "cssVar": "var(--color-on-ink)",
+          "valuesByMode": {
+            "Light": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.12156862745098039,
+              "g": 0.12549019607843137,
+              "b": 0.13725490196078433,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/bar",
+          "type": "COLOR",
+          "description": "The readout bar. Black in both modes: the bar is the one constant across every surface.",
+          "cssVar": "var(--color-bar)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "color/on-bar",
+          "type": "COLOR",
+          "description": "Label and number on the bar.",
+          "cssVar": "var(--color-on-bar)",
+          "valuesByMode": {
+            "Light": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "Dark": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/quiet-on-bar",
+          "type": "COLOR",
+          "description": "The window text on the bar. 10.6:1 on black.",
+          "cssVar": "var(--color-quiet-on-bar)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.7215686274509804,
+              "g": 0.7215686274509804,
+              "b": 0.7215686274509804,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.7215686274509804,
+              "g": 0.7215686274509804,
+              "b": 0.7215686274509804,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/proof",
+          "type": "COLOR",
+          "description": "The measured number on the bar. Alias of on-bar so the number is never a colour, only a weight.",
+          "cssVar": "var(--color-proof)",
+          "valuesByMode": {
+            "Light": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "Dark": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/warning-outage",
+          "type": "COLOR",
+          "description": "Scars, incidents, a bar with no telemetry. Accent square on the bar (9.2:1 on black).",
+          "cssVar": "var(--color-warning-outage)",
+          "valuesByMode": {
+            "Light": {
+              "r": 1,
+              "g": 0.5411764705882353,
+              "b": 0.5019607843137255,
+              "a": 1
+            },
+            "Dark": {
+              "r": 1,
+              "g": 0.5411764705882353,
+              "b": 0.5019607843137255,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/warning-outage-ink",
+          "type": "COLOR",
+          "description": "Scar text on ground (6.5:1 on white).",
+          "cssVar": "var(--color-warning-outage-ink)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.7019607843137254,
+              "g": 0.14901960784313725,
+              "b": 0.11764705882352941,
+              "a": 1
+            },
+            "Dark": {
+              "r": 1,
+              "g": 0.7058823529411765,
+              "b": 0.6823529411764706,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/link",
+          "type": "COLOR",
+          "description": "Links are ink with an underline, never a colour.",
+          "cssVar": "var(--color-link)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.9490196078431372,
+              "g": 0.9490196078431372,
+              "b": 0.9411764705882353,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/focus",
+          "type": "COLOR",
+          "description": "Keyboard focus ring. The only blue in the system, so focus is unmistakable.",
+          "cssVar": "var(--color-focus)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.11372549019607843,
+              "g": 0.3058823529411765,
+              "b": 0.8470588235294118,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.5411764705882353,
+              "g": 0.6901960784313725,
+              "b": 1,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/error",
+          "type": "COLOR",
+          "description": "Form validation text and borders.",
+          "cssVar": "var(--color-error)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.7019607843137254,
+              "g": 0.14901960784313725,
+              "b": 0.11764705882352941,
+              "a": 1
+            },
+            "Dark": {
+              "r": 1,
+              "g": 0.7058823529411765,
+              "b": 0.6823529411764706,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/success",
+          "type": "COLOR",
+          "description": "Form success text.",
+          "cssVar": "var(--color-success)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.058823529411764705,
+              "g": 0.4627450980392157,
+              "b": 0.43137254901960786,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.3686274509803922,
+              "g": 0.9176470588235294,
+              "b": 0.8313725490196079,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "color/selection",
+          "type": "COLOR",
+          "description": "Text selection background.",
+          "cssVar": "var(--color-selection)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.8705882352941177,
+              "g": 0.8705882352941177,
+              "b": 0.8705882352941177,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.22745098039215686,
+              "g": 0.23137254901960785,
+              "b": 0.25098039215686274,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "product/azhagi/accent",
+          "type": "COLOR",
+          "description": "Azhagi square on the bar. 6.4:1 on black.",
+          "cssVar": "var(--product-azhagi-accent)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.8784313725490196,
+              "g": 0.41568627450980394,
+              "b": 0.37254901960784315,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.8784313725490196,
+              "g": 0.41568627450980394,
+              "b": 0.37254901960784315,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "product/azhagi/ink",
+          "type": "COLOR",
+          "description": "Azhagi text on ground. 4.8:1 on white.",
+          "cssVar": "var(--product-azhagi-ink)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.7843137254901961,
+              "g": 0.27058823529411763,
+              "b": 0.22745098039215686,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.9490196078431372,
+              "g": 0.5450980392156862,
+              "b": 0.5098039215686274,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "product/cue/accent",
+          "type": "COLOR",
+          "description": "Boona Cue square on the bar. 7.4:1 on black.",
+          "cssVar": "var(--product-cue-accent)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.6627450980392157,
+              "g": 0.5450980392156862,
+              "b": 0.8627450980392157,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.6627450980392157,
+              "g": 0.5450980392156862,
+              "b": 0.8627450980392157,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "product/cue/ink",
+          "type": "COLOR",
+          "description": "Boona Cue text on ground. 7.4:1 on white.",
+          "cssVar": "var(--product-cue-ink)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.4196078431372549,
+              "g": 0.24705882352941178,
+              "b": 0.6274509803921569,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.7686274509803922,
+              "g": 0.6470588235294118,
+              "b": 0.9411764705882353,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "product/automation/accent",
+          "type": "COLOR",
+          "description": "Client work square on the bar. 10.2:1 on black.",
+          "cssVar": "var(--product-automation-accent)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.24705882352941178,
+              "g": 0.788235294117647,
+              "b": 0.6901960784313725,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.24705882352941178,
+              "g": 0.788235294117647,
+              "b": 0.6901960784313725,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        },
+        {
+          "name": "product/automation/ink",
+          "type": "COLOR",
+          "description": "Client work text on ground. 5.5:1 on white.",
+          "cssVar": "var(--product-automation-ink)",
+          "valuesByMode": {
+            "Light": {
+              "r": 0.058823529411764705,
+              "g": 0.4627450980392157,
+              "b": 0.43137254901960786,
+              "a": 1
+            },
+            "Dark": {
+              "r": 0.3686274509803922,
+              "g": 0.9176470588235294,
+              "b": 0.8313725490196079,
+              "a": 1
+            }
+          },
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Boona · scale",
+      "modes": [
+        "Value"
+      ],
+      "variables": [
+        {
+          "name": "font/family/sans",
+          "type": "STRING",
+          "description": "The one brand face. Host Grotesk, SIL Open Font Licence, free on Google Fonts. Self-host woff2 at /public/fonts; weights 400, 500, 600, 700.",
+          "cssVar": "var(--font-family-sans)",
+          "valuesByMode": {
+            "Value": "Host Grotesk"
+          },
+          "scopes": [
+            "FONT_FAMILY"
+          ]
+        },
+        {
+          "name": "font/family/mono",
+          "type": "STRING",
+          "description": "Code blocks only. System mono stack; not a brand face, so the two-typeface limit holds.",
+          "cssVar": "var(--font-family-mono)",
+          "valuesByMode": {
+            "Value": "ui-monospace"
+          },
+          "scopes": [
+            "FONT_FAMILY"
+          ]
+        },
+        {
+          "name": "font/weight/regular",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-weight-regular)",
+          "valuesByMode": {
+            "Value": 400
+          },
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "font/weight/medium",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-weight-medium)",
+          "valuesByMode": {
+            "Value": 500
+          },
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "font/weight/semibold",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-weight-semibold)",
+          "valuesByMode": {
+            "Value": 600
+          },
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "font/weight/bold",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-weight-bold)",
+          "valuesByMode": {
+            "Value": 700
+          },
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "font/size/13",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-13)",
+          "valuesByMode": {
+            "Value": 13
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/14",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-14)",
+          "valuesByMode": {
+            "Value": 14
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/15",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-15)",
+          "valuesByMode": {
+            "Value": 15
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/17",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-17)",
+          "valuesByMode": {
+            "Value": 17
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/19",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-19)",
+          "valuesByMode": {
+            "Value": 19
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/21",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-21)",
+          "valuesByMode": {
+            "Value": 21
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/24",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-24)",
+          "valuesByMode": {
+            "Value": 24
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/30",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-30)",
+          "valuesByMode": {
+            "Value": 30
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/40",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-40)",
+          "valuesByMode": {
+            "Value": 40
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/52",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-52)",
+          "valuesByMode": {
+            "Value": 52
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "font/size/64",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--font-size-64)",
+          "valuesByMode": {
+            "Value": 64
+          },
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "space/0",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-0)",
+          "valuesByMode": {
+            "Value": 0
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/1",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-1)",
+          "valuesByMode": {
+            "Value": 4
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/2",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-2)",
+          "valuesByMode": {
+            "Value": 8
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/3",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-3)",
+          "valuesByMode": {
+            "Value": 12
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/4",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-4)",
+          "valuesByMode": {
+            "Value": 16
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/5",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-5)",
+          "valuesByMode": {
+            "Value": 20
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/6",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-6)",
+          "valuesByMode": {
+            "Value": 24
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/8",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-8)",
+          "valuesByMode": {
+            "Value": 32
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/10",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-10)",
+          "valuesByMode": {
+            "Value": 40
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/12",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-12)",
+          "valuesByMode": {
+            "Value": 48
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/16",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-16)",
+          "valuesByMode": {
+            "Value": 64
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/20",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-20)",
+          "valuesByMode": {
+            "Value": 80
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/24",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-24)",
+          "valuesByMode": {
+            "Value": 96
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "space/32",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--space-32)",
+          "valuesByMode": {
+            "Value": 128
+          },
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "size/touch",
+          "type": "FLOAT",
+          "description": "Minimum hit area for anything tappable (WCAG 2.5.8 / Apple HIG).",
+          "cssVar": "var(--size-touch)",
+          "valuesByMode": {
+            "Value": 44
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/control-sm",
+          "type": "FLOAT",
+          "description": "Compact buttons and inputs, desktop-only contexts.",
+          "cssVar": "var(--size-control-sm)",
+          "valuesByMode": {
+            "Value": 36
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/control-md",
+          "type": "FLOAT",
+          "description": "Default button and input height.",
+          "cssVar": "var(--size-control-md)",
+          "valuesByMode": {
+            "Value": 44
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/control-lg",
+          "type": "FLOAT",
+          "description": "Primary CTA height.",
+          "cssVar": "var(--size-control-lg)",
+          "valuesByMode": {
+            "Value": 48
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/bar-sm",
+          "type": "FLOAT",
+          "description": "Readout bar on video lower thirds and cards.",
+          "cssVar": "var(--size-bar-sm)",
+          "valuesByMode": {
+            "Value": 48
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/bar-md",
+          "type": "FLOAT",
+          "description": "Readout bar in product and case entries.",
+          "cssVar": "var(--size-bar-md)",
+          "valuesByMode": {
+            "Value": 56
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/bar-lg",
+          "type": "FLOAT",
+          "description": "Readout bar under the hero.",
+          "cssVar": "var(--size-bar-lg)",
+          "valuesByMode": {
+            "Value": 64
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/accent-square",
+          "type": "FLOAT",
+          "description": "The product square on the bar. 10px on bar-sm.",
+          "cssVar": "var(--size-accent-square)",
+          "valuesByMode": {
+            "Value": 12
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/container",
+          "type": "FLOAT",
+          "description": "Max content width.",
+          "cssVar": "var(--size-container)",
+          "valuesByMode": {
+            "Value": 1200
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/gutter",
+          "type": "FLOAT",
+          "description": "Side gutter on phones; 56px from 1024px up.",
+          "cssVar": "var(--size-gutter)",
+          "valuesByMode": {
+            "Value": 24
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "size/icon",
+          "type": "FLOAT",
+          "description": "Inline icon size, 1.5px stroke.",
+          "cssVar": "var(--size-icon)",
+          "valuesByMode": {
+            "Value": 20
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "radius/none",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--radius-none)",
+          "valuesByMode": {
+            "Value": 0
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "radius/xs",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--radius-xs)",
+          "valuesByMode": {
+            "Value": 2
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "radius/sm",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--radius-sm)",
+          "valuesByMode": {
+            "Value": 4
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "radius/full",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--radius-full)",
+          "valuesByMode": {
+            "Value": 9999
+          },
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "border/hairline",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--border-hairline)",
+          "valuesByMode": {
+            "Value": 1
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "border/rule",
+          "type": "FLOAT",
+          "description": "Outlined buttons, table rules.",
+          "cssVar": "var(--border-rule)",
+          "valuesByMode": {
+            "Value": 1.5
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "border/heavy",
+          "type": "FLOAT",
+          "description": "Section rules, focus ring.",
+          "cssVar": "var(--border-heavy)",
+          "valuesByMode": {
+            "Value": 2
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "border/focus-offset",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--border-focus-offset)",
+          "valuesByMode": {
+            "Value": 2
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "breakpoint/sm",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--breakpoint-sm)",
+          "valuesByMode": {
+            "Value": 640
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "breakpoint/md",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--breakpoint-md)",
+          "valuesByMode": {
+            "Value": 768
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "breakpoint/lg",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--breakpoint-lg)",
+          "valuesByMode": {
+            "Value": 1024
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        },
+        {
+          "name": "breakpoint/xl",
+          "type": "FLOAT",
+          "description": "",
+          "cssVar": "var(--breakpoint-xl)",
+          "valuesByMode": {
+            "Value": 1280
+          },
+          "scopes": [
+            "WIDTH_HEIGHT",
+            "GAP"
+          ]
+        }
+      ]
+    }
+  ],
+  "textStyles": [
+    {
+      "name": "Boona/hero",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 64,
+      "fontWeight": 700,
+      "lineHeightPercent": 100,
+      "letterSpacingPercent": -3,
+      "description": "Home hero headline. Drops to 40px under 640px wide."
+    },
+    {
+      "name": "Boona/display",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 52,
+      "fontWeight": 700,
+      "lineHeightPercent": 100,
+      "letterSpacingPercent": -3,
+      "description": "Thumbnail and title-card numbers."
+    },
+    {
+      "name": "Boona/h1",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 40,
+      "fontWeight": 700,
+      "lineHeightPercent": 115,
+      "letterSpacingPercent": -2,
+      "description": ""
+    },
+    {
+      "name": "Boona/h2",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 30,
+      "fontWeight": 600,
+      "lineHeightPercent": 115,
+      "letterSpacingPercent": -2,
+      "description": ""
+    },
+    {
+      "name": "Boona/h3",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 24,
+      "fontWeight": 600,
+      "lineHeightPercent": 115,
+      "letterSpacingPercent": -2,
+      "description": ""
+    },
+    {
+      "name": "Boona/h4",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 21,
+      "fontWeight": 600,
+      "lineHeightPercent": 150,
+      "letterSpacingPercent": 0,
+      "description": ""
+    },
+    {
+      "name": "Boona/lead",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 19,
+      "fontWeight": 400,
+      "lineHeightPercent": 150,
+      "letterSpacingPercent": 0,
+      "description": "Intro paragraphs under a headline."
+    },
+    {
+      "name": "Boona/body",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 17,
+      "fontWeight": 400,
+      "lineHeightPercent": 160,
+      "letterSpacingPercent": 0,
+      "description": ""
+    },
+    {
+      "name": "Boona/small",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 15,
+      "fontWeight": 400,
+      "lineHeightPercent": 150,
+      "letterSpacingPercent": 0,
+      "description": "Captions, windows, form help."
+    },
+    {
+      "name": "Boona/caption",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 13,
+      "fontWeight": 500,
+      "lineHeightPercent": 150,
+      "letterSpacingPercent": 0,
+      "description": "Smallest text allowed. Sentence case, never all caps."
+    },
+    {
+      "name": "Boona/readout-number",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 30,
+      "fontWeight": 700,
+      "lineHeightPercent": 100,
+      "letterSpacingPercent": -2,
+      "description": "The number on a 64px bar. 24px on the 56px bar, 20px on the 48px bar."
+    },
+    {
+      "name": "Boona/readout-label",
+      "fontFamily": "Host Grotesk",
+      "fontSize": 15,
+      "fontWeight": 500,
+      "lineHeightPercent": 100,
+      "letterSpacingPercent": 0,
+      "description": ""
+    },
+    {
+      "name": "Boona/code",
+      "fontFamily": "ui-monospace",
+      "fontSize": 15,
+      "fontWeight": 400,
+      "lineHeightPercent": 160,
+      "letterSpacingPercent": 0,
+      "description": ""
+    }
+  ]
+}
