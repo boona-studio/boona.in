@@ -4,19 +4,25 @@ Everything below is marked on the page with a dashed red outline and a tiny **FI
 In `index.html` each one is a `<span class="ph">…</span>`. Search for the text in square brackets.
 When all are done, change `data-placeholders="show"` to `"hide"` in the first line of `index.html`.
 
+Typing your answers into this file works too: tell me they are here and I will put them into the page.
+This file is only the checklist; the website itself reads `index.html`.
+
+## Done on 6 November 2026 (from your answers)
+
+| Where | Now says |
+| --- | --- |
+| All four meta bars | `2026 · Beta, in development` |
+| Azhagi results | `1.7 s` Reply latency; "Calls taken" removed |
+| Boona Fit meta bar | `Stack · React Native · Android · iOS` |
+| Boona Fit results | "People on a plan" and "Sessions logged" removed; now `1` Plan per person, not per template, and `Beta` In development |
+
+All four products are shown as **Beta, in development** and "not yet released" (your words).
+When one of them launches, search `index.html` for `Beta` and update that product's meta bar, result and sentence.
+
 ## Case studies
 
 | Where | Placeholder | What to put |
 | --- | --- | --- |
-| Azhagi meta bar | `[year]` | The year you started or shipped Azhagi |
-| Azhagi results | `00` ms, "Reply latency" | How fast she answers, or delete this result |
-| Azhagi results | `000`, "Calls taken" | How many calls she has handled, or delete this result |
-| Boona Cue meta bar | `[year]` | Year |
-| Thali meta bar | `[year]` | Year |
-| Boona Fit meta bar | `[year]` | Year |
-| Boona Fit meta bar | `[stack]` | What it is built with (for example "React Native · iOS") |
-| Boona Fit results | `000`, "People on a plan" | A real number, or delete this result |
-| Boona Fit results | `000`, "Sessions logged" | A real number, or delete this result |
 | Boona Fit text | `[One line on who it is for and what makes it different]` | One sentence |
 
 ## Experience
