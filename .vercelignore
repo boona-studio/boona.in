@@ -1,0 +1,10 @@
+# Files Vercel should not publish (working files and the original large photos)
+.claude
+.vercel
+README.md
+PLACEHOLDERS.md
+media/founder-cutout.png
+media/founder-portrait-4x5.jpg
+media/founder-camera-16x9.jpg
+.env.local
+.gitignore

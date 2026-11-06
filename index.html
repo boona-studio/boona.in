@@ -1,16 +1,647 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boona</title>
-    <!-- Theme bootstrap: must run before any stylesheet so the first paint is already in the stored theme. Keep in step with src/theme/theme-init.ts -->
-    <script>(function(){try{var t=localStorage.getItem("boona-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700&display=swap" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-grid="on" data-placeholders="show">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boona — Independent AI solutions architect, Namakkal</title>
+<meta name="description" content="Boona designs and integrates AI into any business, and builds Azhagi, Boona Cue, Thali and Boona Fit. Independent AI solutions architect in Namakkal, Tamil Nadu. Open to projects.">
+<meta property="og:title" content="Boona — Independent AI solutions architect">
+<meta property="og:description" content="AI that runs every day and tells you when it's working. Namakkal, Tamil Nadu. Open to projects.">
+<meta property="og:url" content="https://www.boona.in/">
+<meta property="og:image" content="https://www.boona.in/media/founder-share-16x9.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script>
+  /* Runs before the first paint: mark that scripts work, and start the load animation unless the
+     visitor has asked their device for less motion. */
+  document.documentElement.classList.remove('no-js');
+  if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('is-loading');
+  }
+</script>
+</head>
+<body>
+<a class="skip" href="#work">Skip to the work</a>
+
+<!-- ▸ The faint column grid behind the whole page (12 / 8 / 4 columns) -->
+<div class="gridlines" aria-hidden="true">
+  <i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i><i style="--k:12"></i>
+</div>
+
+<!-- ▸ NAV (fixed at the top) -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="nav__brand" href="#top">Boona</a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <button class="toggle" type="button" aria-pressed="true" title="Show or hide the layout grid">
+        <span class="toggle__sw" aria-hidden="true"></span><span class="txt">Grid</span>
+      </button>
+      <a class="pill" href="#contact"><i class="dot" aria-hidden="true"></i>Open to projects</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ▸ HERO: role, place, live time, status; the name edge to edge; intro; four project thumbnails -->
+<section class="hero wrap">
+  <div class="hero__meta m piece" style="--dx:-10px; --dy:6px; --rot:-.3deg">
+    <span>Independent AI solutions architect</span>
+    <span>Namakkal, Tamil Nadu</span>
+    <span><time class="clock" datetime="">--:--:--</time> IST</span>
+    <span><i class="dot" aria-hidden="true"></i><b>Open to projects</b></span>
+  </div>
+
+  <h1 class="name piece sel" style="--dx:12px; --dy:-8px; --rot:.35deg">
+    <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
+    <span class="dim" aria-hidden="true"></span>
+    <svg viewBox="0 0 1000 206" preserveAspectRatio="none" role="img" aria-label="Boona">
+      <text x="0" y="200" textLength="1000" lengthAdjust="spacingAndGlyphs">BOONA</text>
+    </svg>
+  </h1>
+
+  <div class="row hero__grid">
+    <p class="hero__intro piece" style="--dx:-8px; --dy:10px; --rot:-.25deg">
+      I'm an independent AI solutions architect in Namakkal, Tamil Nadu. I design and integrate AI into any business:
+      <span class="key">AI that runs every day and tells you when it's working.</span>
+      I also build my own products, so the advice I give clients comes from things I've actually shipped.
+    </p>
+    <div class="hero__aside piece" style="--dx:10px; --dy:6px; --rot:.3deg">
+      <span class="m">Based<b>Namakkal, Tamil Nadu · IST</b></span>
+      <span class="m">Working as<b>Independent, Boona AI Agency forming</b></span>
+      <span class="m">Publishing on<b>LinkedIn · X · YouTube</b></span>
+      <span class="m">Availability<b>Open to projects</b></span>
+    </div>
+  </div>
+
+  <ul class="thumbs" aria-label="Four products">
+    <li class="thumb piece" style="--dx:-9px; --dy:8px; --rot:-.3deg; --accent: var(--coral)">
+      <a href="#azhagi">
+        <div class="thumb__art" aria-hidden="true">
+          <div class="mini mini--dark">
+            <i class="ring" style="left:12%; top:16%; width:34%; aspect-ratio:1"></i>
+            <i style="left:56%; top:20%; width:32%; height:7%; background:#3a3a3a"></i>
+            <i style="left:56%; top:33%; width:24%; height:7%; background:#3a3a3a"></i>
+            <i style="left:56%; top:46%; width:30%; height:7%; background:var(--coral)"></i>
+            <i style="left:8%; top:78%; width:84%; height:10%; background:#2a2a2a"></i>
+          </div>
+        </div>
+        <div class="thumb__cap m"><span><b>01</b> Azhagi</span><span>MetaHuman</span></div>
+        <h3>Call an AI, face to face</h3>
+        <p>Sees you, hears you, talks back, moves.</p>
+      </a>
+    </li>
+    <li class="thumb piece" style="--dx:7px; --dy:-6px; --rot:.25deg; --accent: var(--violet)">
+      <a href="#cue">
+        <div class="thumb__art" aria-hidden="true">
+          <div class="mini">
+            <i style="left:8%; top:14%; width:50%; height:9%"></i>
+            <i style="left:8%; top:40%; right:8%; height:1px"></i>
+            <i style="left:30%; top:33%; width:6%; height:15%; background:var(--violet)"></i>
+            <i style="left:42%; top:33%; width:6%; height:15%; background:var(--violet)"></i>
+            <i style="left:8%; top:68%; right:8%; height:1px"></i>
+            <i style="left:52%; top:61%; width:8%; height:15%; background:var(--violet)"></i>
+            <i style="left:66%; top:61%; width:8%; height:15%; background:var(--violet)"></i>
+            <i style="left:80%; top:61%; width:8%; height:15%; background:var(--violet)"></i>
+          </div>
+        </div>
+        <div class="thumb__cap m"><span><b>02</b> Boona Cue</span><span>Text → animation</span></div>
+        <h3>Words in, exact performance out</h3>
+        <p>Two blinks means two blinks.</p>
+      </a>
+    </li>
+    <li class="thumb piece" style="--dx:-6px; --dy:-9px; --rot:-.2deg; --accent: var(--teal)">
+      <a href="#thali">
+        <div class="thumb__art" aria-hidden="true">
+          <div class="mini mini--phone">
+            <i style="left:12%; top:10%; width:50%; height:8%; background:#111"></i>
+            <i style="left:12%; top:28%; right:12%; height:16%; background:var(--teal); opacity:.9"></i>
+            <i style="left:12%; top:50%; right:12%; height:16%"></i>
+            <i style="left:12%; top:72%; right:12%; height:16%"></i>
+          </div>
+        </div>
+        <div class="thumb__cap m"><span><b>03</b> Thali</span><span>React Native</span></div>
+        <h3>A week of South Indian meals</h3>
+        <p>Your rules, sized per person.</p>
+      </a>
+    </li>
+    <li class="thumb piece" style="--dx:9px; --dy:7px; --rot:.3deg; --accent: var(--teal)">
+      <a href="#fit">
+        <div class="thumb__art" aria-hidden="true">
+          <div class="mini mini--dark">
+            <i class="ring" style="left:10%; top:24%; width:22%; aspect-ratio:1; border-color:var(--coral)"></i>
+            <i class="ring" style="left:39%; top:24%; width:22%; aspect-ratio:1; border-color:var(--violet)"></i>
+            <i class="ring" style="left:68%; top:24%; width:22%; aspect-ratio:1; border-color:var(--teal)"></i>
+            <i style="left:10%; top:72%; width:80%; height:8%; background:#2a2a2a"></i>
+          </div>
+        </div>
+        <div class="thumb__cap m"><span><b>04</b> Boona Fit</span><span>Plan · move · track</span></div>
+        <h3>Fitness that fits the person</h3>
+        <p>Plans, guides, and tracks what happened.</p>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- ▸ WORK: four case studies, each with a product screen built in HTML -->
+<div class="wrap section" id="work" style="padding-bottom:0">
+  <div class="section__head m reveal"><span><b>01</b> Work</span><span>Four products, built to be used</span></div>
+</div>
+
+<!-- Case 01 · Azhagi (coral, split layout) -->
+<article class="case case--split" id="azhagi" style="--accent: var(--coral)">
+  <div class="wrap">
+    <div class="case__meta m reveal">
+      <span><b>01 / 04</b></span>
+      <span><i class="swatch" aria-hidden="true"></i><b>Azhagi</b></span>
+      <span>Year · <span class="ph">[year]</span></span>
+      <span>MetaHuman · vision · voice</span>
+    </div>
+    <div class="row">
+      <div class="case__text reveal">
+        <h2 class="t">An AI influencer you can call, face to face.</h2>
+        <ul class="results" aria-label="Results">
+          <li><b class="num" data-count="4">0</b><span class="lbl m">Live senses: sees, hears, speaks, moves</span></li>
+          <li><b class="num"><span class="ph">00</span><small> ms</small></b><span class="lbl m">Reply latency</span></li>
+          <li><b class="num"><span class="ph">000</span></b><span class="lbl m">Calls taken</span></li>
+        </ul>
+        <p>Azhagi is a live MetaHuman on a video call. She sees you through the camera, hears you, talks back in real time and performs any move you ask for. Every reply and every gesture happens live, on the call.</p>
+        <p>She is built as an AI influencer: a presence an audience can call and talk to, not just watch.</p>
+      </div>
+      <div class="case__screen">
+        <div class="backdrop sel" data-screen="azhagi">
+          <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
+          <div class="screen" role="img" aria-label="Azhagi on a video call: a live MetaHuman face, a transcript of the conversation, and the call controls.">
+            <div class="az">
+              <div class="az__stage">
+                <div class="az__top ui-m">
+                  <span class="az__live"><i aria-hidden="true"></i>Live · <b class="az__timer">00:00</b></span>
+                  <span>Azhagi · MetaHuman</span>
+                </div>
+                <svg class="azface" viewBox="0 0 200 200" aria-hidden="true">
+                  <g class="head">
+                    <ellipse cx="100" cy="108" rx="54" ry="64" fill="#151515" stroke="var(--coral)" stroke-width="2"/>
+                    <path d="M46 100 C44 54 156 50 154 100 C148 74 126 64 100 66 C74 64 52 74 46 100Z" fill="#232323"/>
+                    <path d="M64 92 q12 -9 26 -3" stroke="var(--coral)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                    <path d="M110 89 q14 -6 26 3" stroke="var(--coral)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                    <g class="eye"><ellipse cx="78" cy="106" rx="8" ry="5" fill="#fff"/><circle cx="79" cy="106" r="2.6" fill="#111"/></g>
+                    <g class="eye"><ellipse cx="122" cy="106" rx="8" ry="5" fill="#fff"/><circle cx="123" cy="106" r="2.6" fill="#111"/></g>
+                    <path d="M100 118 l-4 10 h8z" fill="none" stroke="var(--coral)" stroke-width="1.4" stroke-linejoin="round"/>
+                    <rect class="mouth" x="86" y="140" width="28" height="4" rx="2" fill="var(--coral)"/>
+                  </g>
+                  <g class="hand">
+                    <rect x="150" y="128" width="26" height="34" rx="9" fill="#151515" stroke="var(--coral)" stroke-width="2"/>
+                    <rect x="152" y="112" width="6" height="22" rx="3" fill="#151515" stroke="var(--coral)" stroke-width="2"/>
+                    <rect x="160" y="108" width="6" height="26" rx="3" fill="#151515" stroke="var(--coral)" stroke-width="2"/>
+                    <rect x="168" y="112" width="6" height="22" rx="3" fill="#151515" stroke="var(--coral)" stroke-width="2"/>
+                  </g>
+                </svg>
+                <div class="az__sees">
+                  <span class="k" style="--d:2.3s">Sees</span>
+                  <span style="--d:2.5s">a cup</span>
+                  <span style="--d:2.7s">glasses</span>
+                  <span style="--d:2.9s">a smile</span>
+                </div>
+              </div>
+              <div class="az__chat">
+                <span class="ui-m">Transcript</span>
+                <div class="bub u" style="--d:1.2s">Hey Azhagi, can you see me?</div>
+                <div class="bub a" style="--d:2.4s">Yes. You're holding a cup, and you look pleased with it.</div>
+                <div class="bub u" style="--d:3.4s">Show me a wave.</div>
+                <div class="bub a" style="--d:5.2s">Like this?</div>
+              </div>
+              <div class="az__bar">
+                <div class="grp">
+                  <span class="levels" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i></span>
+                  <span class="btn" data-act="mic">Mic</span>
+                  <span class="btn">Camera</span>
+                </div>
+                <div class="grp">
+                  <span class="btn" data-act="wave">Wave</span>
+                  <span class="btn btn--end">End</span>
+                </div>
+              </div>
+            </div>
+            <span class="cursor" aria-hidden="true"><svg viewBox="0 0 16 20"><path d="M1 1l5.5 15 2.3-6.2L15 7.5z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- Case 02 · Boona Cue (violet, full width) -->
+<article class="case case--full" id="cue" style="--accent: var(--violet)">
+  <div class="wrap">
+    <div class="case__meta m reveal">
+      <span><b>02 / 04</b></span>
+      <span><i class="swatch" aria-hidden="true"></i><b>Boona Cue</b></span>
+      <span>Year · <span class="ph">[year]</span></span>
+      <span>Text → animation · any engine</span>
+    </div>
+    <div class="row">
+      <div class="case__text reveal">
+        <h2 class="t">Words in. The exact performance out.</h2>
+        <ul class="results" aria-label="Results">
+          <li><b class="num" data-count="2" data-suffix="/2">0</b><span class="lbl m">Blinks asked for, blinks delivered</span></li>
+          <li><b class="num" data-count="3" data-suffix="/3">0</b><span class="lbl m">Nods asked for, nods delivered</span></li>
+          <li><b class="num" data-count="0">0</b><span class="lbl m">Cues dropped or invented</span></li>
+        </ul>
+        <p>Boona Cue turns words from any AI into animation for AI characters. Tell it "blink twice, then nod three times" and the character blinks exactly twice and nods exactly three times, on any engine.</p>
+        <p>The language model decides what to say. Cue makes sure the body keeps its word: the exact performance, every time, nothing extra.</p>
+      </div>
+      <div class="case__screen">
+        <div class="backdrop sel" data-screen="cue">
+          <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
+          <div class="screen" role="img" aria-label="Boona Cue editor: a text prompt is parsed into cues and placed on an animation timeline, then played back.">
+            <div class="cue">
+              <div class="cue__top ui-m">
+                <span><b>Boona Cue</b> · text to animation</span>
+                <span>Engine: <b>any</b> · Rig: <b>humanoid</b></span>
+              </div>
+              <div class="cue__left">
+                <span class="ui-m">Prompt from the model</span>
+                <div class="prompt"><span class="typed">blink twice, then nod three times</span></div>
+                <span class="ui-m">Parsed cues</span>
+                <div class="cues">
+                  <div class="cue-item" style="--d:0s"><i class="sw" aria-hidden="true"></i>Blink · eyes<span class="n">×2</span></div>
+                  <div class="cue-item" style="--d:.15s"><i class="sw" aria-hidden="true"></i>Nod · head<span class="n">×3</span></div>
+                </div>
+                <div class="cue__facewrap">
+                <div class="cue__face" aria-hidden="true">
+                  <svg class="azface cueface" viewBox="0 0 200 200">
+                    <g class="head">
+                      <ellipse cx="100" cy="108" rx="54" ry="64" fill="#151515" stroke="var(--violet)" stroke-width="2"/>
+                      <path d="M64 92 q12 -9 26 -3" stroke="var(--violet)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                      <path d="M110 89 q14 -6 26 3" stroke="var(--violet)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                      <g class="eye"><ellipse cx="78" cy="106" rx="8" ry="5" fill="#fff"/><circle cx="79" cy="106" r="2.6" fill="#111"/></g>
+                      <g class="eye"><ellipse cx="122" cy="106" rx="8" ry="5" fill="#fff"/><circle cx="123" cy="106" r="2.6" fill="#111"/></g>
+                      <rect class="mouth" x="86" y="140" width="28" height="4" rx="2" fill="var(--violet)"/>
+                    </g>
+                  </svg>
+                </div>
+                <span class="ui-m">Preview<br><b>Live rig</b></span>
+                </div>
+              </div>
+              <div class="cue__right">
+                <div class="ruler ui-m"><span>0s</span><span>1s</span><span>2s</span><span>3s</span><span>4s</span></div>
+                <div class="tracks">
+                  <div class="track">
+                    <span class="ui-m">Eyes</span>
+                    <div class="lane">
+                      <i class="kf" style="--x:10%; --w:4%; --d:.1s"></i>
+                      <i class="kf" style="--x:22%; --w:4%; --d:.2s"></i>
+                    </div>
+                  </div>
+                  <div class="track">
+                    <span class="ui-m">Head</span>
+                    <div class="lane">
+                      <i class="kf" style="--x:40%; --w:10%; --d:.3s"></i>
+                      <i class="kf" style="--x:58%; --w:10%; --d:.4s"></i>
+                      <i class="kf" style="--x:76%; --w:10%; --d:.5s"></i>
+                    </div>
+                  </div>
+                  <div class="track"><span class="ui-m">Brows</span><div class="lane lane--empty"></div></div>
+                  <div class="track"><span class="ui-m">Body</span><div class="lane lane--empty"></div></div>
+                  <i class="playhead" aria-hidden="true"></i>
+                </div>
+                <div class="cue__log ui-m" aria-hidden="true">
+                  <span style="--d:0s">00:00.0 · parsed 2 cues from 34 characters</span>
+                  <span style="--d:.2s">00:00.0 · blink ×2 → eyes track · nod ×3 → head track</span>
+                  <span style="--d:.4s">00:00.1 · nothing added, nothing dropped</span>
+                </div>
+                <div class="counters ui-m">
+                  <span>Blinks <b data-c="blinks">0/2</b></span>
+                  <span>Nods <b data-c="nods">0/3</b></span>
+                  <span>Drift <b>0 ms</b></span>
+                  <span class="btn" data-act="play">▶ Play</span>
+                </div>
+              </div>
+            </div>
+            <span class="cursor" aria-hidden="true"><svg viewBox="0 0 16 20"><path d="M1 1l5.5 15 2.3-6.2L15 7.5z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- Case 03 · Thali (teal, flipped: screen left, text right) -->
+<article class="case case--flip" id="thali" style="--accent: var(--teal)">
+  <div class="wrap">
+    <div class="case__meta m reveal">
+      <span><b>03 / 04</b></span>
+      <span><i class="swatch" aria-hidden="true"></i><b>Thali</b></span>
+      <span>Year · <span class="ph">[year]</span></span>
+      <span>React Native · iOS · TestFlight</span>
+    </div>
+    <div class="row">
+      <div class="case__screen">
+        <div class="backdrop backdrop--phone sel" data-screen="thali">
+          <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
+          <div class="phone" role="img" aria-label="Thali on a phone: a weekly South Indian meal plan with meal-planner rules, day tabs, and a slider for how many people are eating.">
+            <div class="phone__status"><span>12:30</span><span>●●●</span></div>
+            <div class="th__head">
+              <h4>Thali</h4>
+              <span class="ui-m">This week · serves <b data-c="serves">1</b></span>
+            </div>
+            <div class="chips" aria-hidden="true">
+              <span class="chip on">No repeats</span><span class="chip on">Veg on Tue</span><span class="chip on">Rice once a day</span><span class="chip">Light dinners</span>
+            </div>
+            <div class="days" aria-hidden="true"><span class="on">Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+            <div class="meals">
+              <div class="meal" style="--d:.2s"><span class="k">Breakfast</span><span class="d">Idli, sambar, chutney</span><span class="q" data-base="4" data-unit="idli" data-plural="idli">4 idli</span></div>
+              <div class="meal" style="--d:.35s"><span class="k">Lunch</span><span class="d">Curd rice, beans poriyal</span><span class="q" data-base="1" data-unit="cup" data-plural="cups">1 cup</span></div>
+              <div class="meal" style="--d:.5s"><span class="k">Dinner</span><span class="d">Rasam, pepper, appalam</span><span class="q" data-base="1" data-unit="bowl" data-plural="bowls">1 bowl</span></div>
+            </div>
+            <div class="variety">
+              <div class="lbl ui-m"><span>Different dishes per day</span><span><b>0 repeats</b></span></div>
+              <div class="bars" aria-hidden="true">
+                <i style="--v:60; --i:0"></i><i style="--v:80; --i:1"></i><i style="--v:60; --i:2"></i><i style="--v:100; --i:3"></i><i style="--v:60; --i:4"></i><i style="--v:80; --i:5"></i><i style="--v:60; --i:6"></i>
+              </div>
+            </div>
+            <div class="people">
+              <div class="lbl ui-m"><span>People eating</span><span><b data-c="people">1</b></span></div>
+              <div class="slider" aria-hidden="true"><i class="rail"></i><i class="fill"></i><i class="knob"></i></div>
+            </div>
+            <div class="th__foot ui-m">in.boona.thali · TestFlight</div>
+            <span class="cursor" aria-hidden="true"><svg viewBox="0 0 16 20"><path d="M1 1l5.5 15 2.3-6.2L15 7.5z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <div class="case__text reveal">
+        <h2 class="t">Your meal rules, turned into a week of South Indian food.</h2>
+        <ul class="results" aria-label="Results">
+          <li><b class="num" data-count="7">0</b><span class="lbl m">Days planned at once</span></li>
+          <li><b class="num" data-count="1">0</b><span class="lbl m">Slider sizes every portion per person</span></li>
+          <li><b class="num">iOS</b><span class="lbl m">On iPhone via TestFlight</span></li>
+        </ul>
+        <p>Thali is a React Native app. You set the rules of your meal planner, and it turns them into a weekly South Indian meal plan, sized for the number of people eating.</p>
+        <p>It ships to iPhone through TestFlight as in.boona.thali.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- Case 04 · Boona Fit (dark full-bleed band) -->
+<section class="band">
+  <div class="gridlines gridlines--local" aria-hidden="true">
+    <i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i><i style="--k:12"></i>
+  </div>
+  <article class="case case--dark" id="fit" style="--accent: #FFFFFF">
+    <div class="wrap">
+      <div class="case__meta m reveal">
+        <span><b>04 / 04</b></span>
+        <span><i class="swatch" aria-hidden="true"></i><b>Boona Fit</b></span>
+        <span>Year · <span class="ph">[year]</span></span>
+        <span>Stack · <span class="ph">[stack]</span></span>
+      </div>
+      <div class="row">
+        <div class="case__text reveal">
+          <h2 class="t">A fitness plan that fits the person, not the template.</h2>
+          <ul class="results" aria-label="Results">
+            <li><b class="num" data-count="3">0</b><span class="lbl m">Modes: plan, exercise, track</span></li>
+            <li><b class="num"><span class="ph">000</span></b><span class="lbl m">People on a plan</span></li>
+            <li><b class="num"><span class="ph">000</span></b><span class="lbl m">Sessions logged</span></li>
+          </ul>
+          <p>Boona Fit is a personalised fitness app. It plans the programme, guides the exercising, and tracks what actually happened.</p>
+          <p><span class="ph">[One line on who it is for and what makes it different]</span></p>
+        </div>
+        <div class="case__screen">
+          <div class="backdrop sel" data-screen="fit">
+            <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
+            <div class="screen screen--dark" role="img" aria-label="Boona Fit: three progress rings for plan, exercise and tracking, a weekly chart, a session button and an intensity slider.">
+              <div class="fit">
+                <div class="fit__top ui-m">
+                  <span><b>Boona Fit</b> · this week</span>
+                  <span>Plan · Exercise · Track</span>
+                </div>
+                <div class="fit__rings">
+                  <div class="ring" style="--c: var(--coral); --off: 198; --d:.2s">
+                    <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bg" cx="50" cy="50" r="42"/><circle class="fg" cx="50" cy="50" r="42"/></svg>
+                    <span class="v">Wk 3</span><span class="l">Plan · of 12</span>
+                  </div>
+                  <div class="ring" style="--c: var(--violet); --off: 53; --d:.4s">
+                    <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bg" cx="50" cy="50" r="42"/><circle class="fg" cx="50" cy="50" r="42"/></svg>
+                    <span class="v">4 / 5</span><span class="l">Exercise</span>
+                  </div>
+                  <div class="ring" style="--c: var(--teal); --off: 37; --d:.6s">
+                    <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bg" cx="50" cy="50" r="42"/><circle class="fg" cx="50" cy="50" r="42"/></svg>
+                    <span class="v">6 days</span><span class="l">Track · streak</span>
+                  </div>
+                </div>
+                <div class="fit__right">
+                  <div class="fit__chart">
+                    <div class="lbl ui-m"><span>Minutes moved</span><span><b>Mon – Sun</b></span></div>
+                    <div class="fit__bars" aria-hidden="true">
+                      <i style="--v:55; --i:0"></i><i style="--v:70; --i:1"></i><i style="--v:0; --i:2"></i><i style="--v:85; --i:3"></i><i style="--v:60; --i:4"></i><i class="on" style="--v:100; --i:5"></i><i style="--v:30; --i:6"></i>
+                    </div>
+                  </div>
+                  <div></div>
+                  <div class="fit__session">
+                    <span class="btn btn--dark" data-act="start">Start session</span>
+                    <span class="fit__timer">00:00</span>
+                  </div>
+                  <div class="fit__slider">
+                    <div class="lbl ui-m"><span>Intensity</span><span><b data-c="intensity">40</b>%</span></div>
+                    <div class="slider" style="--pf:.4" aria-hidden="true"><i class="rail"></i><i class="fill"></i><i class="knob"></i></div>
+                  </div>
+                </div>
+              </div>
+              <span class="cursor" aria-hidden="true"><svg viewBox="0 0 16 20"><path d="M1 1l5.5 15 2.3-6.2L15 7.5z" fill="#fff" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ▸ APPROACH: an index list, then the twelve-week plan (one grid column per week) -->
+<section id="approach" class="wrap section">
+  <div class="section__head m reveal"><span><b>02</b> Approach</span><span>How a project runs</span></div>
+  <ol class="index">
+    <li class="reveal"><span class="idx m">01</span><h3 class="t">Listen first</h3><p>What does the business actually do all day? I start there, not with the AI wish list.</p></li>
+    <li class="reveal"><span class="idx m">02</span><h3 class="t">Map the hours</h3><p>Where the time goes, written down. We pick the one flow worth automating first and the number we expect it to move.</p></li>
+    <li class="reveal"><span class="idx m">03</span><h3 class="t">Prototype on real data</h3><p>A working slice within days, on your data, not a slide. If it does not earn its keep, we stop early and cheap.</p></li>
+    <li class="reveal"><span class="idx m">04</span><h3 class="t">Instrument before shipping<span class="rulemark m">Rule</span></h3><p>Telemetry first. I once ran production without it and debugged the outage by feel. Never again: if we cannot see it, we do not ship it.</p></li>
+    <li class="reveal"><span class="idx m">05</span><h3 class="t">Dates come as a range<span class="rulemark m">Rule</span></h3><p>Targets I once set to a single day got missed. Now every date is a range, and the range holds.</p></li>
+    <li class="reveal"><span class="idx m">06</span><h3 class="t">Hand over, properly</h3><p>Documentation, dashboards, and a team that can run it without me. I am the architect, not the dependency.</p></li>
+  </ol>
+
+  <div class="plan">
+    <div class="plan__head m"><span><b>Twelve weeks</b> · one grid column per week</span><span>A typical engagement</span></div>
+    <div class="plan__weeks m" aria-hidden="true">
+      <span>W01</span><span>W02</span><span>W03</span><span>W04</span><span>W05</span><span>W06</span><span>W07</span><span>W08</span><span>W09</span><span>W10</span><span>W11</span><span>W12</span>
+    </div>
+    <div class="plan__rows">
+      <div class="plan__row"><span class="plan__lbl m">Discover · weeks 1–2</span><div class="plan__bar" style="--s:1; --n:2; --i:0">Discover</div></div>
+      <div class="plan__row"><span class="plan__lbl m">Prototype · weeks 2–4</span><div class="plan__bar" style="--s:2; --n:3; --i:1">Prototype</div></div>
+      <div class="plan__row"><span class="plan__lbl m">Build · weeks 4–9, range +1</span><div class="plan__bar" style="--s:4; --n:6; --i:2; --r:1">Build</div></div>
+      <div class="plan__row"><span class="plan__lbl m">Instrument · weeks 5–10</span><div class="plan__bar teal" style="--s:5; --n:6; --i:3">Instrument</div></div>
+      <div class="plan__row"><span class="plan__lbl m">Launch · weeks 10–11, range +1</span><div class="plan__bar" style="--s:10; --n:2; --i:4; --r:1">Launch</div></div>
+      <div class="plan__row"><span class="plan__lbl m">Hand over · weeks 11–12</span><div class="plan__bar" style="--s:11; --n:2; --i:5">Hand over</div></div>
+    </div>
+    <div class="plan__cap m"><span><i class="range" aria-hidden="true"></i>Dashed tail = the range. Every date is given as a range, and the range holds.</span><span>Weeks, not promises</span></div>
+  </div>
+</section>
+
+<!-- ▸ EXPERIENCE: timeline (draws as you scroll) beside sticky portrait and stats -->
+<section id="experience" class="wrap section">
+  <div class="section__head m reveal"><span><b>03</b> Experience</span><span>Two rules, learned the hard way</span></div>
+  <div class="row">
+    <div class="exp__tl">
+      <div class="timeline">
+        <i class="tl__line" aria-hidden="true"></i>
+        <ol>
+          <li class="reveal">
+            <div class="yrs m"><b>2026 — now</b><span class="now">Current</span></div>
+            <h3 class="t">Independent, as Boona</h3>
+            <p>AI automation for clients (anonymised). Building Azhagi, Boona Cue, Thali and Boona Fit. Publishing on LinkedIn, X and YouTube.</p>
+            <p>Boona AI Agency is forming behind it.</p>
+          </li>
+          <li class="reveal">
+            <div class="yrs m"><b>2022 — 2025</b></div>
+            <h3 class="t"><span class="ph">[Senior / lead engineer]</span> at a product company</h3>
+            <p>Ran production without telemetry. Debugged the outage.</p>
+            <div class="rule"><span class="m">Rule since</span>Telemetry first.</div>
+          </li>
+          <li class="reveal">
+            <div class="yrs m"><b>2018 — 2022</b></div>
+            <h3 class="t"><span class="ph">[Role]</span> at <span class="ph">[company type]</span></h3>
+            <p>Set targets and dates that were missed. Includes the 2018 food-ordering platform: store onboarding brought from 48 hours to 24, with a product team of eight.</p>
+            <div class="rule"><span class="m">Rule since</span>Realistic dates, with a range.</div>
+          </li>
+          <li class="reveal">
+            <div class="yrs m"><b><span class="ph">[2016]</span> — 2018</b></div>
+            <h3 class="t"><span class="ph">[First role(s)]</span></h3>
+            <p>Web apps and React front ends.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="exp__side">
+      <div class="sticky">
+        <img class="portrait" src="media/founder-portrait-4x5.webp" width="600" height="750" alt="Portrait of the founder of Boona" loading="lazy">
+        <ul class="stats" aria-label="Numbers">
+          <li><span class="m">Store onboarding, 2018</span><span class="num">48<small> h</small> → 24<small> h</small></span></li>
+          <li><span class="m">Product team on it</span><span class="num">8</span></li>
+          <li><span class="m">Rules I keep</span><span class="num">2</span></li>
+          <li><span class="m">Products in build</span><span class="num">4</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ TESTIMONIALS (placeholders: no reviews have been invented) -->
+<section id="testimonials" class="wrap section" style="padding-top:0">
+  <div class="section__head m reveal"><span><b>04</b> Said about the work</span><span>Three lines from clients</span></div>
+  <div class="quotes">
+    <div class="quote reveal">
+      <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
+      <footer><span class="m"><b><span class="ph">[Name]</span></b></span><span class="m"><span class="ph">[Role, company]</span></span></footer>
+    </div>
+    <div class="quote reveal">
+      <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
+      <footer><span class="m"><b><span class="ph">[Name]</span></b></span><span class="m"><span class="ph">[Role, company]</span></span></footer>
+    </div>
+    <div class="quote reveal">
+      <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
+      <footer><span class="m"><b><span class="ph">[Name]</span></b></span><span class="m"><span class="ph">[Role, company]</span></span></footer>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ WRITING: posts as a table -->
+<section id="writing" class="wrap section" style="padding-top:0">
+  <div class="section__head m reveal"><span><b>05</b> Writing</span><span>Notes from the work, posted as I go</span></div>
+  <div class="channels m reveal">
+    <a href="#" class="ph">LinkedIn · [profile link]</a>
+    <a href="#" class="ph">X · [profile link]</a>
+    <a href="#" class="ph">YouTube · [channel link]</a>
+  </div>
+  <table class="table reveal">
+    <colgroup><col style="width:16.67%"><col style="width:50%"><col style="width:16.67%"><col style="width:16.66%"></colgroup>
+    <thead><tr><th class="m">Date</th><th class="m">Title</th><th class="m">Channel</th><th class="m">Read</th></tr></thead>
+    <tbody>
+      <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a LinkedIn post]</span></td><td class="m">LinkedIn</td><td><a class="read m" href="#"><span class="ph">[link]</span></a></td></tr>
+      <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a post on X]</span></td><td class="m">X</td><td><a class="read m" href="#"><span class="ph">[link]</span></a></td></tr>
+      <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a YouTube video]</span></td><td class="m">YouTube</td><td><a class="read m" href="#"><span class="ph">[link]</span></a></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ▸ CONTACT: email with copy, quarterly availability, a brief form; the cutout photo on the right -->
+<section id="contact" class="wrap section" style="padding-top:0">
+  <div class="section__head m reveal"><span><b>06</b> Contact</span><span>Namakkal, Tamil Nadu · <time class="clock" datetime="">--:--:--</time> IST</span></div>
+  <div class="row">
+    <div class="contact__main reveal">
+      <h2 class="t">Tell me what the business does. I'll tell you where AI fits.</h2>
+      <div class="email">
+        <a href="mailto:studio.boona@gmail.com">studio.boona@gmail.com</a>
+        <button class="copy" type="button" data-email="studio.boona@gmail.com">Copy</button>
+      </div>
+      <span class="m">One email is enough to start. No deck needed.</span>
+
+      <ul class="avail" aria-label="Availability by quarter">
+        <li><span class="q m" data-quarter="0">Q4 2026</span><span class="st"><i class="dot" aria-hidden="true"></i>Open to projects</span><span class="m">Now</span></li>
+        <li><span class="q m" data-quarter="1">Q1 2027</span><span class="st"><span class="ph">[Open / Limited / Booked]</span></span><span class="m">Next</span></li>
+        <li><span class="q m" data-quarter="2">Q2 2027</span><span class="st"><span class="ph">[Open / Limited / Booked]</span></span><span class="m">After</span></li>
+      </ul>
+
+      <form id="brief" class="form" data-to="studio.boona@gmail.com">
+        <div class="field"><label class="m" for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label class="m" for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization"></div>
+        <div class="field full"><label class="m" for="f-what">What should AI do for you?</label><textarea id="f-what" name="what" required placeholder="The job it should take off your plate, in a sentence or two."></textarea></div>
+        <div class="field"><label class="m" for="f-when">When</label><select id="f-when" name="when"><option>This quarter</option><option>Next quarter</option><option>Not sure yet</option></select></div>
+        <div class="field"><label class="m" for="f-budget">Budget, if known</label><input id="f-budget" name="budget" type="text" placeholder="Optional"></div>
+        <div class="submit"><button class="btn-main" type="submit">Send the brief</button><span class="note m">Opens your email app with the brief filled in.</span></div>
+      </form>
+    </div>
+    <div class="contact__photo reveal">
+      <div class="backdrop">
+        <img src="media/founder-cutout.webp" width="600" height="744" alt="The founder of Boona, standing, hands in pockets" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ▸ FOOTER: dark band with the name huge -->
+<footer class="foot">
+  <div class="gridlines gridlines--local" aria-hidden="true">
+    <i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i><i style="--k:12"></i>
+  </div>
+  <div class="wrap">
+    <div class="name" aria-hidden="true">
+      <svg viewBox="0 0 1000 206" preserveAspectRatio="none"><text x="0" y="200" textLength="1000" lengthAdjust="spacingAndGlyphs">BOONA</text></svg>
+    </div>
+    <div class="foot__cols">
+      <div class="foot__col"><span class="m">Studio</span><span class="v">Namakkal, Tamil Nadu, India</span><span class="v m"><time class="clock" datetime="">--:--:--</time> IST</span></div>
+      <div class="foot__col"><span class="m">Write</span><a href="mailto:studio.boona@gmail.com">studio.boona@gmail.com</a></div>
+      <div class="foot__col"><span class="m">Sections</span><a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#writing">Writing</a><a href="#contact">Contact</a></div>
+      <div class="foot__col"><span class="m">Elsewhere</span><a href="#" class="ph">LinkedIn [link]</a><a href="#" class="ph">X [link]</a><a href="#" class="ph">YouTube [link]</a></div>
+    </div>
+    <div class="foot__bot m"><span>© 2026 Boona · Independent AI solutions architect</span><span>Boona AI Agency, forming</span></div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
 </html>
