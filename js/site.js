@@ -2,7 +2,8 @@
    Boona — site script. Plain JavaScript, no libraries, no build step.
    1 grid toggle · 2 live clock · 3 load choreography · 4 reveal on scroll
    5 count-ups · 6 timeline draw · 7 copy email · 8 quarters · 9 brief form
-   10 product screens (land → snap → play)
+   10 product screens (land → snap → play, and Replay) · 11 readout + G key
+   12 smooth scrolling (the wheel glides, section links glide)
    ========================================================================== */
 (function () {
   'use strict';
@@ -11,8 +12,15 @@
   var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
-  /* wait(): run fn after ms. With reduced motion, run it right away so the page lands in its end state. */
-  var wait = function (ms, fn) { if (reduce) { fn(); return 0; } return setTimeout(fn, ms); };
+  /* wait(): run fn after ms. With reduced motion, run it right away so the page lands in its end state.
+     While a screen is being set up, every timer is kept on that screen so Replay can clear them. */
+  var timers = null;
+  var wait = function (ms, fn) {
+    if (reduce) { fn(); return 0; }
+    var id = setTimeout(fn, ms);
+    if (timers) timers.push(id);
+    return id;
+  };
 
   /* 1 ▸ grid toggle ------------------------------------------------------ */
   var saved = null;
@@ -83,7 +91,7 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) { ob.unobserve(en.target); cb(en.target); }
       });
-    }, opts || { threshold: .2, rootMargin: '0px 0px -8% 0px' });
+    }, opts || { threshold: .15, rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (el) { ob.observe(el); });
   }
   observe($$('.reveal'), function (el) { el.classList.add('is-in'); });
@@ -112,7 +120,7 @@
   }
   observe($$('[data-count]'), countUp, { threshold: .6 });
 
-  /* 6 ▸ experience timeline draws as you scroll -------------------------- */
+  /* 6 ▸ experience timeline draws as you scroll; each chapter brightens as the line reaches it */
   var tl = $('.timeline');
   if (tl) {
     var line = $('.tl__line', tl), items = $$('li', tl), ticking = false;
@@ -120,7 +128,7 @@
       ticking = false;
       var r = tl.getBoundingClientRect();
       var vh = window.innerHeight || 800;
-      var p = reduce ? 1 : Math.max(0, Math.min(1, (vh * .8 - r.top) / r.height));
+      var p = reduce ? 1 : Math.max(0, Math.min(1, (vh * .78 - r.top) / r.height));
       if (line) line.style.setProperty('--p', p.toFixed(4));
       items.forEach(function (li) {
         var lr = li.getBoundingClientRect();
@@ -221,6 +229,7 @@
     show();
     if (reduce) return;
     var iv = setInterval(function () { s++; show(); if (s >= max) clearInterval(iv); }, 1000);
+    if (timers) timers.push(iv);
   }
 
   var plays = {
@@ -311,13 +320,36 @@
     var scr = $('.screen, .phone', bd);
     var name = bd.getAttribute('data-screen');
     if (!scr) return;
-    var go = function () { scr.classList.add('is-playing'); if (plays[name]) plays[name](scr); };
+    bd._timers = [];
+    var go = function () {
+      timers = bd._timers;
+      scr.classList.add('is-playing');
+      if (plays[name]) plays[name](scr);
+      timers = null;
+    };
     if (reduce) { bd.classList.add('is-landing'); bd.classList.add('is-snapped'); go(); return; }
     bd.classList.add('is-landing');
-    setTimeout(function () { bd.classList.add('is-snapped'); }, 500);
-    setTimeout(go, 1000);
+    bd._timers.push(setTimeout(function () { bd.classList.add('is-snapped'); }, 500));
+    bd._timers.push(setTimeout(go, 1000));
   }
-  observe($$('.backdrop[data-screen]'), playScreen, { threshold: .35 });
+  var backdrops = $$('.backdrop[data-screen]');
+  backdrops.forEach(function (bd) { bd._fresh = bd.innerHTML; });
+  observe(backdrops, playScreen, { threshold: .35 });
+
+  /* Replay: stop whatever is running, put the screen back to its first frame, run the sequence again. */
+  function replay(bd) {
+    (bd._timers || []).forEach(function (id) { clearTimeout(id); clearInterval(id); });
+    bd.classList.remove('is-landing'); bd.classList.remove('is-snapped');
+    bd.innerHTML = bd._fresh;
+    void bd.offsetWidth;
+    playScreen(bd);
+  }
+  $$('.replay').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var bd = $('.backdrop[data-screen="' + btn.getAttribute('data-replay') + '"]');
+      if (bd) replay(bd);
+    });
+  });
 
   /* 11 ▸ side readout (which section, how far down) and the G key for the grid */
   var readout = $('.readout');
@@ -341,5 +373,74 @@
     var t = e.target, tag = t && t.tagName ? t.tagName.toLowerCase() : '';
     if (tag === 'input' || tag === 'textarea' || tag === 'select' || (t && t.isContentEditable)) return;
     if (toggle) toggle.click();
+  });
+
+  /* 12 ▸ smooth scrolling --------------------------------------------------
+     With a mouse, each wheel notch moves a target and the page glides towards it, easing out over
+     about half a second, the way the reference page scrolls. Touch screens, keyboards and the
+     scrollbar keep the browser's own scrolling, and "reduce motion" switches all of this off. */
+  var fine = !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+  var sm = { target: 0, current: 0, raf: 0, last: 0, anchor: false };
+  var maxY = function () { return Math.max(0, html.scrollHeight - window.innerHeight); };
+  var glide = function (ts) {
+    var dt = sm.last ? Math.min(64, ts - sm.last) : 16.7;
+    sm.last = ts;
+    var k = 1 - Math.exp(-dt / 160);
+    sm.current += (sm.target - sm.current) * k;
+    if (Math.abs(sm.target - sm.current) < .4) sm.current = sm.target;
+    window.scrollTo(0, sm.current);
+    if (sm.current === sm.target) { sm.raf = 0; sm.last = 0; return; }
+    sm.raf = requestAnimationFrame(glide);
+  };
+  var stopMotion = function () { if (sm.raf) { cancelAnimationFrame(sm.raf); sm.raf = 0; } sm.last = 0; sm.anchor = false; };
+  if (!reduce && fine) {
+    window.addEventListener('wheel', function (e) {
+      if (e.ctrlKey || e.defaultPrevented) return;
+      var t = e.target;
+      if (t && t.closest && t.closest('textarea, select')) return;
+      var dy = e.deltaY;
+      if (e.deltaMode === 1) dy *= 40; else if (e.deltaMode === 2) dy *= window.innerHeight;
+      if (!dy) return;
+      e.preventDefault();
+      if (sm.anchor) stopMotion();
+      if (!sm.raf) { sm.current = window.scrollY; sm.target = sm.current; }
+      sm.target = Math.max(0, Math.min(maxY(), sm.target + dy));
+      if (!sm.raf) sm.raf = requestAnimationFrame(glide);
+    }, { passive: false });
+    window.addEventListener('scroll', function () {
+      /* if the page moved and it was not us (keyboard, scrollbar, a jump), forget our target */
+      if (sm.raf && Math.abs(window.scrollY - sm.current) > 1.5) { stopMotion(); sm.current = sm.target = window.scrollY; }
+    }, { passive: true });
+  }
+
+  /* Section links glide too: an ease-in-out curve over about a second, then the address updates. */
+  var scrollToY = function (y, ms) {
+    y = Math.max(0, Math.min(maxY(), y));
+    if (reduce) { window.scrollTo(0, y); return; }
+    stopMotion();
+    var y0 = window.scrollY, t0 = null;
+    sm.anchor = true;
+    var step = function (ts) {
+      if (!t0) t0 = ts;
+      var p = Math.min(1, (ts - t0) / ms);
+      var e = p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+      sm.current = y0 + (y - y0) * e;
+      window.scrollTo(0, sm.current);
+      if (p < 1) { sm.raf = requestAnimationFrame(step); }
+      else { sm.raf = 0; sm.anchor = false; sm.target = sm.current = y; }
+    };
+    sm.raf = requestAnimationFrame(step);
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = id ? document.getElementById(id) : null;
+    if (!el) return;
+    e.preventDefault();
+    var navH = parseFloat(getComputedStyle(html).getPropertyValue('--nav-h')) || 48;
+    var y = id === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - navH - 24;
+    scrollToY(y, 900);
+    if (history.pushState) history.pushState(null, '', '#' + id);
   });
 })();

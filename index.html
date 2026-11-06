@@ -14,9 +14,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 <script>
   /* Runs before the first paint: mark that scripts work, and start the load animation unless the
@@ -74,7 +71,7 @@
   <h1 class="hero__name">
     <span class="name__txt piece sel" style="--dx:12px; --dy:-8px; --rot:.35deg">
       <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
-      <span class="dim" aria-hidden="true"></span>BOONA</span>
+      <span class="dim" aria-hidden="true"></span>Boona</span>
   </h1>
 
   <div class="wrap hero__bottom">
@@ -162,31 +159,38 @@
 </section>
 
 <!-- ▸ WORK: four case studies, each with a product screen built in HTML -->
-<div class="wrap section" id="work" style="padding-bottom:0">
-  <div class="section__head m reveal"><span><b>01</b> Work</span><span>Four products, all in beta</span></div>
-</div>
+<section class="section" id="work" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="m shead__lbl">§ 01 Work · 2026</span>
+      <h2 class="shead__t">Four products, all in beta.</h2>
+      <p class="shead__d">Each one shown through the screen that matters most. The screens play as you reach them; press Replay to watch again.</p>
+    </div>
+  </div>
+</section>
 
 <!-- Case 01 · Azhagi (coral, split layout) -->
 <article class="case case--split" id="azhagi" style="--accent: var(--coral)">
   <div class="wrap">
     <div class="case__meta m reveal">
-      <span><b>01 / 04</b></span>
-      <span><i class="swatch" aria-hidden="true"></i><b>Azhagi</b></span>
-      <span>2026 · Beta, in development</span>
-      <span>MetaHuman · vision · voice</span>
+      <span class="case__n"><b>01 / 04</b></span>
+      <span class="case__name"><i class="swatch" aria-hidden="true"></i>Azhagi</span>
+      <span class="case__tag">MetaHuman · vision · voice</span>
+      <span class="case__yr">2026 · Beta, in development</span>
     </div>
     <div class="row">
       <div class="case__text reveal">
         <h2 class="t">An AI influencer you can call, face to face.</h2>
+        <p>Azhagi is a live MetaHuman on a video call. She sees you through the camera, hears you, talks back in real time and performs any move you ask for. Every reply and every gesture happens live, on the call.</p>
+        <p>She is built as an AI influencer: a presence an audience can call and talk to, not just watch. She is in beta and not yet released.</p>
         <ul class="results" aria-label="Results">
           <li><b class="num" data-count="4">0</b><span class="lbl m">Live senses: sees, hears, speaks, moves</span></li>
           <li><b class="num" data-count="1.7" data-decimals="1" data-suffix=" s">0</b><span class="lbl m">Reply latency</span></li>
           <li><b class="num">Beta</b><span class="lbl m">In development, not yet released</span></li>
         </ul>
-        <p>Azhagi is a live MetaHuman on a video call. She sees you through the camera, hears you, talks back in real time and performs any move you ask for. Every reply and every gesture happens live, on the call.</p>
-        <p>She is built as an AI influencer: a presence an audience can call and talk to, not just watch. She is in beta and not yet released.</p>
       </div>
       <div class="case__screen">
+        <div class="case__cap m"><span>Azhagi / video call · live</span><button class="replay" type="button" data-replay="azhagi"><i aria-hidden="true">▶</i>Replay</button></div>
         <div class="backdrop sel" data-screen="azhagi">
           <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
           <div class="screen" role="img" aria-label="Azhagi on a video call: a live MetaHuman face, a transcript of the conversation, and the call controls.">
@@ -252,23 +256,14 @@
 <article class="case case--full" id="cue" style="--accent: var(--violet)">
   <div class="wrap">
     <div class="case__meta m reveal">
-      <span><b>02 / 04</b></span>
-      <span><i class="swatch" aria-hidden="true"></i><b>Boona Cue</b></span>
-      <span>2026 · Beta, in development</span>
-      <span>Text → animation · any engine</span>
+      <span class="case__n"><b>02 / 04</b></span>
+      <span class="case__name"><i class="swatch" aria-hidden="true"></i>Boona Cue</span>
+      <span class="case__tag">Text → animation · any engine</span>
+      <span class="case__yr">2026 · Beta, in development</span>
     </div>
     <div class="row">
-      <div class="case__text reveal">
-        <h2 class="t">Words in. The exact performance out.</h2>
-        <ul class="results" aria-label="Results">
-          <li><b class="num" data-count="2" data-suffix="/2">0</b><span class="lbl m">Blinks asked for, blinks delivered</span></li>
-          <li><b class="num" data-count="3" data-suffix="/3">0</b><span class="lbl m">Nods asked for, nods delivered</span></li>
-          <li><b class="num" data-count="0">0</b><span class="lbl m">Cues dropped or invented</span></li>
-        </ul>
-        <p>Boona Cue turns words from any AI into animation for AI characters. Tell it "blink twice, then nod three times" and the character blinks exactly twice and nods exactly three times, on any engine.</p>
-        <p>The language model decides what to say. Cue makes sure the body keeps its word: the exact performance, every time, nothing extra. It is in beta and not yet released.</p>
-      </div>
       <div class="case__screen">
+        <div class="case__cap m"><span>Boona Cue / editor · desktop</span><button class="replay" type="button" data-replay="cue"><i aria-hidden="true">▶</i>Replay</button></div>
         <div class="backdrop sel" data-screen="cue">
           <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
           <div class="screen" role="img" aria-label="Boona Cue editor: a text prompt is parsed into cues and placed on an animation timeline, then played back.">
@@ -340,6 +335,18 @@
           </div>
         </div>
       </div>
+      <div class="case__text case__text--row reveal">
+        <h2 class="t">Words in. The exact performance out.</h2>
+        <div class="case__body">
+          <p>Boona Cue turns words from any AI into animation for AI characters. Tell it "blink twice, then nod three times" and the character blinks exactly twice and nods exactly three times, on any engine.</p>
+          <p>The language model decides what to say. Cue makes sure the body keeps its word: the exact performance, every time, nothing extra. It is in beta and not yet released.</p>
+        </div>
+        <ul class="results" aria-label="Results">
+          <li><b class="num" data-count="2" data-suffix="/2">0</b><span class="lbl m">Blinks asked for, blinks delivered</span></li>
+          <li><b class="num" data-count="3" data-suffix="/3">0</b><span class="lbl m">Nods asked for, nods delivered</span></li>
+          <li><b class="num" data-count="0">0</b><span class="lbl m">Cues dropped or invented</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </article>
@@ -348,13 +355,14 @@
 <article class="case case--flip" id="thali" style="--accent: var(--teal)">
   <div class="wrap">
     <div class="case__meta m reveal">
-      <span><b>03 / 04</b></span>
-      <span><i class="swatch" aria-hidden="true"></i><b>Thali</b></span>
-      <span>2026 · Beta, in development</span>
-      <span>React Native · iOS · TestFlight</span>
+      <span class="case__n"><b>03 / 04</b></span>
+      <span class="case__name"><i class="swatch" aria-hidden="true"></i>Thali</span>
+      <span class="case__tag">React Native · iOS · TestFlight</span>
+      <span class="case__yr">2026 · Beta, in development</span>
     </div>
     <div class="row">
       <div class="case__screen">
+        <div class="case__cap m"><span>Thali / this week · iPhone</span><button class="replay" type="button" data-replay="thali"><i aria-hidden="true">▶</i>Replay</button></div>
         <div class="backdrop backdrop--phone sel" data-screen="thali">
           <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
           <div class="phone" role="img" aria-label="Thali on a phone: a weekly South Indian meal plan with meal-planner rules, day tabs, and a slider for how many people are eating.">
@@ -389,13 +397,13 @@
       </div>
       <div class="case__text reveal">
         <h2 class="t">Your meal rules, turned into a week of South Indian food.</h2>
+        <p>Thali is a React Native app. You set the rules of your meal planner, and it turns them into a weekly South Indian meal plan, sized for the number of people eating.</p>
+        <p>It is in beta on iPhone through TestFlight as in.boona.thali, not yet on the App Store.</p>
         <ul class="results" aria-label="Results">
           <li><b class="num" data-count="7">0</b><span class="lbl m">Days planned at once</span></li>
           <li><b class="num" data-count="1">0</b><span class="lbl m">Slider sizes every portion per person</span></li>
           <li><b class="num">iOS</b><span class="lbl m">Beta on iPhone via TestFlight</span></li>
         </ul>
-        <p>Thali is a React Native app. You set the rules of your meal planner, and it turns them into a weekly South Indian meal plan, sized for the number of people eating.</p>
-        <p>It is in beta on iPhone through TestFlight as in.boona.thali, not yet on the App Store.</p>
       </div>
     </div>
   </div>
@@ -409,23 +417,26 @@
   <article class="case case--dark" id="fit" style="--accent: #FFFFFF">
     <div class="wrap">
       <div class="case__meta m reveal">
-        <span><b>04 / 04</b></span>
-        <span><i class="swatch" aria-hidden="true"></i><b>Boona Fit</b></span>
-        <span>2026 · Beta, in development</span>
-        <span>Stack · React Native · Android · iOS</span>
+        <span class="case__n"><b>04 / 04</b></span>
+        <span class="case__name"><i class="swatch" aria-hidden="true"></i>Boona Fit</span>
+        <span class="case__tag">Stack · React Native · Android · iOS</span>
+        <span class="case__yr">2026 · Beta, in development</span>
       </div>
       <div class="row">
-        <div class="case__text reveal">
+        <div class="case__text case__text--row reveal">
           <h2 class="t">A fitness plan that fits the person, not the template.</h2>
+          <div class="case__body">
+            <p>Boona Fit is a personalised fitness app. It plans the programme, guides the exercising, and tracks what actually happened. It is in beta and not yet released.</p>
+            <p><span class="ph">[One line on who it is for and what makes it different]</span></p>
+          </div>
           <ul class="results" aria-label="Results">
             <li><b class="num" data-count="3">0</b><span class="lbl m">Modes: plan, exercise, track</span></li>
             <li><b class="num" data-count="1">0</b><span class="lbl m">Plan per person, not per template</span></li>
             <li><b class="num">Beta</b><span class="lbl m">In development, not yet released</span></li>
           </ul>
-          <p>Boona Fit is a personalised fitness app. It plans the programme, guides the exercising, and tracks what actually happened. It is in beta and not yet released.</p>
-          <p><span class="ph">[One line on who it is for and what makes it different]</span></p>
         </div>
         <div class="case__screen">
+          <div class="case__cap m"><span>Boona Fit / this week · app</span><button class="replay" type="button" data-replay="fit"><i aria-hidden="true">▶</i>Replay</button></div>
           <div class="backdrop sel" data-screen="fit">
             <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
             <div class="screen screen--dark" role="img" aria-label="Boona Fit: three progress rings for plan, exercise and tracking, a weekly chart, a session button and an intensity slider.">
@@ -475,170 +486,200 @@
   </article>
 </section>
 
-<!-- ▸ APPROACH: an index list, then the twelve-week plan (one grid column per week) -->
-<section id="approach" class="wrap section">
-  <div class="section__head m reveal"><span><b>02</b> Approach</span><span>How a project runs</span></div>
-  <ol class="index">
-    <li class="reveal"><span class="idx m">01</span><h3 class="t">Listen first</h3><p>What does the business actually do all day? I start there, not with the AI wish list.</p></li>
-    <li class="reveal"><span class="idx m">02</span><h3 class="t">Map the hours</h3><p>Where the time goes, written down. We pick the one flow worth automating first and the number we expect it to move.</p></li>
-    <li class="reveal"><span class="idx m">03</span><h3 class="t">Prototype on real data</h3><p>A working slice within days, on your data, not a slide. If it does not earn its keep, we stop early and cheap.</p></li>
-    <li class="reveal"><span class="idx m">04</span><h3 class="t">Instrument before shipping<span class="rulemark m">Rule</span></h3><p>Telemetry first. I once ran production without it and debugged the outage by feel. Never again: if we cannot see it, we do not ship it.</p></li>
-    <li class="reveal"><span class="idx m">05</span><h3 class="t">Dates come as a range<span class="rulemark m">Rule</span></h3><p>Targets I once set to a single day got missed. Now every date is a range, and the range holds.</p></li>
-    <li class="reveal"><span class="idx m">06</span><h3 class="t">Hand over, properly</h3><p>Documentation, dashboards, and a team that can run it without me. I am the architect, not the dependency.</p></li>
-  </ol>
+<!-- ▸ APPROACH: one big line, the index of how a project runs, then the shape of a project -->
+<section id="approach" class="section">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="m shead__lbl">§ 02 Approach</span>
+      <h2 class="shead__t">How a project runs.</h2>
+      <p class="shead__d">Listen first, prototype on real data, instrument before shipping, hand over properly. Every date comes as a range.</p>
+    </div>
+    <p class="lede reveal">Working AI, measured from day one, <span class="key">and a team that can run it without me.</span></p>
+    <ol class="index">
+      <li class="reveal"><span class="idx m">01</span><h3 class="t">Listen first</h3><p>What does the business actually do all day? I start there, not with the AI wish list.</p></li>
+      <li class="reveal"><span class="idx m">02</span><h3 class="t">Map the hours</h3><p>Where the time goes, written down. We pick the one flow worth automating first and the number we expect it to move.</p></li>
+      <li class="reveal"><span class="idx m">03</span><h3 class="t">Prototype on real data</h3><p>A working slice within days, on your data, not a slide. If it does not earn its keep, we stop early and cheap.</p></li>
+      <li class="reveal"><span class="idx m">04</span><h3 class="t">Instrument before shipping</h3><p>Telemetry first. I once ran production without it and debugged the outage by feel. Never again: if we cannot see it, we do not ship it.</p><span class="idx__r m">Rule</span></li>
+      <li class="reveal"><span class="idx m">05</span><h3 class="t">Dates come as a range</h3><p>Targets I once set to a single day got missed. Now every date is a range, and the range holds.</p><span class="idx__r m">Rule</span></li>
+      <li class="reveal"><span class="idx m">06</span><h3 class="t">Hand over, properly</h3><p>Documentation, dashboards, and a team that can run it without me. I am the architect, not the dependency.</p></li>
+    </ol>
 
-  <div class="plan">
-    <div class="plan__head m"><span><b>The shape of a project</b> · start to hand over</span><span>Length depends on the job</span></div>
-    <div class="plan__weeks m" aria-hidden="true">
-      <span>Start</span><span></span><span></span><span>25%</span><span></span><span></span><span>50%</span><span></span><span></span><span>75%</span><span></span><span style="text-align:right; padding-right:6px">Done</span>
+    <div class="plan">
+      <div class="plan__head"><h3>The shape of a project</h3><span class="m">Start to hand over · length depends on the job</span></div>
+      <div class="plan__weeks m" aria-hidden="true">
+        <span>Start</span><span></span><span></span><span>25%</span><span></span><span></span><span>50%</span><span></span><span></span><span>75%</span><span></span><span style="text-align:right; padding-right:6px">Done</span>
+      </div>
+      <div class="plan__rows">
+        <div class="plan__row" style="--s:1; --n:4; --i:0"><span class="plan__lbl">Understand and prototype</span><div class="plan__bar"><span class="m">First quarter</span></div></div>
+        <div class="plan__row" style="--s:4; --n:6; --i:1; --r:1"><span class="plan__lbl">Build</span><div class="plan__bar"><span class="m">Middle half</span></div></div>
+        <div class="plan__row" style="--s:5; --n:6; --i:2"><span class="plan__lbl">Instrument, alongside the build</span><div class="plan__bar teal"><span class="m">Never after</span></div></div>
+        <div class="plan__row" style="--s:10; --n:2; --i:3; --r:1"><span class="plan__lbl">Launch and hand over</span><div class="plan__bar"><span class="m">Last quarter</span></div></div>
+      </div>
+      <div class="plan__cap m"><span><i class="range" aria-hidden="true"></i>Dashed tail = the range. Every date comes as a range, and the range holds.</span><span>Every project has this shape; only the length changes</span></div>
     </div>
-    <div class="plan__rows">
-      <div class="plan__row"><span class="plan__lbl m">Understand and prototype · the first quarter</span><div class="plan__bar" style="--s:1; --n:4; --i:0">Understand and prototype</div></div>
-      <div class="plan__row"><span class="plan__lbl m">Build · the middle half, with a range</span><div class="plan__bar" style="--s:4; --n:6; --i:1; --r:1">Build</div></div>
-      <div class="plan__row"><span class="plan__lbl m">Instrument · alongside the build, never after it</span><div class="plan__bar teal" style="--s:5; --n:6; --i:2">Instrument</div></div>
-      <div class="plan__row"><span class="plan__lbl m">Launch and hand over · the last quarter, with a range</span><div class="plan__bar" style="--s:10; --n:2; --i:3; --r:1">Launch and hand over</div></div>
-    </div>
-    <div class="plan__cap m"><span><i class="range" aria-hidden="true"></i>Dashed tail = the range. Every date comes as a range, and the range holds.</span><span>Every project has this shape; only the length changes</span></div>
   </div>
 </section>
 
-<!-- ▸ EXPERIENCE: timeline (draws as you scroll) beside sticky portrait and stats -->
-<section id="experience" class="wrap section">
-  <div class="section__head m reveal"><span><b>03</b> Experience</span><span>Two rules, learned the hard way</span></div>
-  <div class="row">
-    <div class="exp__tl">
-      <div class="timeline">
-        <i class="tl__line" aria-hidden="true"></i>
-        <ol>
-          <li class="reveal">
-            <div class="yrs m"><b>2026 — now</b><span class="now">Current</span></div>
-            <h3 class="t">Independent, as Boona</h3>
-            <p>AI automation for clients (anonymised). Building Azhagi, Boona Cue, Thali and Boona Fit. Publishing on LinkedIn, X and YouTube.</p>
-            <p>Boona AI Agency is forming behind it.</p>
-          </li>
-          <li class="reveal">
-            <div class="yrs m"><b>2022 — 2025</b></div>
-            <h3 class="t"><span class="ph">[Senior / lead engineer]</span> at a product company</h3>
-            <p>Ran production without telemetry. Debugged the outage.</p>
-            <div class="rule"><span class="m">Rule since</span>Telemetry first.</div>
-          </li>
-          <li class="reveal">
-            <div class="yrs m"><b>2018 — 2022</b></div>
-            <h3 class="t"><span class="ph">[Role]</span> at <span class="ph">[company type]</span></h3>
-            <p>Set targets and dates that were missed. Includes the 2018 food-ordering platform: store onboarding brought from 48 hours to 24, with a product team of eight.</p>
-            <div class="rule"><span class="m">Rule since</span>Realistic dates, with a range.</div>
-          </li>
-          <li class="reveal">
-            <div class="yrs m"><b><span class="ph">[2016]</span> — 2018</b></div>
-            <h3 class="t"><span class="ph">[First role(s)]</span></h3>
-            <p>Web apps and React front ends.</p>
-          </li>
-        </ol>
-      </div>
+<!-- ▸ EXPERIENCE: the numbers pinned on the left, the timeline drawing itself on the right -->
+<section id="experience" class="section">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="m shead__lbl">§ 03 Experience</span>
+      <h2 class="shead__t">Two rules, learned the hard way.</h2>
+      <p class="shead__d">Four chapters, from web apps and React front ends to independent AI work as Boona.</p>
     </div>
-    <div class="exp__side">
-      <div class="sticky">
-        <img class="portrait" src="media/founder-portrait-4x5.webp" width="600" height="750" alt="Portrait of the founder of Boona" loading="lazy">
-        <ul class="stats" aria-label="Numbers">
-          <li><span class="m">Store onboarding, 2018</span><span class="num">48<small> h</small> → 24<small> h</small></span></li>
-          <li><span class="m">Product team on it</span><span class="num">8</span></li>
-          <li><span class="m">Rules I keep</span><span class="num">2</span></li>
-          <li><span class="m">Products in build</span><span class="num">4</span></li>
-        </ul>
+    <div class="row">
+      <div class="exp__side">
+        <div class="sticky">
+          <div class="bignum reveal"><b><span class="ph">[10]</span></b><span>years</span></div>
+          <ul class="stats reveal" aria-label="Numbers">
+            <li><span>Store onboarding, 2018</span><b>48 h → 24 h</b></li>
+            <li><span>Product team on it</span><b>8</b></li>
+            <li><span>Rules I keep</span><b>2</b></li>
+            <li><span>Products in build</span><b>4</b></li>
+          </ul>
+          <img class="portrait reveal" src="media/founder-portrait-4x5.webp" width="600" height="750" alt="Portrait of the founder of Boona" loading="lazy">
+        </div>
+      </div>
+      <div class="exp__tl">
+        <div class="timeline">
+          <i class="tl__line" aria-hidden="true"></i>
+          <ol>
+            <li class="is-now">
+              <div class="yrs m"><b>2026 — now</b><span class="now">Current</span></div>
+              <h3 class="t">Independent, as Boona</h3>
+              <p class="where"><b>Boona</b> · Namakkal, Tamil Nadu</p>
+              <p>AI automation for clients (anonymised). Building Azhagi, Boona Cue, Thali and Boona Fit. Publishing on LinkedIn, X and YouTube. Boona AI Agency is forming behind it.</p>
+              <div class="tags m"><span>Azhagi</span><span>Boona Cue</span><span>Thali</span><span>Boona Fit</span></div>
+            </li>
+            <li>
+              <div class="yrs m"><b>2022 — 2025</b></div>
+              <h3 class="t"><span class="ph">[Senior / lead engineer]</span> at a product company</h3>
+              <p>Ran production without telemetry. Debugged the outage.</p>
+              <div class="tags m"><span class="rule">Rule since · Telemetry first</span></div>
+            </li>
+            <li>
+              <div class="yrs m"><b>2018 — 2022</b></div>
+              <h3 class="t"><span class="ph">[Role]</span> at <span class="ph">[company type]</span></h3>
+              <p>Set targets and dates that were missed. Includes the 2018 food-ordering platform: store onboarding brought from 48 hours to 24, with a product team of eight.</p>
+              <div class="tags m"><span class="rule">Rule since · Realistic dates, with a range</span></div>
+            </li>
+            <li>
+              <div class="yrs m"><b><span class="ph">[2016]</span> — 2018</b></div>
+              <h3 class="t"><span class="ph">[First role(s)]</span></h3>
+              <p>Web apps and React front ends.</p>
+              <div class="tags m"><span>Web apps</span><span>React</span></div>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ▸ TESTIMONIALS (placeholders: no reviews have been invented) -->
-<section id="testimonials" class="wrap section" style="padding-top:0">
-  <div class="section__head m reveal"><span>Said about the work</span><span>Three lines from clients</span></div>
-  <div class="quotes">
-    <div class="quote reveal">
+<section id="testimonials" class="section">
+  <div class="wrap">
+    <span class="m said__lbl reveal">§ Said about the work · three lines from clients</span>
+    <figure class="quote--big reveal">
       <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
-      <footer><span class="m"><b><span class="ph">[Name]</span></b></span><span class="m"><span class="ph">[Role, company]</span></span></footer>
-    </div>
-    <div class="quote reveal">
-      <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
-      <footer><span class="m"><b><span class="ph">[Name]</span></b></span><span class="m"><span class="ph">[Role, company]</span></span></footer>
-    </div>
-    <div class="quote reveal">
-      <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
-      <footer><span class="m"><b><span class="ph">[Name]</span></b></span><span class="m"><span class="ph">[Role, company]</span></span></footer>
+      <figcaption><b><span class="ph">[Name]</span></b> · <span class="ph">[Role, company]</span></figcaption>
+    </figure>
+    <div class="quotes">
+      <figure class="quote reveal">
+        <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
+        <figcaption><b><span class="ph">[Name]</span></b> · <span class="ph">[Role, company]</span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
+        <figcaption><b><span class="ph">[Name]</span></b> · <span class="ph">[Role, company]</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ▸ WRITING: posts as a table -->
-<section id="writing" class="wrap section" style="padding-top:0">
-  <div class="section__head m reveal"><span><b>04</b> Writing</span><span>Notes from the work, posted as I go</span></div>
-  <div class="channels m reveal">
-    <a href="#" class="ph">LinkedIn · [profile link]</a>
-    <a href="#" class="ph">X · [profile link]</a>
-    <a href="#" class="ph">YouTube · [channel link]</a>
+<!-- ▸ WRITING: posts as a table; a row fills black when you point at it -->
+<section id="writing" class="section">
+  <div class="wrap">
+    <div class="shead shead--tight reveal">
+      <span class="m shead__lbl">§ 04 Writing</span>
+      <h2 class="shead__t">Notes from the work.</h2>
+      <p class="shead__d">Posted as I go, on LinkedIn, X and YouTube.</p>
+    </div>
+    <div class="channels m reveal">
+      <a href="#" class="ph">LinkedIn · [profile link]</a>
+      <a href="#" class="ph">X · [profile link]</a>
+      <a href="#" class="ph">YouTube · [channel link]</a>
+    </div>
+    <table class="table reveal">
+      <colgroup><col style="width:12%"><col style="width:52%"><col style="width:18%"><col style="width:18%"></colgroup>
+      <thead><tr><th>Date</th><th>Title</th><th>Channel</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a LinkedIn post]</span></td><td class="m">LinkedIn</td><td class="m rd"><a class="read" href="#"><span class="ph">[link]</span></a></td></tr>
+        <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a post on X]</span></td><td class="m">X</td><td class="m rd"><a class="read" href="#"><span class="ph">[link]</span></a></td></tr>
+        <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a YouTube video]</span></td><td class="m">YouTube</td><td class="m rd"><a class="read" href="#"><span class="ph">[link]</span></a></td></tr>
+      </tbody>
+    </table>
   </div>
-  <table class="table reveal">
-    <colgroup><col style="width:16.67%"><col style="width:50%"><col style="width:16.67%"><col style="width:16.66%"></colgroup>
-    <thead><tr><th class="m">Date</th><th class="m">Title</th><th class="m">Channel</th><th class="m">Read</th></tr></thead>
-    <tbody>
-      <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a LinkedIn post]</span></td><td class="m">LinkedIn</td><td><a class="read m" href="#"><span class="ph">[link]</span></a></td></tr>
-      <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a post on X]</span></td><td class="m">X</td><td><a class="read m" href="#"><span class="ph">[link]</span></a></td></tr>
-      <tr><td class="m"><span class="ph">[2026-00-00]</span></td><td class="title"><span class="ph">[Title of a YouTube video]</span></td><td class="m">YouTube</td><td><a class="read m" href="#"><span class="ph">[link]</span></a></td></tr>
-    </tbody>
-  </table>
 </section>
 
-<!-- ▸ CONTACT: email with copy, quarterly availability, a brief form; the cutout photo on the right -->
-<section id="contact" class="wrap section" style="padding-top:0">
-  <div class="section__head m reveal"><span><b>05</b> Contact</span><span>Namakkal, Tamil Nadu · <time class="clock" datetime="">--:--:--</time> IST</span></div>
-  <div class="row">
-    <div class="contact__main reveal">
-      <h2 class="t">Tell me what the business does. I'll tell you where AI fits.</h2>
-      <div class="email">
-        <a href="mailto:studio.boona@gmail.com">studio.boona@gmail.com</a>
-        <button class="copy" type="button" data-email="studio.boona@gmail.com">Copy</button>
+<!-- ▸ CONTACT: email with copy, the facts, availability by quarter, the brief form; the standing photo under the facts -->
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="m shead__lbl">§ 05 Contact · Namakkal, Tamil Nadu</span>
+      <h2 class="shead__t shead__t--mid">Tell me what the business does.<br><span class="key">I'll tell you where AI fits.</span></h2>
+      <p class="shead__d">One email is enough to start. No deck needed.</p>
+    </div>
+    <div class="row">
+      <div class="contact__main reveal">
+        <span class="m">Email</span>
+        <div class="email">
+          <a href="mailto:studio.boona@gmail.com">studio.boona@gmail.com</a>
+          <button class="copy" type="button" data-email="studio.boona@gmail.com">Copy</button>
+        </div>
+        <dl class="facts">
+          <div><dt class="m">Studio</dt><dd>Namakkal, Tamil Nadu, India</dd></div>
+          <div><dt class="m">Local time</dt><dd><time class="clock" datetime="">--:--:--</time> IST</dd></div>
+          <div><dt class="m">Working as</dt><dd>Independent · Boona AI Agency forming</dd></div>
+        </dl>
+        <span class="m">Availability</span>
+        <ul class="avail" aria-label="Availability by quarter">
+          <li class="is-open"><span class="m" data-quarter="0">Q4 2026</span><b><i class="dot" aria-hidden="true"></i>Open to projects</b></li>
+          <li><span class="m" data-quarter="1">Q1 2027</span><b><span class="ph">[Open / Limited / Booked]</span></b></li>
+          <li><span class="m" data-quarter="2">Q2 2027</span><b><span class="ph">[Open / Limited / Booked]</span></b></li>
+        </ul>
+        <div class="contact__photo">
+          <div class="backdrop">
+            <img src="media/founder-cutout.webp" width="600" height="744" alt="The founder of Boona, standing, hands in pockets" loading="lazy">
+          </div>
+        </div>
       </div>
-      <span class="m">One email is enough to start. No deck needed.</span>
-
-      <ul class="avail" aria-label="Availability by quarter">
-        <li><span class="q m" data-quarter="0">Q4 2026</span><span class="st"><i class="dot" aria-hidden="true"></i>Open to projects</span><span class="m">Now</span></li>
-        <li><span class="q m" data-quarter="1">Q1 2027</span><span class="st"><span class="ph">[Open / Limited / Booked]</span></span><span class="m">Next</span></li>
-        <li><span class="q m" data-quarter="2">Q2 2027</span><span class="st"><span class="ph">[Open / Limited / Booked]</span></span><span class="m">After</span></li>
-      </ul>
-
-      <form id="brief" class="form" data-to="studio.boona@gmail.com">
+      <form id="brief" class="form reveal" data-to="studio.boona@gmail.com">
         <div class="field"><label class="m" for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
         <div class="field"><label class="m" for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization"></div>
         <div class="field full"><label class="m" for="f-what">What should AI do for you?</label><textarea id="f-what" name="what" required placeholder="The job it should take off your plate, in a sentence or two."></textarea></div>
         <div class="field"><label class="m" for="f-when">When</label><select id="f-when" name="when"><option>This quarter</option><option>Next quarter</option><option>Not sure yet</option></select></div>
         <div class="field"><label class="m" for="f-budget">Budget, if known</label><input id="f-budget" name="budget" type="text" placeholder="Optional"></div>
-        <div class="submit"><button class="btn-main" type="submit">Send the brief</button><span class="note m">Opens your email app with the brief filled in.</span></div>
+        <div class="submit"><button class="btn-main" type="submit">Send the brief <i aria-hidden="true">→</i></button><span class="note m">Opens your email app with the brief filled in.</span></div>
       </form>
-    </div>
-    <div class="contact__photo reveal">
-      <div class="backdrop">
-        <img src="media/founder-cutout.webp" width="600" height="744" alt="The founder of Boona, standing, hands in pockets" loading="lazy">
-      </div>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ▸ FOOTER: dark band with the name huge -->
+<!-- ▸ FOOTER: dark band, four columns -->
 <footer class="foot">
   <div class="gridlines gridlines--local" aria-hidden="true">
     <i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i><i style="--k:12"></i>
   </div>
   <div class="wrap">
-    <div class="name" aria-hidden="true">
-      <svg viewBox="0 0 1000 206" preserveAspectRatio="none"><text x="0" y="200" textLength="1000" lengthAdjust="spacingAndGlyphs">BOONA</text></svg>
-    </div>
     <div class="foot__cols">
-      <div class="foot__col"><span class="m">Studio</span><span class="v">Namakkal, Tamil Nadu, India</span><span class="v m"><time class="clock" datetime="">--:--:--</time> IST</span></div>
-      <div class="foot__col"><span class="m">Write</span><a href="mailto:studio.boona@gmail.com">studio.boona@gmail.com</a></div>
-      <div class="foot__col"><span class="m">Sections</span><a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#writing">Writing</a><a href="#contact">Contact</a></div>
+      <div class="foot__col"><span class="m">Index</span><a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#writing">Writing</a><a href="#contact">Contact</a></div>
       <div class="foot__col"><span class="m">Elsewhere</span><a href="#" class="ph">LinkedIn [link]</a><a href="#" class="ph">X [link]</a><a href="#" class="ph">YouTube [link]</a></div>
+      <div class="foot__col"><span class="m">Colophon</span><p>Set in the device's own typeface on a 12-column grid with 24 px gutters. Plain HTML, CSS and JavaScript: no framework, no build step.</p></div>
+      <div class="foot__col"><span class="m">Namakkal, Tamil Nadu</span><span class="v"><time class="clock" datetime="">--:--:--</time> IST</span><a href="mailto:studio.boona@gmail.com">studio.boona@gmail.com</a><a class="m totop" href="#top">Back to top ↑</a></div>
     </div>
     <div class="foot__bot m"><span>© 2026 Boona · Independent AI solutions architect</span><span>Boona AI Agency, forming</span></div>
   </div>

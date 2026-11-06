@@ -29,6 +29,7 @@ When one of them launches, search `index.html` for `Beta` and update that produc
 
 | Where | Placeholder | What to put |
 | --- | --- | --- |
+| Big number on the left | `[10]` years | How many years you have been working (it follows from the first chapter's start year) |
 | 2022 – 2025 | `[Senior / lead engineer]` | Your title |
 | 2018 – 2022 | `[Role]` | Your title |
 | 2018 – 2022 | `[company type]` | What kind of company (startup, fintech, agency…) |
@@ -60,5 +61,8 @@ These are not placeholders, but they were my call and are easy to switch.
 
 - Boona Fit has no brand colour of its own, so on the black band it uses white, with your three product colours on its rings.
 - The landing section follows the arrangement of the reference design you sent (numbered menu, facts with labels, the name large on the left, intro and four product tiles along the bottom) with your own colours and words. The one key phrase in the intro is underlined in automation teal (signal blue is used only for motion, as you chose).
+- On 7 November 2026 the rest of the page was rebuilt from your screen recording of the reference: big section titles, the words pinned beside taller screens, the gliding scroll, Replay buttons, the numbers pinned beside the timeline, the black hover on the writing rows, the four-column footer. Where the reference uses blue for small accents, the page uses your teal. Two things went with it and are easy to bring back: the giant BOONA across the footer, and the hero name is now "Boona" as you typed it.
+- The typeface is now the device's own (Segoe UI on your PC), because that is what the recording showed: the reference's Geist had not loaded on your screen. The README has the one-line switch back to Geist.
+- The standing photo now sits under the facts in Contact, with the form pinned beside it; the portrait sits under the numbers in Experience.
 - The portrait is shown in black and white. See the README for the one-line change to colour.
 - The approach list, the project-shape chart (four phases, no durations), and the case-study headlines are my drafts in your voice. Please read them once and change anything that does not sound like you.
