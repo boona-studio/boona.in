@@ -688,6 +688,7 @@ html[data-placeholders="hide"] .ph { color: inherit; }
 @media (max-width: 639px) {
   .thumb__cap span + span { display: none; }
   .hero__aside { flex-direction: column; gap: 12px; }
+  .plan__head > span:last-child { display: none; }
 }
 @media (max-width: 639px) {
   .table, .table tbody { display: block; }

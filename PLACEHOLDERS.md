@@ -61,4 +61,4 @@ These are not placeholders, but they were my call and are easy to switch.
 - Boona Fit has no brand colour of its own, so on the black band it uses white, with your three product colours on its rings.
 - The one key phrase in the intro is underlined in automation teal (signal blue is used only for motion, as you chose).
 - The portrait is shown in black and white. See the README for the one-line change to colour.
-- The approach list, the twelve-week plan, and the case-study headlines are my drafts in your voice. Please read them once and change anything that does not sound like you.
+- The approach list, the project-shape chart (four phases, no durations), and the case-study headlines are my drafts in your voice. Please read them once and change anything that does not sound like you.
