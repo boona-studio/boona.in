@@ -42,6 +42,7 @@ The full list is in `PLACEHOLDERS.md`.
 
 ## Common edits
 
+- **The big name.** The landing section shows "Boopathi Thangamani"; the menu, the page title and the link preview say "Boona". Search for `Boopathi` to change the name.
 - **Availability.** The words "Open to projects" appear three times: the pill in the top bar, the hero meta line, and the first box under Availability in Contact. Search for `Open to projects`.
 - **The next two quarters.** In the Contact section, the rows marked `[Open / Limited / Booked]`. The quarter names themselves update from the date on their own.
 - **Email address.** Search for `studio.boona@gmail.com` (it appears in the hero, the contact section, the form and the footer).
@@ -63,6 +64,7 @@ If you would rather have briefs land in your inbox without the email app step, a
 
 - The typeface (Geist) loads from Google Fonts when the visitor is online. Offline it falls back to the device's own type (see "Typeface" above).
 - With a mouse, the page glides: each wheel notch eases the page to its new place, and the menu links ease to their section. Touch screens and keyboards keep the normal scrolling.
+- Behind the landing section a slow constellation of points and links drifts, with teal signals running along the links; it leans with the mouse and gathers around it. It is drawn by `js/site.js` on the `<canvas class="hero__field">` line at the top of the landing section in `index.html`; delete that line to remove it. It is off on phones and under "reduce motion".
 - Columns pin: in the case studies the words stay put while the taller screen scrolls past; in Experience the numbers and portrait stay while the timeline draws; in Contact the form stays while the facts and photo scroll.
 - Each product screen plays once when you reach it. **Replay** above a screen runs it again.
 - People who have "reduce motion" switched on in their phone or computer settings get a still version of the page: no gliding, no grid draw, no snapping, screens shown finished.

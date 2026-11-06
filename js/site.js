@@ -3,7 +3,7 @@
    1 grid toggle · 2 live clock · 3 load choreography · 4 reveal on scroll
    5 count-ups · 6 timeline draw · 7 copy email · 8 quarters · 9 brief form
    10 product screens (land → snap → play, and Replay) · 11 readout + G key
-   12 smooth scrolling (the wheel glides, section links glide)
+   12 smooth scrolling (the wheel glides, section links glide) · 13 the field behind the landing
    ========================================================================== */
 (function () {
   'use strict';
@@ -443,4 +443,117 @@
     scrollToY(y, 900);
     if (history.pushState) history.pushState(null, '', '#' + id);
   });
+
+  /* 13 ▸ the field behind the landing section -----------------------------
+     A slow constellation of points and links, a little like a neural net, with teal signals running
+     along the links. It leans with the pointer (deeper points lean less), and points near the pointer
+     gather towards it and light up. Plain canvas, no library. It pauses while the landing section is
+     off screen or the tab is hidden, and it does not run at all under "reduce motion". */
+  var heroEl = $('.hero'), fieldEl = $('.hero__field');
+  if (heroEl && fieldEl && fieldEl.getContext && !reduce) {
+    var fx = fieldEl.getContext('2d');
+    var fw = 0, fh = 0, pts = [], lnk = [], sig = [];
+    var mx = -1e4, my = -1e4, lean = { x: 0, y: 0, tx: 0, ty: 0 };
+    var fRaf = 0, fLast = 0, fVisible = true, sigClock = 0;
+    var TEAL = '63, 201, 176';
+    var fieldBuild = function () {
+      var r = heroEl.getBoundingClientRect();
+      fw = Math.round(r.width); fh = Math.round(r.height);
+      if (fw < 2 || fh < 2 || getComputedStyle(fieldEl).display === 'none') { fw = fh = 0; return; }
+      var dpr = Math.min(2, window.devicePixelRatio || 1);
+      fieldEl.width = fw * dpr; fieldEl.height = fh * dpr;
+      fx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      pts = []; lnk = []; sig = [];
+      var cell = fw < 1000 ? 88 : 108;
+      var cols = Math.ceil(fw / cell) + 2, rows = Math.ceil(fh / cell) + 2;
+      for (var i = 0; i < cols; i++) {
+        for (var j = 0; j < rows; j++) {
+          if (Math.random() < .3) continue;                     /* gaps keep it a constellation, not a lattice */
+          var z = .45 + Math.random() * .55;                     /* depth: deeper points are smaller, fainter, lean less */
+          pts.push({ ax: (i - .5) * cell + (Math.random() - .5) * cell * .8, ay: (j - .5) * cell + (Math.random() - .5) * cell * .8,
+            x: 0, y: 0, z: z, r: (1.1 + Math.random() * 1.4) * z, ph: Math.random() * 6.283,
+            sp: .12 + Math.random() * .22, amp: (5 + Math.random() * 9) * z, e: 0 });
+        }
+      }
+      var seen = {}, maxD = cell * 1.6;
+      pts.forEach(function (p, a) {
+        var near = [];
+        pts.forEach(function (q, b) {
+          if (a === b) return;
+          var dx = p.ax - q.ax, dy = p.ay - q.ay, d = Math.sqrt(dx * dx + dy * dy);
+          if (d < maxD) near.push([d, b]);
+        });
+        near.sort(function (u, v) { return u[0] - v[0]; });
+        near.slice(0, 3).forEach(function (n) {
+          var b = n[1], key = a < b ? a + '-' + b : b + '-' + a;
+          if (!seen[key]) { seen[key] = 1; lnk.push({ a: a, b: b }); }
+        });
+      });
+    };
+    var fieldFrame = function (ts) {
+      fRaf = 0;
+      if (!fw) return;
+      var dt = fLast ? Math.min(.05, (ts - fLast) / 1000) : .016; fLast = ts;
+      var t = ts / 1000, R = 220;
+      lean.x += (lean.tx - lean.x) * .04; lean.y += (lean.ty - lean.y) * .04;
+      fx.clearRect(0, 0, fw, fh);
+      pts.forEach(function (p) {
+        p.x = p.ax + Math.sin(t * p.sp + p.ph) * p.amp + lean.x * 18 * p.z;
+        p.y = p.ay + Math.cos(t * p.sp * .8 + p.ph) * p.amp * .7 + lean.y * 18 * p.z;
+        var dx = mx - p.x, dy = my - p.y, d = Math.sqrt(dx * dx + dy * dy), pull = d < R ? 1 - d / R : 0;
+        pull *= pull;
+        p.x += dx * pull * .22; p.y += dy * pull * .22;
+        p.e += (pull - p.e) * (pull > p.e ? .25 : .04);
+      });
+      fx.lineWidth = 1;
+      lnk.forEach(function (k) {
+        var p = pts[k.a], q = pts[k.b], e = Math.max(p.e, q.e), z = (p.z + q.z) / 2;
+        fx.strokeStyle = e > .02 ? 'rgba(' + TEAL + ', ' + (.25 + e * .6).toFixed(3) + ')' : 'rgba(0, 0, 0, ' + (.07 + .09 * z).toFixed(3) + ')';
+        fx.beginPath(); fx.moveTo(p.x, p.y); fx.lineTo(q.x, q.y); fx.stroke();
+      });
+      sigClock += dt;
+      if (sigClock > .35 && lnk.length) {
+        sigClock = 0;
+        var hot = lnk.filter(function (k) { return pts[k.a].e > .15 || pts[k.b].e > .15; });
+        var pick = (hot.length && Math.random() < .7) ? hot[Math.floor(Math.random() * hot.length)] : lnk[Math.floor(Math.random() * lnk.length)];
+        sig.push({ k: pick, p: 0, v: .35 + Math.random() * .4, f: Math.random() < .5 ? 1 : -1 });
+        if (sig.length > 28) sig.shift();
+      }
+      sig = sig.filter(function (s) {
+        s.p += dt * s.v;
+        if (s.p >= 1) return false;
+        var p = pts[s.k.a], q = pts[s.k.b];
+        if (s.f < 0) { var tmp = p; p = q; q = tmp; }
+        var u = s.p, x = p.x + (q.x - p.x) * u, y = p.y + (q.y - p.y) * u;
+        var u0 = Math.max(0, u - .18), tx = p.x + (q.x - p.x) * u0, ty = p.y + (q.y - p.y) * u0;
+        var g = fx.createLinearGradient(tx, ty, x, y);
+        g.addColorStop(0, 'rgba(' + TEAL + ', 0)'); g.addColorStop(1, 'rgba(' + TEAL + ', .9)');
+        fx.strokeStyle = g; fx.lineWidth = 1.5;
+        fx.beginPath(); fx.moveTo(tx, ty); fx.lineTo(x, y); fx.stroke();
+        fx.fillStyle = 'rgba(' + TEAL + ', .95)';
+        fx.beginPath(); fx.arc(x, y, 2, 0, 6.283); fx.fill();
+        return true;
+      });
+      pts.forEach(function (p) {
+        var a = .16 + .18 * p.z + p.e * .5, r = p.r * (1 + p.e * 1.2);
+        fx.fillStyle = p.e > .05 ? 'rgba(' + TEAL + ', ' + Math.min(1, .4 + p.e).toFixed(3) + ')' : 'rgba(0, 0, 0, ' + a.toFixed(3) + ')';
+        fx.beginPath(); fx.arc(p.x, p.y, r, 0, 6.283); fx.fill();
+      });
+      if (fVisible && !document.hidden) fRaf = requestAnimationFrame(fieldFrame); else fLast = 0;
+    };
+    var fieldStart = function () { if (!fRaf && fw && fVisible && !document.hidden) { fLast = 0; fRaf = requestAnimationFrame(fieldFrame); } };
+    fieldBuild(); fieldStart();
+    if (hasIO) new IntersectionObserver(function (en) { fVisible = en[0].isIntersecting; fieldStart(); }, { threshold: 0 }).observe(heroEl);
+    document.addEventListener('visibilitychange', fieldStart);
+    var fRsz = 0;
+    window.addEventListener('resize', function () { clearTimeout(fRsz); fRsz = setTimeout(function () { fieldBuild(); fieldStart(); }, 150); });
+    if (fine) {
+      window.addEventListener('pointermove', function (e) {
+        var r = fieldEl.getBoundingClientRect();
+        mx = e.clientX - r.left; my = e.clientY - r.top;
+        lean.tx = (e.clientX / window.innerWidth - .5) * 2; lean.ty = (e.clientY / window.innerHeight - .5) * 2;
+      }, { passive: true });
+      document.documentElement.addEventListener('mouseleave', function () { mx = my = -1e4; lean.tx = lean.ty = 0; });
+    }
+  }
 })();
