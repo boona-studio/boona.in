@@ -154,6 +154,19 @@ html[data-grid="off"] .toggle { color: var(--quiet); }
   mask-image: linear-gradient(to top, transparent 0, rgba(0, 0, 0, .85) 30%, #000 55%);
 }
 html:not(.is-loading) .hero__field { opacity: 1; }
+/* the crosshair that follows the pointer across the landing section, with its position and grid column */
+.xhair { position: absolute; inset: 0; z-index: 2; pointer-events: none; opacity: 0; transition: opacity .25s ease; --x: -10px; --y: -10px; }
+.hero.is-xhair .xhair { opacity: 1; }
+.xhair__v { position: absolute; top: 0; bottom: 0; width: 1px; left: var(--x); background: var(--signal); opacity: .55; }
+.xhair__h { position: absolute; left: 0; right: 0; height: 1px; top: var(--y); background: var(--signal); opacity: .55; }
+.xhair__lbl {
+  position: absolute; left: var(--x); top: var(--y); transform: translate(12px, 12px);
+  background: var(--signal); color: #fff; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; line-height: 1.3;
+  padding: 3px 6px; border-radius: 3px; white-space: nowrap;
+}
+.xhair.is-left .xhair__lbl { transform: translate(calc(-100% - 12px), 12px); }
+.xhair.is-up .xhair__lbl { transform: translate(12px, calc(-100% - 12px)); }
+.xhair.is-left.is-up .xhair__lbl { transform: translate(calc(-100% - 12px), calc(-100% - 12px)); }
 .hero__meta { display: grid; grid-template-columns: repeat(var(--cols), 1fr); row-gap: 18px; }
 .hero__meta > div { grid-column: span 3; padding-inline: var(--inset); display: flex; flex-direction: column; gap: 6px; }
 .hero__meta .m { font-size: 10px; }

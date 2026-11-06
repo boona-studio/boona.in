@@ -4,6 +4,7 @@
    5 count-ups · 6 timeline draw · 7 copy email · 8 quarters · 9 brief form
    10 product screens (land → snap → play, and Replay) · 11 readout + G key
    12 smooth scrolling (the wheel glides, section links glide) · 13 the field behind the landing
+   14 the crosshair on the landing section
    ========================================================================== */
 (function () {
   'use strict';
@@ -555,5 +556,26 @@
       }, { passive: true });
       document.documentElement.addEventListener('mouseleave', function () { mx = my = -1e4; lean.tx = lean.ty = 0; });
     }
+  }
+
+  /* 14 ▸ the crosshair on the landing section ------------------------------
+     With a mouse, two thin lines follow the pointer across the landing section, and a small label
+     reads its position on the page and the grid column it is in, like a design tool. */
+  var xh = $('.hero .xhair');
+  if (heroEl && xh && fine) {
+    var xhLbl = $('.xhair__lbl', xh);
+    heroEl.addEventListener('pointermove', function (e) {
+      var r = heroEl.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      var w = wrapEl ? wrapEl.getBoundingClientRect() : r;
+      var cols = parseInt(getComputedStyle(html).getPropertyValue('--cols'), 10) || 12;
+      var col = Math.max(1, Math.min(cols, Math.floor((e.clientX - w.left) / (w.width / cols)) + 1));
+      xh.style.setProperty('--x', Math.round(x) + 'px');
+      xh.style.setProperty('--y', Math.round(y) + 'px');
+      xh.classList.toggle('is-left', x > r.width - 220);
+      xh.classList.toggle('is-up', y > r.height - 48);
+      xhLbl.textContent = 'x ' + Math.round(e.clientX) + ' · y ' + Math.round(e.clientY + window.scrollY) + ' · col ' + (col < 10 ? '0' : '') + col;
+      heroEl.classList.add('is-xhair');
+    }, { passive: true });
+    heroEl.addEventListener('pointerleave', function () { heroEl.classList.remove('is-xhair'); });
   }
 })();

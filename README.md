@@ -64,6 +64,7 @@ If you would rather have briefs land in your inbox without the email app step, a
 
 - The typeface (Geist) loads from Google Fonts when the visitor is online. Offline it falls back to the device's own type (see "Typeface" above).
 - With a mouse, the page glides: each wheel notch eases the page to its new place, and the menu links ease to their section. Touch screens and keyboards keep the normal scrolling.
+- With a mouse over the landing section, a thin blue crosshair follows the pointer and a small label reads its position on the page and the grid column it is in. Search `xhair` in `index.html` to remove it.
 - Behind the landing section a slow constellation of points and links drifts, with teal signals running along the links; it leans with the mouse and gathers around it. It is drawn by `js/site.js` on the `<canvas class="hero__field">` line at the top of the landing section in `index.html`; delete that line to remove it. It is off on phones and under "reduce motion".
 - Columns pin: in the case studies the words stay put while the taller screen scrolls past; in Experience the numbers and portrait stay while the timeline draws; in Contact the form stays while the facts and photo scroll.
 - Each product screen plays once when you reach it. **Replay** above a screen runs it again.
