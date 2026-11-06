@@ -502,7 +502,8 @@ html.is-loading:not(.is-snapped) .hero .sel .dim,
 .plan__cap .range { display: inline-block; width: 22px; height: 10px; border: 1px dashed var(--quiet); vertical-align: -1px; margin-right: 6px; }
 
 /* 9 ▸ experience --------------------------------------------------------- */
-.exp__side { grid-column: 1 / span 4; padding-inline: var(--inset); }
+/* the column stretches to the row's full height, so the block inside can stay pinned while the timeline scrolls */
+.exp__side { grid-column: 1 / span 4; padding-inline: var(--inset); align-self: stretch; }
 .sticky { position: sticky; top: var(--stick); }
 .bignum { display: flex; align-items: baseline; gap: 6px; border-bottom: 1px solid var(--ink); padding-bottom: 10px; }
 .bignum b { font-size: clamp(72px, 8.5vw, 120px); font-weight: 600; letter-spacing: -.06em; line-height: .9; font-variant-numeric: tabular-nums; }
@@ -514,9 +515,9 @@ html.is-loading:not(.is-snapped) .hero .sel .dim,
 .timeline { --tlp: clamp(24px, 3vw, 44px); position: relative; padding-left: var(--tlp); }
 .timeline::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 0; width: 1px; background: var(--line); }
 .tl__line { position: absolute; left: 0; top: 4px; bottom: 0; width: 1px; background: var(--ink); transform: scaleY(var(--p, 0)); transform-origin: top; }
-.timeline li { position: relative; padding-bottom: clamp(44px, 5vw, 72px); opacity: .28; transition: opacity .7s ease; }
+.timeline li { position: relative; min-height: 32vh; padding-bottom: clamp(44px, 5vw, 72px); opacity: .28; transition: opacity .7s ease; }
 .timeline li.is-past, .no-js .timeline li { opacity: 1; }
-.timeline li:last-child { padding-bottom: 0; }
+.timeline li:last-child { min-height: 0; padding-bottom: 0; }
 .timeline li::before {
   content: ""; position: absolute; left: calc(-1 * var(--tlp) - 5px); top: 2px; width: 11px; height: 11px; border-radius: 50%;
   background: var(--ink);
@@ -678,6 +679,7 @@ html.is-snapped .piece { transform: none; outline-color: transparent; }
   .index p { grid-column: 2 / span 6; margin-top: 10px; }
   .index .idx__r { grid-column: 8; }
   .exp__side, .exp__tl { grid-column: 1 / -1; }
+  .timeline li { min-height: 0; }
   .exp__tl { margin-top: 48px; }
   .sticky { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; }
   .quote--big blockquote, .quote--big figcaption { grid-column: 1 / -1; padding-left: calc(var(--inset) + 22px); }
