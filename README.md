@@ -47,7 +47,7 @@ The full list is in `PLACEHOLDERS.md`.
 - **Email address.** Search for `studio.boona@gmail.com` (it appears in the hero, the contact section, the form and the footer).
 - **Photos.** The page shows the small web copies in `media/` (`founder-cutout.webp`, `founder-portrait-4x5.webp`, `founder-share-16x9.jpg`). To change a photo, give me the new picture and I will make the web copies, or make them yourself at the same names and sizes (600 px wide cutout with a transparent background, 600 × 750 portrait, 1200 × 675 share image). The portrait sits under the numbers in Experience and is shown in black and white to match the design; for colour, open `css/site.css`, find `.portrait` and delete `filter: grayscale(1) contrast(1.05);`. The standing photo sits under the facts in Contact.
 - **Big section titles.** Each section starts with a small label, a large title and a short note at the right. Search for `shead__t` to find the titles.
-- **Typeface.** The page uses the device's own typeface (Segoe UI on Windows, San Francisco on Apple devices, Roboto on Android), so nothing is downloaded and it looks like the reference did on your screen. To use Geist instead, open `css/site.css`, find `--sans:` near the top and change the line to `--sans: "Geist", system-ui, sans-serif;` (and `--mono: "Geist Mono", Consolas, monospace;` below it), then put this line back into the `<head>` of `index.html`: `<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">`.
+- **Typeface.** The page is set in Geist and Geist Mono, loaded from Google Fonts by the `<link href="https://fonts.googleapis.com/...">` line in the `<head>` of `index.html`. To use the device's own typeface instead (Segoe UI on Windows, San Francisco on Apple devices), delete that line and, in `css/site.css`, remove `"Geist",` from the `--sans:` line and `"Geist Mono",` from the `--mono:` line near the top.
 - **Link previews.** When someone shares www.boona.in on WhatsApp, LinkedIn or X, the preview card uses `media/founder-share-16x9.jpg` and the words in the `og:` lines near the top of `index.html`.
 - **Writing.** Each post is one `<tr> ... </tr>` row in the table under `<!-- ▸ WRITING -->`. Copy a row to add one.
 - **Case-study numbers.** Each result is `<b class="num" data-count="7">0</b>`. Change `data-count` and the number counts up to it on screen.
@@ -61,7 +61,7 @@ If you would rather have briefs land in your inbox without the email app step, a
 
 ## Fonts and motion
 
-- The typeface is the device's own, so the page needs no font download (see "Typeface" above to switch to Geist).
+- The typeface (Geist) loads from Google Fonts when the visitor is online. Offline it falls back to the device's own type (see "Typeface" above).
 - With a mouse, the page glides: each wheel notch eases the page to its new place, and the menu links ease to their section. Touch screens and keyboards keep the normal scrolling.
 - Columns pin: in the case studies the words stay put while the taller screen scrolls past; in Experience the numbers and portrait stay while the timeline draws; in Contact the form stays while the facts and photo scroll.
 - Each product screen plays once when you reach it. **Replay** above a screen runs it again.

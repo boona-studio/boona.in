@@ -27,10 +27,10 @@
   --nav-h: 48px;
   --stick: calc(var(--nav-h) + 32px);   /* where a pinned column rests under the top bar */
 
-  /* The type is the device's own: Segoe UI on Windows, San Francisco on Apple devices, Roboto on Android.
-     The README explains the one-line switch back to Geist. */
-  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --mono: Consolas, "Cascadia Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  /* Geist and Geist Mono load from Google Fonts (the link is in the head of index.html);
+     offline, the device's own type stands in. */
+  --sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "Geist Mono", Consolas, "Cascadia Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --snap: cubic-bezier(.2, .9, .1, 1);
   --ease: cubic-bezier(.16, 1, .3, 1);
 }
