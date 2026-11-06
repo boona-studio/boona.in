@@ -10,7 +10,7 @@ To see it, double-click `index.html`. It opens in any browser.
 | `index.html` | Every word on the page. This is the only file you need to edit to change text. |
 | `css/site.css` | How it looks: colours, type, the grid, phone and tablet layouts. |
 | `js/site.js` | The motion and the small interactions (the gliding scroll, grid toggle, clock, Replay buttons, copy button, the brief form). |
-| `media/` | Your photos. The page uses the small web copies (`founder-cutout.webp`, `founder-portrait-4x5.webp`, `founder-share-16x9.jpg`); the three originals are kept beside them. |
+| `media/` | Your photos. The page itself shows none of them; only `founder-share-16x9.jpg` is used, as the picture in link previews. The rest stay here unpublished. |
 | `favicon.svg` | The little icon in the browser tab. |
 | `PLACEHOLDERS.md` | The list of everything still to fill in. |
 | `.vercelignore` | The list of files Vercel must not publish (this README, the placeholders list, the originals of the photos, tooling). |
@@ -45,7 +45,7 @@ The full list is in `PLACEHOLDERS.md`.
 - **Availability.** The words "Open to projects" appear three times: the pill in the top bar, the hero meta line, and the first box under Availability in Contact. Search for `Open to projects`.
 - **The next two quarters.** In the Contact section, the rows marked `[Open / Limited / Booked]`. The quarter names themselves update from the date on their own.
 - **Email address.** Search for `studio.boona@gmail.com` (it appears in the hero, the contact section, the form and the footer).
-- **Photos.** The page shows the small web copies in `media/` (`founder-cutout.webp`, `founder-portrait-4x5.webp`, `founder-share-16x9.jpg`). To change a photo, give me the new picture and I will make the web copies, or make them yourself at the same names and sizes (600 px wide cutout with a transparent background, 600 × 750 portrait, 1200 × 675 share image). The portrait sits under the numbers in Experience and is shown in black and white to match the design; for colour, open `css/site.css`, find `.portrait` and delete `filter: grayscale(1) contrast(1.05);`. The standing photo sits under the facts in Contact.
+- **Photos.** There are no photos on the page (removed on 7 November 2026). The web copies are still in `media/` if you ever want one back; ask and I will place it.
 - **Big section titles.** Each section starts with a small label, a large title and a short note at the right. Search for `shead__t` to find the titles.
 - **Typeface.** The page is set in Geist and Geist Mono, loaded from Google Fonts by the `<link href="https://fonts.googleapis.com/...">` line in the `<head>` of `index.html`. To use the device's own typeface instead (Segoe UI on Windows, San Francisco on Apple devices), delete that line and, in `css/site.css`, remove `"Geist",` from the `--sans:` line and `"Geist Mono",` from the `--mono:` line near the top.
 - **Link previews.** When someone shares www.boona.in on WhatsApp, LinkedIn or X, the preview card uses `media/founder-share-16x9.jpg` and the words in the `og:` lines near the top of `index.html`.

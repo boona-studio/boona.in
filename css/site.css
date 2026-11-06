@@ -509,7 +509,6 @@ html.is-loading:not(.is-snapped) .hero .sel .dim,
 .bignum span { font-size: clamp(20px, 2.2vw, 30px); color: var(--quiet); letter-spacing: -.02em; }
 .stats li { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
 .stats li b { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.portrait { margin-top: 28px; width: 62%; border: 1px solid var(--line); aspect-ratio: 4 / 5; object-fit: cover; filter: grayscale(1) contrast(1.05); }
 
 .exp__tl { grid-column: 6 / -1; }
 .timeline { --tlp: clamp(24px, 3vw, 44px); position: relative; padding-left: var(--tlp); }
@@ -589,9 +588,6 @@ html.is-loading:not(.is-snapped) .hero .sel .dim,
 .avail li.is-open { background: var(--teal); border-color: var(--teal); }
 .avail li.is-open .m { color: rgba(0, 0, 0, .65); }
 .avail li.is-open .dot { background: #000; animation: none; }
-.contact__photo { margin-top: 40px; }
-.contact__photo .backdrop { aspect-ratio: 4 / 3; display: flex; align-items: flex-end; justify-content: center; padding: 8% 8% 0; }
-.contact__photo img { width: 80%; max-width: 360px; }
 
 .form { grid-column: 7 / -1; padding-inline: var(--inset); display: grid; grid-template-columns: 1fr 1fr; gap: 26px 24px; position: sticky; top: var(--stick); }
 .field { display: flex; flex-direction: column; gap: 8px; }
@@ -683,8 +679,7 @@ html.is-snapped .piece { transform: none; outline-color: transparent; }
   .index .idx__r { grid-column: 8; }
   .exp__side, .exp__tl { grid-column: 1 / -1; }
   .exp__tl { margin-top: 48px; }
-  .sticky { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
-  .portrait { grid-column: 2; grid-row: 1 / span 2; width: 100%; margin-top: 0; }
+  .sticky { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; }
   .quote--big blockquote, .quote--big figcaption { grid-column: 1 / -1; padding-left: calc(var(--inset) + 22px); }
   .quotes .quote, .quotes .quote:first-child { grid-column: span 4; }
   .contact__main, .form { grid-column: 1 / -1; }
@@ -719,7 +714,6 @@ html.is-snapped .piece { transform: none; outline-color: transparent; }
   .plan__bar .m { display: none; }
   .plan__cap > span:last-child { display: none; }
   .sticky { grid-template-columns: 1fr; }
-  .portrait { grid-column: 1; grid-row: auto; width: 60%; margin-top: 24px; }
   .timeline { --tlp: 22px; }
   .quotes .quote, .quotes .quote:first-child { grid-column: 1 / -1; }
   .quotes .quote + .quote { margin-top: 20px; }
