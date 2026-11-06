@@ -81,8 +81,24 @@ The new version is live at www.boona.in as soon as it prints `Aliased`. Every ea
 On a new computer, run `npx vercel login` first (it opens the browser for you to confirm), then
 `npx vercel link --yes --project boona-portfolio --scope boopathi-ts-projects` once, then the deploy line above.
 
-### One thing to know
+### The GitHub copy
 
-The `boona-portfolio` project is still connected to the GitHub repository `boona-studio/boona.in`, which holds the previous site.
-If anyone pushes to that repository's `main` branch, Vercel will build it and put the **old** site back at boona.in.
-To stop that, open the project on vercel.com → Settings → Git → Disconnect, or ask me to do it.
+This folder is also a git repository connected to `github.com/boona-studio/boona.in`, and the Vercel project builds from it.
+The previous site's code is still in the repository's history (the commits before 6 November 2026), so nothing is lost.
+
+A second way to publish, which also keeps a history of every change, is to commit and push:
+
+```
+git add -A
+```
+
+```
+git commit -m "Describe the change"
+```
+
+```
+git push
+```
+
+Vercel notices the push and updates www.boona.in by itself within about a minute.
+Either way works; pushing is the tidier habit because the folder and GitHub then always match.
