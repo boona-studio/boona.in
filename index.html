@@ -38,58 +38,49 @@
 <!-- ▸ NAV (fixed at the top) -->
 <header class="nav">
   <div class="wrap nav__in">
-    <a class="nav__brand" href="#top">Boona</a>
+    <a class="nav__brand" href="#top"><svg class="mark" viewBox="0 0 16 16" aria-hidden="true"><rect width="7" height="7" fill="#000"/><rect x="9" width="7" height="7" fill="#3FC9B0"/><rect y="9" width="7" height="7" fill="#5A5A5A"/><rect x="9" y="9" width="7" height="7" fill="#DEDEDE"/></svg>Boona</a>
     <nav class="nav__links" aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#approach">Approach</a>
-      <a href="#experience">Experience</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
+      <a href="#work"><i>01</i>Work</a>
+      <a href="#approach"><i>02</i>Approach</a>
+      <a href="#experience"><i>03</i>Experience</a>
+      <a href="#writing"><i>04</i>Writing</a>
+      <a href="#contact"><i>05</i>Contact</a>
     </nav>
     <div class="nav__right">
-      <button class="toggle" type="button" aria-pressed="true" title="Show or hide the layout grid">
-        <span class="toggle__sw" aria-hidden="true"></span><span class="txt">Grid</span>
+      <button class="toggle" type="button" aria-pressed="true" title="Show or hide the layout grid (or press G)">
+        <span class="toggle__ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="txt">Grid</span><kbd aria-hidden="true">G</kbd>
       </button>
       <a class="pill" href="#contact"><i class="dot" aria-hidden="true"></i>Open to projects</a>
     </div>
   </div>
 </header>
+<div class="readout m" aria-hidden="true">§ 00 Index · Y 00000</div>
 
 <main id="top">
 
-<!-- ▸ HERO: role, place, live time, status; the name edge to edge; intro; four project thumbnails -->
-<section class="hero wrap">
-  <div class="hero__meta m piece" style="--dx:-10px; --dy:6px; --rot:-.3deg">
-    <span>Independent AI solutions architect</span>
-    <span>Namakkal, Tamil Nadu</span>
-    <span><time class="clock" datetime="">--:--:--</time> IST</span>
-    <span><i class="dot" aria-hidden="true"></i><b>Open to projects</b></span>
-  </div>
-
-  <h1 class="name piece sel" style="--dx:12px; --dy:-8px; --rot:.35deg">
-    <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
-    <span class="dim" aria-hidden="true"></span>
-    <svg viewBox="0 0 1000 206" preserveAspectRatio="none" role="img" aria-label="Boona">
-      <text x="0" y="200" textLength="1000" lengthAdjust="spacingAndGlyphs">BOONA</text>
-    </svg>
-  </h1>
-
-  <div class="row hero__grid">
-    <p class="hero__intro piece" style="--dx:-8px; --dy:10px; --rot:-.25deg">
-      I'm an independent AI solutions architect in Namakkal, Tamil Nadu. I design and integrate AI into any business:
-      <span class="key">AI that runs every day and tells you when it's working.</span>
-      I also build my own products, all in beta right now, so the advice I give clients comes from work I do every day.
-    </p>
-    <div class="hero__aside piece" style="--dx:10px; --dy:6px; --rot:.3deg">
-      <span class="m">Based<b>Namakkal, Tamil Nadu · IST</b></span>
-      <span class="m">Working as<b>Independent, Boona AI Agency forming</b></span>
-      <span class="m">Publishing on<b>LinkedIn · X · YouTube</b></span>
-      <span class="m">Availability<b>Open to projects</b></span>
+<!-- ▸ HERO: role, place, local time, status; the name large on the left; intro bottom-left; four product tiles bottom-right -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__meta piece" style="--dx:-10px; --dy:6px; --rot:-.3deg">
+      <div><span class="m">Role</span><b>Independent AI solutions architect</b></div>
+      <div><span class="m">Based in</span><b>Namakkal, Tamil Nadu</b></div>
+      <div><span class="m">Local time</span><b><time class="clock" datetime="">--:--</time>&nbsp;in Namakkal</b></div>
+      <div><span class="m">Status</span><b><i class="dot" aria-hidden="true"></i>Open to projects</b></div>
     </div>
   </div>
 
-  <ul class="thumbs" aria-label="Four products">
-    <li class="thumb piece" style="--dx:-9px; --dy:8px; --rot:-.3deg; --accent: var(--coral)">
+  <h1 class="hero__name">
+    <span class="name__txt piece sel" style="--dx:12px; --dy:-8px; --rot:.35deg">
+      <i class="h tl" aria-hidden="true"></i><i class="h tr" aria-hidden="true"></i><i class="h bl" aria-hidden="true"></i><i class="h br" aria-hidden="true"></i>
+      <span class="dim" aria-hidden="true"></span>Boona</span>
+  </h1>
+
+  <div class="wrap hero__bottom">
+    <p class="hero__intro piece" style="--dx:-8px; --dy:10px; --rot:-.25deg">
+      I'm an independent AI solutions architect in Namakkal, Tamil Nadu. I design and integrate AI into any business: AI that <b>runs every day</b> and <b>tells you when it's working</b>. I also build my own products, all in beta right now, so the advice I give clients comes from work I do every day.
+    </p>
+    <ul class="thumbs" aria-label="Four products">
+    <li class="thumb piece" style="--dx:-9px; --dy:8px; --rot:-.3deg; --accent: var(--coral); --tile: #F6E1DE">
       <a href="#azhagi">
         <div class="thumb__art" aria-hidden="true">
           <div class="mini mini--dark">
@@ -100,12 +91,10 @@
             <i style="left:8%; top:78%; width:84%; height:10%; background:#2a2a2a"></i>
           </div>
         </div>
-        <div class="thumb__cap m"><span><b>01</b> Azhagi</span><span>Beta · MetaHuman</span></div>
-        <h3>Call an AI, face to face</h3>
-        <p>Sees you, hears you, talks back, moves.</p>
+        <div class="thumb__cap"><span class="cap"><i>01</i>Azhagi</span><span class="sub">AI influencer · beta</span></div>
       </a>
     </li>
-    <li class="thumb piece" style="--dx:7px; --dy:-6px; --rot:.25deg; --accent: var(--violet)">
+    <li class="thumb piece" style="--dx:7px; --dy:-6px; --rot:.25deg; --accent: var(--violet); --tile: #EBE6F6">
       <a href="#cue">
         <div class="thumb__art" aria-hidden="true">
           <div class="mini">
@@ -119,12 +108,10 @@
             <i style="left:80%; top:61%; width:8%; height:15%; background:var(--violet)"></i>
           </div>
         </div>
-        <div class="thumb__cap m"><span><b>02</b> Boona Cue</span><span>Beta · Text → animation</span></div>
-        <h3>Words in, exact performance out</h3>
-        <p>Two blinks means two blinks.</p>
+        <div class="thumb__cap"><span class="cap"><i>02</i>Boona Cue</span><span class="sub">Text to animation · beta</span></div>
       </a>
     </li>
-    <li class="thumb piece" style="--dx:-6px; --dy:-9px; --rot:-.2deg; --accent: var(--teal)">
+    <li class="thumb piece" style="--dx:-6px; --dy:-9px; --rot:-.2deg; --accent: var(--teal); --tile: #DBF2EC">
       <a href="#thali">
         <div class="thumb__art" aria-hidden="true">
           <div class="mini mini--phone">
@@ -134,12 +121,10 @@
             <i style="left:12%; top:72%; right:12%; height:16%"></i>
           </div>
         </div>
-        <div class="thumb__cap m"><span><b>03</b> Thali</span><span>Beta · React Native</span></div>
-        <h3>A week of South Indian meals</h3>
-        <p>Your rules, sized per person.</p>
+        <div class="thumb__cap"><span class="cap"><i>03</i>Thali</span><span class="sub">Meal planner app · beta</span></div>
       </a>
     </li>
-    <li class="thumb piece" style="--dx:9px; --dy:7px; --rot:.3deg; --accent: var(--teal)">
+    <li class="thumb piece" style="--dx:9px; --dy:7px; --rot:.3deg; --accent: var(--teal); --tile: #111111">
       <a href="#fit">
         <div class="thumb__art" aria-hidden="true">
           <div class="mini mini--dark">
@@ -149,12 +134,11 @@
             <i style="left:10%; top:72%; width:80%; height:8%; background:#2a2a2a"></i>
           </div>
         </div>
-        <div class="thumb__cap m"><span><b>04</b> Boona Fit</span><span>Beta · Plan · move · track</span></div>
-        <h3>Fitness that fits the person</h3>
-        <p>Plans, guides, and tracks what happened.</p>
+        <div class="thumb__cap"><span class="cap"><i>04</i>Boona Fit</span><span class="sub">Fitness app · beta</span></div>
       </a>
     </li>
-  </ul>
+    </ul>
+  </div>
 </section>
 
 <!-- ▸ WORK: four case studies, each with a product screen built in HTML -->
@@ -548,7 +532,7 @@
 
 <!-- ▸ TESTIMONIALS (placeholders: no reviews have been invented) -->
 <section id="testimonials" class="wrap section" style="padding-top:0">
-  <div class="section__head m reveal"><span><b>04</b> Said about the work</span><span>Three lines from clients</span></div>
+  <div class="section__head m reveal"><span>Said about the work</span><span>Three lines from clients</span></div>
   <div class="quotes">
     <div class="quote reveal">
       <blockquote><span class="ph">[One or two sentences from a client about the result, in their words.]</span></blockquote>
@@ -567,7 +551,7 @@
 
 <!-- ▸ WRITING: posts as a table -->
 <section id="writing" class="wrap section" style="padding-top:0">
-  <div class="section__head m reveal"><span><b>05</b> Writing</span><span>Notes from the work, posted as I go</span></div>
+  <div class="section__head m reveal"><span><b>04</b> Writing</span><span>Notes from the work, posted as I go</span></div>
   <div class="channels m reveal">
     <a href="#" class="ph">LinkedIn · [profile link]</a>
     <a href="#" class="ph">X · [profile link]</a>
@@ -586,7 +570,7 @@
 
 <!-- ▸ CONTACT: email with copy, quarterly availability, a brief form; the cutout photo on the right -->
 <section id="contact" class="wrap section" style="padding-top:0">
-  <div class="section__head m reveal"><span><b>06</b> Contact</span><span>Namakkal, Tamil Nadu · <time class="clock" datetime="">--:--:--</time> IST</span></div>
+  <div class="section__head m reveal"><span><b>05</b> Contact</span><span>Namakkal, Tamil Nadu · <time class="clock" datetime="">--:--:--</time> IST</span></div>
   <div class="row">
     <div class="contact__main reveal">
       <h2 class="t">Tell me what the business does. I'll tell you where AI fits.</h2>

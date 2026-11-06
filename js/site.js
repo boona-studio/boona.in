@@ -38,11 +38,11 @@
   if (clocks.length) {
     var fmt = null;
     try {
-      fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+      fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit', hour12: true });
     } catch (e) { fmt = null; }
     var tick = function () {
       var d = new Date();
-      var txt = fmt ? fmt.format(d) : d.toTimeString().slice(0, 8);
+      var txt = fmt ? fmt.format(d) : d.toTimeString().slice(0, 5);
       clocks.forEach(function (c) { c.textContent = txt; c.setAttribute('datetime', d.toISOString()); });
     };
     tick();
@@ -50,11 +50,16 @@
   }
 
   /* 3 ▸ load choreography: columns draw, pieces land off-grid, then snap -- */
-  var dim = $('.hero .dim'), nameEl = $('.hero .name');
+  var dim = $('.hero .dim'), nameEl = $('.hero .sel'), wrapEl = $('.hero .wrap');
   if (dim && nameEl) {
+    /* The label on the name reads like a design tool: its x / y position and the grid column it starts in. */
     var measure = function () {
       var nr = nameEl.getBoundingClientRect();
-      if (nr.width) dim.textContent = Math.round(nr.width) + ' × ' + Math.round(nr.height);
+      if (!nr.width) return;
+      var cols = parseInt(getComputedStyle(html).getPropertyValue('--cols'), 10) || 12;
+      var w = wrapEl ? wrapEl.getBoundingClientRect() : nr;
+      var col = Math.max(1, Math.min(cols, Math.floor((nr.left - w.left) / (w.width / cols)) + 1));
+      dim.textContent = 'x ' + Math.round(nr.left) + ' · y ' + Math.round(nr.top + window.scrollY) + ' · col ' + (col < 10 ? '0' : '') + col;
     };
     measure();
     requestAnimationFrame(measure);
@@ -313,4 +318,28 @@
     setTimeout(go, 1000);
   }
   observe($$('.backdrop[data-screen]'), playScreen, { threshold: .35 });
+
+  /* 11 ▸ side readout (which section, how far down) and the G key for the grid */
+  var readout = $('.readout');
+  if (readout) {
+    var marks = [['top', 'Index'], ['work', 'Work'], ['approach', 'Approach'], ['experience', 'Experience'], ['writing', 'Writing'], ['contact', 'Contact']];
+    var upd = function () {
+      var y = window.scrollY || 0, idx = 0, line = y + (window.innerHeight || 800) * .4;
+      marks.forEach(function (m, i) {
+        var el = document.getElementById(m[0]);
+        if (el && el.getBoundingClientRect().top + y <= line) idx = i;
+      });
+      var ys = String(Math.round(y)); while (ys.length < 5) ys = '0' + ys;
+      readout.textContent = '§ ' + (idx < 10 ? '0' : '') + idx + ' ' + marks[idx][1] + ' · Y ' + ys;
+    };
+    window.addEventListener('scroll', upd, { passive: true });
+    window.addEventListener('resize', upd);
+    upd();
+  }
+  document.addEventListener('keydown', function (e) {
+    if ((e.key !== 'g' && e.key !== 'G') || e.metaKey || e.ctrlKey || e.altKey) return;
+    var t = e.target, tag = t && t.tagName ? t.tagName.toLowerCase() : '';
+    if (tag === 'input' || tag === 'textarea' || tag === 'select' || (t && t.isContentEditable)) return;
+    if (toggle) toggle.click();
+  });
 })();

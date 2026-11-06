@@ -49,7 +49,8 @@ The full list is in `PLACEHOLDERS.md`.
 - **Link previews.** When someone shares www.boona.in on WhatsApp, LinkedIn or X, the preview card uses `media/founder-share-16x9.jpg` and the words in the `og:` lines near the top of `index.html`.
 - **Writing.** Each post is one `<tr> ... </tr>` row in the table under `<!-- ▸ WRITING -->`. Copy a row to add one.
 - **Case-study numbers.** Each result is `<b class="num" data-count="7">0</b>`. Change `data-count` and the number counts up to it on screen.
-- **Grid lines.** They are on by default. The toggle in the top bar remembers each visitor's choice.
+- **Grid lines.** They are on by default. The toggle in the top bar (or the G key) remembers each visitor's choice.
+- **Page colour.** The light grey background is `--ground` near the top of `css/site.css`. Change it to `#FFFFFF` for pure white.
 
 ## The contact form
 
