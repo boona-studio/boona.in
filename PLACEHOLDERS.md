@@ -59,6 +59,6 @@ Ask three clients for a line each. If you would rather not show this section yet
 These are not placeholders, but they were my call and are easy to switch.
 
 - Boona Fit has no brand colour of its own, so on the black band it uses white, with your three product colours on its rings.
-- The landing section follows the reference design you sent (light grey page, numbered menu, the name large on the left, intro and four product tiles along the bottom). The key phrases in the intro are bold rather than underlined. The grey is one line in `css/site.css` (`--ground`); set it to `#FFFFFF` for pure white.
+- The landing section follows the arrangement of the reference design you sent (numbered menu, facts with labels, the name large on the left, intro and four product tiles along the bottom) with your own colours and words. The one key phrase in the intro is underlined in automation teal (signal blue is used only for motion, as you chose).
 - The portrait is shown in black and white. See the README for the one-line change to colour.
 - The approach list, the project-shape chart (four phases, no durations), and the case-study headlines are my drafts in your voice. Please read them once and change anything that does not sound like you.

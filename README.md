@@ -50,7 +50,7 @@ The full list is in `PLACEHOLDERS.md`.
 - **Writing.** Each post is one `<tr> ... </tr>` row in the table under `<!-- ▸ WRITING -->`. Copy a row to add one.
 - **Case-study numbers.** Each result is `<b class="num" data-count="7">0</b>`. Change `data-count` and the number counts up to it on screen.
 - **Grid lines.** They are on by default. The toggle in the top bar (or the G key) remembers each visitor's choice.
-- **Page colour.** The light grey background is `--ground` near the top of `css/site.css`. Change it to `#FFFFFF` for pure white.
+- **Page colour.** The background is `--ground` near the top of `css/site.css` (white). The reference design used a light grey, `#F4F4F4`, if you ever want that.
 
 ## The contact form
 

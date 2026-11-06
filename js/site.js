@@ -38,11 +38,11 @@
   if (clocks.length) {
     var fmt = null;
     try {
-      fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit', hour12: true });
+      fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
     } catch (e) { fmt = null; }
     var tick = function () {
       var d = new Date();
-      var txt = fmt ? fmt.format(d) : d.toTimeString().slice(0, 5);
+      var txt = fmt ? fmt.format(d) : d.toTimeString().slice(0, 8);
       clocks.forEach(function (c) { c.textContent = txt; c.setAttribute('datetime', d.toISOString()); });
     };
     tick();
