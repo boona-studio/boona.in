@@ -12,6 +12,7 @@ To see it, double-click `index.html`. It opens in any browser.
 | `js/site.js` | The motion and the small interactions (the gliding scroll, grid toggle, clock, Replay buttons, copy button, the brief form). |
 | `media/` | Your photos. The page itself shows none of them; only `founder-share-16x9.jpg` is used, as the picture in link previews. The rest stay here unpublished. |
 | `favicon.svg` | The little icon in the browser tab. |
+| `tokens.json` | The design tokens: every colour, typeface, text style, grid measure, spacing step, corner radius and motion timing, with a note on where each is used. It mirrors `css/site.css` and is the starting point for a design system in Figma or anywhere else. |
 | `PLACEHOLDERS.md` | The list of everything still to fill in. |
 | `.vercelignore` | The list of files Vercel must not publish (this README, the placeholders list, the originals of the photos, tooling). |
 | `.vercel/`, `.env.local`, `.gitignore` | Created by Vercel when the folder was linked to your project. Leave them alone. `.env.local` holds a private token: do not share it or email it. |
@@ -54,6 +55,17 @@ The full list is in `PLACEHOLDERS.md`.
 - **Case-study numbers.** Each result is `<b class="num" data-count="7">0</b>`. Change `data-count` and the number counts up to it on screen.
 - **Grid lines.** They are on by default. The toggle in the top bar (or the G key) remembers each visitor's choice.
 - **Page colour.** The background is `--ground` near the top of `css/site.css` (white). The reference design used a light grey, `#F4F4F4`, if you ever want that.
+
+## The design tokens
+
+`tokens.json` lists the site's design decisions in the W3C Design Tokens format, which Figma plugins such as Tokens Studio, and tools such as Style Dictionary, read directly.
+It is published with the site, so it has two public addresses:
+
+- `https://www.boona.in/tokens.json`
+- `https://raw.githubusercontent.com/boona-studio/boona.in/main/tokens.json` (the one to paste into a tool that pulls from a URL)
+
+In Tokens Studio for Figma: **Settings → Sync providers → URL**, paste the GitHub address, then **Pull**. Each token has a `$description` saying where on the page it is used.
+The values come from `css/site.css`; when a colour or size changes there, change it here too.
 
 ## The contact form
 
