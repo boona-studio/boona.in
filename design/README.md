@@ -143,31 +143,31 @@ Class names in `css/site.css` are the component names. "Figma" says whether the 
 | Status pill | `.pill` + `.dot` | 30 px, ink fill, 13 px text, pulsing 7 px teal dot | open / booked | ✓ | ✓ |
 | Section head | `.shead` | label · title (9 cols) · note (cols 10–12) · 1 px ink rule | `--mid`, `--tight` | ✓ | ✓ |
 | Key phrase | `.key` | teal underline as background, 0.12em at 94 % | 0.07em under titles | — | — |
-| Product tile | `.thumb` | 4:3 art box (hairline, dot-grid, mini screen) · mono row · 14 px h3 · 12 px line | hover border ink; `--accent` | — | — |
+| Product tile | `.thumb` | 4:3 art box (hairline, dot-grid, mini screen) · mono row · 14 px h3 · 12 px line | hover border ink; `--accent` | ✓ | — |
 | Case meta | `.case__meta` | hairline above; number · swatch + name · tag · year right | per product | ✓ | ✓ |
 | Case layouts | `.case--split/--flip/--full/--dark` | text pins while the screen scrolls | 4 layouts | — | — |
 | Results list | `.results` | hairline rows; 36 px number left, mono label right | counts up on reveal | ✓ | ✓ |
-| Screen backdrop | `.backdrop` + `.sel` | hairline box, 5 % padding, dot-grid; selection box with 4 handles and a signal tag while landing | `--phone`; square beside pinned text | — | — |
-| Product screen | `.screen` | 16:10, 6 px radius, hairline, soft shadow, `cqw` type | `--dark` | — | — |
-| Index rows | `.index li` | hairline rows; teal numeral · h3 · body · "Rule" mark | hover rule draws, title shifts 8 px | — | — |
-| Plan chart | `.plan` | 12-col ruler, ink bars with white mono captions, dashed tail = range | `.teal` bar | — | — |
-| Big number + stats | `.bignum` `.stats` | 120 px number + unit, ink rule; hairline stat rows | pins beside timeline | — | — |
-| Timeline | `.timeline` | 1 px line that draws; 11 px dots (teal = now); years, h3, where, body, tags | `.is-now`, `.is-past` | — | — |
+| Screen backdrop | `.backdrop` + `.sel` | hairline box, 5 % padding, dot-grid; selection box with 4 handles and a signal tag while landing | `--phone`; square beside pinned text | ✓ | — |
+| Product screen | `.screen` | 16:10, 6 px radius, hairline, soft shadow, `cqw` type | `--dark` | ✓ (frame) | — |
+| Index rows | `.index li` | hairline rows; teal numeral · h3 · body · "Rule" mark | hover rule draws, title shifts 8 px | ✓ | — |
+| Plan chart | `.plan` | 12-col ruler, ink bars with white mono captions, dashed tail = range | `.teal` bar | ✓ | — |
+| Big number + stats | `.bignum` `.stats` | 120 px number + unit, ink rule; hairline stat rows | pins beside timeline | ✓ | — |
+| Timeline | `.timeline` | 1 px line that draws; 11 px dots (teal = now); years, h3, where, body, tags | `.is-now`, `.is-past` | ✓ | — |
 | Tag | `.tags span` | hairline box, 5 × 8, mono | `.rule` teal border | ✓ | ✓ |
-| Big quote / quote | `.quote--big` `.quote` | 38 px, cols 2–11, teal mark in the margin; small quotes with ink rule above | | — | — |
+| Big quote / quote | `.quote--big` `.quote` | 38 px, cols 2–11, teal mark in the margin; small quotes with ink rule above | | ✓ | — |
 | Writing table | `.table` | hidden thead; mono date · 25 px title · channel · Read → | row fills ink on hover | ✓ | ✓ |
 | Email + copy | `.email` `.copy` | 26 px address; 28 px mono pill button | copied = teal | ✓ (copy) | ✓ (copy) |
-| Facts | `.facts` | 7em label column, hairline rows | | — | — |
+| Facts | `.facts` | 7em label column, hairline rows | | ✓ | — |
 | Availability | `.avail li` | 3 cards, 1 px ink border, 92 min; quarter + state | open = teal fill | ✓ | ✓ |
 | Form field | `.field` | mono label; borderless input, 1 px ink line | focus = teal line | ✓ | ✓ |
 | Main button | `.btn-main` | ink fill, 15 px semibold, 16 × 22, arrow shifts 4 px | hover `#222` | ✓ | ✓ |
-| Footer | `.foot` | dark band with local grid; 4 columns; mono headings; hairline bottom row | | — | — |
-| Placeholder | `.ph` | dashed `lost` outline + FILL tag while `data-placeholders="show"` | | — | — |
+| Footer | `.foot` | dark band with local grid; 4 columns; mono headings; hairline bottom row | | ✓ | — |
+| Placeholder | `.ph` | dashed `lost` outline + FILL tag while `data-placeholders="show"` | | ✓ | — |
 | Grid overlay | `.gridlines` | 13 lines at column edges; `--local` inside dark bands | draws in signal on load | (Cover) | (Cover) |
 | Crosshair | `.xhair` | two 1 px signal lines + mono label with position and column | mouse only | — | — |
 | Label | `.m` | 10 px mono uppercase quiet; bold parts ink 600 | | ✓ | ✓ |
 
-Gaps to close in Figma (next build): Product tile, Backdrop + Screen frame, Index row, Plan chart, Big number + stats, Timeline item, Quote, Facts row, Footer, Placeholder marker. Every value is already in the variables; these are composition work.
+Figma now carries every component except the key-phrase underline (a text decoration), the four case layouts (page composition) and the crosshair (a pointer effect). The Claude Design system previews ten of them; the rest are documented here.
 
 ---
 
@@ -216,11 +216,17 @@ Colour on content: the canvas is `ground`, the words `ink`, labels `quiet`, the 
 | 4. Push | `git push`; Vercel publishes www.boona.in |
 | 5. Figma | run `design/scripts/figma-sync.js` through the Figma MCP (or a plugin console) with `design/build/figma-variables.json` against **Boona — Design system (Grid v2)** (`9ALjyFp3bldjj3Pvh9SW5S`). Matches by name, updates in place. Ids in `design/build/figma-ledger.json` |
 | 6. Claude Design | `node design/scripts/build-claude-ds.mjs <dir>` and publish `<dir>/project/*` to the **Boona Grid** artifact (https://claude.ai/artifact/34rooSgXffj6itFp4VAk9B) |
-| 7. Content templates | the Figma content file follows the same variables; after a token change, open it and the instances update |
+| 7. Content templates | **Boona — Content templates (Grid v2)** (`5Xkvxat0XnCw0IMlLfwo9E`) carries the same collections and text styles, synced by the same script; after a token change run the sync there too and every instance follows |
 
 Audit (run any time): `npm run audit` lists every colour literal in `css/site.css` that bypasses the tokens, against `design/build/tokens.flat.json`.
 
-Figma files in the Boona folder (683220504): **Boona — Design system (Grid v2)** `9ALjyFp3bldjj3Pvh9SW5S` (current); **Boona — Content templates** `1YmlpJa6XlOya44PSx9nE8` (v1 · Readout, superseded; rebuild on Grid v2 per §5 before any post is made from it).
+Figma files in the Boona folder (683220504):
+
+| File | Key | Holds |
+|---|---|---|
+| **Boona — Design system (Grid v2)** | `9ALjyFp3bldjj3Pvh9SW5S` | Cover · Foundations · Components (23 component sets and compositions) |
+| **Boona — Content templates (Grid v2)** | `5Xkvxat0XnCw0IMlLfwo9E` | Cover (routine, rules) · LinkedIn (image: Broad/Nurture/Convert; carousel: Cover/Body/Ask) · YouTube (thumbnail: Face × Tone) · Video (title card, chapter card, lower third, end card, 16:9 guide) · Shorts and Reels (vertical frame: Title/Caption/Result overlays, 9:16 guide) · Medium (cover, figure) · Assets (three Photo placeholders, Mark). Fill the Photo components once from `media/`; every face slot follows |
+| Boona — Content templates (v1) | `1YmlpJa6XlOya44PSx9nE8` | Readout templates, superseded; keep for reference, post nothing from it |
 
 ---
 
@@ -229,5 +235,6 @@ Figma files in the Boona folder (683220504): **Boona — Design system (Grid v2)
 - 2026-11-06 — Grid v2 goes live on www.boona.in (website session).
 - 2026-11-08 — `tokens.json` written from `css/site.css`.
 - 2026-11-09 — `tokens.json` made the source of truth; `css/tokens.css` generated and loaded by the page (render diff 0); Figma file and Claude Design system built; this document written.
+- 2026-11-09 — Figma: the ten remaining components composed in the design-system file; **Boona — Content templates (Grid v2)** built to §5 (LinkedIn image and carousel, YouTube thumbnail, title/chapter/lower-third/end cards, Shorts and Reels overlays, Medium cover and figure, guides, photo placeholders). The v1 templates file is superseded.
 - 2026-11-09 — `color.teal-ink` `#0F766E` added for teal letters (index numerals, Rule marks, Current, Thali quantities); bright teal stays for marks. Render diff: 36 text colours per width, nothing else. Approved by Boopathi.
 - 2026-11-09 — Audit of `site.css` literals; normalisation approved by Boopathi and applied (12 new tokens, 237 alpha snaps per width, no layout change). Decision: photos stay off the website but are allowed everywhere else (thumbnails, title cards, posts); the cut-out and the 16:9 and 4:5 crops in `media/` are the approved assets.
