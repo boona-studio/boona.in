@@ -417,7 +417,7 @@ html.is-loading:not(.is-snapped) .hero .sel .dim,
 .is-playing .meal { animation: bubin .35s var(--snap) forwards; animation-delay: var(--d, 0s); }
 .meal .k { grid-column: 1 / -1; font-family: var(--mono); font-size: .6em; letter-spacing: .06em; text-transform: uppercase; color: var(--quiet); }
 .meal .d { font-weight: 600; font-size: .95em; letter-spacing: -.01em; }
-.meal .q { font-family: var(--mono); font-size: .7em; color: var(--teal); align-self: center; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.meal .q { font-family: var(--mono); font-size: .7em; color: var(--color-teal-ink); align-self: center; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .meal .q.is-bump { animation: bump .35s var(--snap); }
 .variety { padding: 0 1.3em .6em; }
 .variety .lbl, .people .lbl { display: flex; justify-content: space-between; margin-bottom: .4em; }
@@ -466,11 +466,11 @@ html.is-loading:not(.is-snapped) .hero .sel .dim,
 .index li { position: relative; display: grid; grid-template-columns: repeat(var(--cols), 1fr); border-top: 1px solid var(--line); padding: 26px 0 30px; align-items: start; }
 .index li::after { content: ""; position: absolute; left: 0; top: -1px; height: 1px; width: 0; background: var(--ink); transition: width .8s var(--ease); }
 .index li:hover::after { width: 100%; }
-.index .idx { grid-column: 1 / span 1; padding-inline: var(--inset); color: var(--teal); padding-top: 7px; }
+.index .idx { grid-column: 1 / span 1; padding-inline: var(--inset); color: var(--color-teal-ink); padding-top: 7px; }
 .index h3 { grid-column: 2 / span 4; padding-inline: var(--inset); transition: transform .5s var(--ease); }
 .index li:hover h3 { transform: translateX(8px); }
 .index p { grid-column: 7 / span 5; padding-inline: var(--inset); color: var(--quiet); max-width: 50ch; padding-top: 4px; }
-.index .idx__r { grid-column: 12 / span 1; grid-row: 1; padding-inline: var(--inset); text-align: right; color: var(--teal); padding-top: 7px; }
+.index .idx__r { grid-column: 12 / span 1; grid-row: 1; padding-inline: var(--inset); text-align: right; color: var(--color-teal-ink); padding-top: 7px; }
 
 .plan { margin-top: clamp(64px, 8vw, 120px); }
 .plan__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-inline: var(--inset); margin-bottom: 16px; }
@@ -520,7 +520,7 @@ html.is-loading:not(.is-snapped) .hero .sel .dim,
 .timeline li.is-now::before { background: var(--teal); }
 .timeline .yrs { margin-bottom: 12px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 .timeline .yrs b { color: var(--quiet); font-weight: 400; }
-.timeline .yrs .now { color: var(--teal); }
+.timeline .yrs .now { color: var(--color-teal-ink); }
 .timeline h3 { font-size: clamp(22px, 2vw, 27px); margin-bottom: 8px; }
 .timeline .where { color: var(--quiet); margin-bottom: 14px; }
 .timeline .where b { color: var(--ink); font-weight: 600; }

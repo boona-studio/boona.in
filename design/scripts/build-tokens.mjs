@@ -171,7 +171,8 @@ const PAIRS = [
   ["color.signal", "color.ground", "ui", "Focus ring, crosshair, selection box", "required"],
   ["color.on-bar", "color.signal", "text", "Crosshair and dimension labels", "required"],
   ["color.quiet", "color.dark.band", "text", "If the quiet grey is ever used on the band (it is not)", "advisory"],
-  ["color.teal", "color.ground", "text", "Index numerals, 'Rule' marks, 'Current' on the timeline, replay arrow: 10 px teal mono text", "advisory"],
+  ["color.teal-ink", "color.ground", "text", "Index numerals, 'Rule' marks, 'Current' on the timeline, Thali quantities: teal letters", "required"],
+  ["color.teal", "color.ground", "text", "Teal as letters is no longer used anywhere (since 2026-11-09); kept as a reminder", "advisory"],
   ["color.on-bar", "color.lost", "text", "'End' button in the Azhagi screen, white on coral-red", "advisory"],
   ["color.teal", "color.ground", "ui", "Status dot, key-phrase underline, open card fill: always beside words that say the same", "advisory"],
   ["color.coral", "color.ground", "ui", "Azhagi swatch and screen accents: beside the product name", "advisory"],
@@ -192,7 +193,7 @@ for (const [fg, bg, kind, use, level] of PAIRS) {
   if (!ok && level === "required" && kind !== "decor") failed = true;
   report.push(`| ${fg} ${get(fg)} | ${bg} ${get(bg)} | ${use} | ${r.toFixed(2)}:1 | ${need}:1 ${kind} | ${result} |`);
 }
-report.push(`\nAdvisory rows do not stop the build. The product colours and the status dot are identity marks that always sit beside the words that carry the meaning, so colour alone never carries it (WCAG 1.4.11 asks 3:1 only of parts needed to identify a control or state). The three advisory text rows are inherited from the live site as published on ${updated}; the fix for teal text is a darker teal for type only (for example #0F766E, 5.0:1 on white) while the bright teal stays for dots, underlines and fills. Decide, then add the token and rebuild.`);
+report.push(`\nAdvisory rows do not stop the build. The product colours and the status dot are identity marks that always sit beside the words that carry the meaning, so colour alone never carries it (WCAG 1.4.11 asks 3:1 only of parts needed to identify a control or state). Teal letters use color.teal-ink (#0F766E) since 2026-11-09; the bright teal stays for dots, underlines and fills. The one remaining advisory text row is white on the coral-red End button inside the Azhagi demo screen.`);
 mkdirSync(resolve(root, "design/build"), { recursive: true });
 writeFileSync(resolve(root, "design/build/contrast-report.md"), report.join("\n") + "\n");
 

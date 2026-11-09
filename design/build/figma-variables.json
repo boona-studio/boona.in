@@ -107,7 +107,7 @@
             "b": 0.6901960784313725,
             "a": 1
           },
-          "description": "Automation teal, the brand accent. Underlined key phrases, the status dot, the quote mark, the open quarter, the current timeline dot, the signals in the landing field. Also Thali's product colour.",
+          "description": "Automation teal, the brand accent. Underlined key phrases, the status dot, the quote mark, the open quarter, the current timeline dot, the signals in the landing field. Also Thali's product colour. Never for letters: text in teal uses color.teal-ink.",
           "cssVar": "--teal",
           "scopes": [
             "ALL_SCOPES"
@@ -559,6 +559,21 @@
           },
           "description": "Violet at 35 %: the focus glow on the Cue prompt.",
           "cssVar": "--color-violet-glow",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "teal-ink",
+          "type": "COLOR",
+          "value": {
+            "r": 0.058823529411764705,
+            "g": 0.4627450980392157,
+            "b": 0.43137254901960786,
+            "a": 1
+          },
+          "description": "Teal for letters only (5.0:1 on white): the Approach index numerals and Rule marks, 'Current' on the timeline, the quantities in the Thali screen. Dots, underlines, fills and borders stay color.teal.",
+          "cssVar": "--color-teal-ink",
           "scopes": [
             "ALL_SCOPES"
           ]

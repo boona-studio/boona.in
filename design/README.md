@@ -21,7 +21,7 @@ The page looks like the working drawing of someone who measures things. That is 
 | Principle | What it means in practice |
 |---|---|
 | **The grid is visible** | The 12 columns are drawn on the page in `line` grey and can be toggled with G. Every block aligns to a column edge. On a post or a thumbnail the same grid is the texture behind the words. |
-| **Ink on white, colour only where it means something** | Text, rules and buttons are black. Colour appears as a 9 px square beside a product name, a 7 px status dot, a thin underline under one key phrase, a filled card that says "Open". Never as a background wash, never as decoration. |
+| **Ink on white, colour only where it means something** | Text, rules and buttons are black. Colour appears as a 9 px square beside a product name, a 7 px status dot, a thin underline under one key phrase, a filled card that says "Open". Never as a background wash, never as decoration. Where teal must be letters (an index numeral, "Rule", "Current") it is `teal-ink`, the dark teal that reads. |
 | **One colour per product** | Azhagi coral, Boona Cue violet, Thali teal, Boona Fit white on the dark band. A product's colour appears on its own screen, tile and swatch and nowhere else. The brand accent (teal) doubles as Thali's colour; that is accepted. |
 | **Labels are annotations** | The 10 px uppercase Geist Mono label (`§ 01 Work · 2026`, `01 / 04`, `Reply latency`) is how the sheet is annotated. It carries numbers, dates, places and names, never slogans. |
 | **Proof has a slot** | Every product and client surface carries a number and the window it was measured in (`48 h → 24 h`, `Store onboarding, 2018`). A number not yet measured is a bracketed placeholder with a visible marker, never a guess. |
@@ -47,7 +47,8 @@ The page looks like the working drawing of someone who measures things. That is 
 | `color.quiet` | `#5A5A5A` | Secondary text, mono labels |
 | `color.line` | `#DEDEDE` | Hairlines, the grid overlay, box borders |
 | `color.bar` / `on-bar` | ink / ground | Footer and dark band ground and text |
-| `color.teal` | `#3FC9B0` | Brand accent: key-phrase underline, status dot, quote mark, open quarter, current timeline dot, signals in the landing field. Also Thali |
+| `color.teal` | `#3FC9B0` | Brand accent, marks only: key-phrase underline, status dot, quote mark, open quarter, current timeline dot, signals in the landing field. Also Thali |
+| `color.teal-ink` | `#0F766E` | Teal **letters** (5.5:1 on white): index numerals, Rule marks, "Current", Thali quantities. Never as a fill |
 | `color.coral` | `#E06A5F` | Azhagi |
 | `color.violet` | `#A98BDC` | Boona Cue |
 | `color.product.fit` | white | Boona Fit, on the dark band only |
@@ -124,7 +125,7 @@ Render diff after the change (`node design/scripts/verify-tokens.mjs <baseline>`
 **Don't**
 - No photos on the website (removed 7 November 2026). Everywhere else the face is allowed and expected: thumbnails, title cards, posts use the cut-out or the 16:9 / 4:5 crops in `media/` (decided 9 November 2026).
 - No gradients as decoration (the two drawn exceptions: the key-phrase underline, which is a flat background, and the dot-grid backdrops behind screens). No shadows except under product screens.
-- No colour as text except black, quiet grey and white; teal as text is under review (2.06:1 on white).
+- No colour as text except black, quiet grey, white and `teal-ink`. Bright teal is never letters (2.06:1 on white); the one bright-teal glyph is the 38 px quote mark, which is a mark.
 - No second accent, no second display face, no emoji, no icons where a word will do.
 - No "we" until the agency is switched on. No hype words. No invented facts.
 - Never change a value in `css/site.css`, `css/tokens.css`, Figma or a canvas; change `tokens.json` and rebuild.
@@ -228,4 +229,5 @@ Figma files in the Boona folder (683220504): **Boona — Design system (Grid v2)
 - 2026-11-06 — Grid v2 goes live on www.boona.in (website session).
 - 2026-11-08 — `tokens.json` written from `css/site.css`.
 - 2026-11-09 — `tokens.json` made the source of truth; `css/tokens.css` generated and loaded by the page (render diff 0); Figma file and Claude Design system built; this document written.
+- 2026-11-09 — `color.teal-ink` `#0F766E` added for teal letters (index numerals, Rule marks, Current, Thali quantities); bright teal stays for marks. Render diff: 36 text colours per width, nothing else. Approved by Boopathi.
 - 2026-11-09 — Audit of `site.css` literals; normalisation approved by Boopathi and applied (12 new tokens, 237 alpha snaps per width, no layout change). Decision: photos stay off the website but are allowed everywhere else (thumbnails, title cards, posts); the cut-out and the 16:9 and 4:5 crops in `media/` are the approved assets.

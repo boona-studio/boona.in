@@ -36,6 +36,7 @@
   "color.teal-tint": "#3FC9B024",
   "color.teal-pulse": "#3FC9B08C",
   "color.violet-glow": "#A98BDC59",
+  "color.teal-ink": "#0F766E",
   "font.family.sans": [
     "Geist",
     "system-ui",

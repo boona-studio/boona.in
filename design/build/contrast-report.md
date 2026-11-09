@@ -15,7 +15,8 @@ Generated from tokens.json (updated 2026-11-09). WCAG 2.2: text 4.5:1, large tex
 | color.signal #2F5BFF | color.ground #FFFFFF | Focus ring, crosshair, selection box | 5.17:1 | 3:1 ui | pass |
 | color.on-bar #FFFFFF | color.signal #2F5BFF | Crosshair and dimension labels | 5.17:1 | 4.5:1 text | pass |
 | color.quiet #5A5A5A | color.dark.band #0B0B0B | If the quiet grey is ever used on the band (it is not) | 2.85:1 | 4.5:1 text | fails, advisory |
-| color.teal #3FC9B0 | color.ground #FFFFFF | Index numerals, 'Rule' marks, 'Current' on the timeline, replay arrow: 10 px teal mono text | 2.06:1 | 4.5:1 text | fails, advisory |
+| color.teal-ink #0F766E | color.ground #FFFFFF | Index numerals, 'Rule' marks, 'Current' on the timeline, Thali quantities: teal letters | 5.47:1 | 4.5:1 text | pass |
+| color.teal #3FC9B0 | color.ground #FFFFFF | Teal as letters is no longer used anywhere (since 2026-11-09); kept as a reminder | 2.06:1 | 4.5:1 text | fails, advisory |
 | color.on-bar #FFFFFF | color.lost #FF8A80 | 'End' button in the Azhagi screen, white on coral-red | 2.28:1 | 4.5:1 text | fails, advisory |
 | color.teal #3FC9B0 | color.ground #FFFFFF | Status dot, key-phrase underline, open card fill: always beside words that say the same | 2.06:1 | 3:1 ui | fails, advisory |
 | color.coral #E06A5F | color.ground #FFFFFF | Azhagi swatch and screen accents: beside the product name | 3.28:1 | 3:1 ui | pass |
@@ -23,4 +24,4 @@ Generated from tokens.json (updated 2026-11-09). WCAG 2.2: text 4.5:1, large tex
 | color.lost #FF8A80 | color.ground #FFFFFF | Placeholder outline (with a FILL tag), live dot (with the word Live) | 2.28:1 | 3:1 ui | fails, advisory |
 | color.line #DEDEDE | color.ground #FFFFFF | Hairlines and the grid overlay (decorative, no bar) | 1.35:1 | 0:1 decor | no bar |
 
-Advisory rows do not stop the build. The product colours and the status dot are identity marks that always sit beside the words that carry the meaning, so colour alone never carries it (WCAG 1.4.11 asks 3:1 only of parts needed to identify a control or state). The three advisory text rows are inherited from the live site as published on 2026-11-09; the fix for teal text is a darker teal for type only (for example #0F766E, 5.0:1 on white) while the bright teal stays for dots, underlines and fills. Decide, then add the token and rebuild.
+Advisory rows do not stop the build. The product colours and the status dot are identity marks that always sit beside the words that carry the meaning, so colour alone never carries it (WCAG 1.4.11 asks 3:1 only of parts needed to identify a control or state). Teal letters use color.teal-ink (#0F766E) since 2026-11-09; the bright teal stays for dots, underlines and fills. The one remaining advisory text row is white on the coral-red End button inside the Azhagi demo screen.
