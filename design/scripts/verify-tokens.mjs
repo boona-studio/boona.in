@@ -62,6 +62,7 @@ async function snapshot(browser, dir, width) {
 }
 
 const baseline = process.argv[2] ? resolve(process.argv[2]) : null;
+const summary = new Map(); // "prop: old → new" -> count
 const browser = await chromium.launch();
 let diffs = 0;
 for (const w of WIDTHS) {
@@ -75,12 +76,16 @@ for (const w of WIDTHS) {
     const prev = wasMap.get(key);
     if (!prev) continue;
     vals.forEach((v, i) => {
-      if (v !== prev[i]) { n++; if (n <= 12) console.log(`  ${w}px ${key} ${PROPS[i]}: ${prev[i]} → ${v}`); }
+      if (v !== prev[i]) { n++; const k = `${PROPS[i]}: ${prev[i]} → ${v}`; summary.set(k, (summary.get(k) ?? 0) + 1); }
     });
   }
   diffs += n;
   console.log(`${w}px: ${now.data.length} elements compared, ${n} differences`);
 }
 await browser.close();
-if (baseline && diffs) { console.error(`verify: ${diffs} computed differences against the baseline`); process.exit(1); }
+if (baseline && diffs) {
+  console.log("what changed (all widths):");
+  for (const [k, n] of [...summary].sort((a, b) => b[1] - a[1])) console.log(`  ${String(n).padStart(4)}  ${k}`);
+  console.error(`verify: ${diffs} computed differences against the baseline`); process.exit(1);
+}
 console.log(baseline ? "verify: identical to the baseline" : "verify: ok");

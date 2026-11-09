@@ -115,6 +115,12 @@ for (const [k, t] of Object.entries(resolved)) {
 }
 lines.push("  /* radius */");
 for (const [k, t] of Object.entries(resolved)) if (k.startsWith("radius.")) lines.push(`  --${kebab(k)}: ${t.value};`);
+lines.push("  /* shadow */");
+for (const [k, t] of Object.entries(resolved)) {
+  if (!k.startsWith("shadow.")) continue;
+  const css = t.value.map((sh) => (sh.spread === "0px" ? `${sh.offsetX} ${sh.offsetY} ${sh.blur} ${sh.color}` : `${sh.offsetX} ${sh.offsetY} ${sh.blur} ${sh.spread} ${sh.color}`)).join(", ");
+  lines.push(`  --shadow-${k.slice(7)}: ${css};`);
+}
 lines.push("  /* motion */");
 for (const [k, t] of Object.entries(resolved)) if (k.startsWith("motion.duration.")) lines.push(`  --duration-${k.split(".").pop()}: ${t.value};`);
 for (const [k, t] of Object.entries(resolved)) if (k.startsWith("motion.easing.")) lines.push(`  --ease-${k.split(".").pop()}: ${bezier(t.value)};`);

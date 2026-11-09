@@ -97,19 +97,17 @@ Two families, two jobs. **Geist** for everything you read; **Geist Mono** only f
 | Durations | 120 press · 200 hover colour · 250 hover fill · 300 small moves · 450 snap · 500 fades · 700 reveal · 800 drift · 900 glide · 1800 landing field | | |
 | Easing | snap `(.2,.9,.1,1)` for things landing · ease `(.16,1,.3,1)` for reveals · scroll `(.65,0,.35,1)` for menu links | | |
 
-### Fidelity note (audit, 9 November 2026)
+### Fidelity note (audit and normalisation, 9 November 2026)
 
-`css/site.css` reads every named colour from the variables, but still carries literals that the tokens only approximate:
+`npm run audit` found 47 hex and 43 alpha colour literals in `css/site.css` that bypassed the tokens. Boopathi approved the normalisation the same day and it is applied:
 
-| In `site.css` | Count | Token that should cover it | Gap |
-|---|---|---|---|
-| `#fff` / `#000` for text on ink or teal | 34 | `color.ground` / `color.ink` | none; literal where a variable belongs |
-| `#111`, `#0B0B0B`, `#222`, `#F1F1F1`, `#FAFAFA`, `#FCFCFC` | 10 | `dark.surface`, `dark.band`, `dark.hover`, `surface.*` | none; literal where a variable belongs |
-| White at .62 .75 .78 .6 .85 .8 .7 .72 .35 .3 .22 .2 .18 .15 .14 | ~24 | `on-dark.*` ladder 86/72/55/25/12 | the site uses fifteen alphas, the tokens name five |
-| `#0A0A0A`, `#2B2B2B`, `#0C0C0C` (backdrop and Azhagi stage) | 3 | none | not tokenised |
-| Shadows under screens, `rgba(63,201,176,.14/.55)` chip fill and pulse | 5 | none (no shadow or tint tokens) | not tokenised |
+| Change | Count | Visible effect |
+|---|---|---|
+| Hex literals with an existing token → `var()` (`#fff`, `#000`, `#111`, `#0B0B0B`, `#222`, surface greys) | 44 | none |
+| New tokens for the three untokenised greys (`dark.backdrop` `#0A0A0A`, `dark.stage` `#2B2B2B`, `dark.stage-deep` `#0C0C0C`), the top bar glass (`ground-glass`), ink on teal (`ink-muted` 65 %), the toggle border (`overlay.line` 18 %), the chip fill (`teal-tint` 14 %), the pulse ring (`teal-pulse` 55 %), the Cue focus glow (`violet-glow` 35 %), and a `shadow` family (`screen`, `phone`, `cursor`) | 12 tokens | none |
+| Fifteen white alphas snapped to the five `on-dark` steps: .62 .6 → .55 · .78 .75 .7 → .72 · .85 .8 → .86 · .35 .3 → .25 · .22 .2 .18 .15 .14 → .12; black .4 → .35, .6 → .65 | 237 computed values per width | secondary text on the dark band and footer is 5–7 % fainter or stronger; all still ≥ 6:1 |
 
-Proposed and waiting for Boopathi's word: (a) swap the 44 literals that have a token for `var(--…)`; (b) snap the alpha ladder to the five `on-dark` steps (.62→.55, .75/.78/.7→.72, .85/.8→.86, .35/.3→.25, .22/.2/.18/.15/.14→.12), a change of at most 7 % opacity on secondary text and lines on dark; (c) add `color.dark.stage` for the Azhagi backdrop and a `shadow.screen` token. After (a)–(c) `site.css` has no colour literal and the render diff shows exactly what moved.
+Render diff after the change (`node design/scripts/verify-tokens.mjs <baseline>`): 822 elements, 237 differences per width, every one an alpha listed above; no size, spacing or layout change. Two literals remain on purpose: the `mask-image` gradient behind the landing field (geometry, not colour) and the transparent end of the pulse ring.
 
 ---
 
@@ -124,7 +122,7 @@ Proposed and waiting for Boopathi's word: (a) swap the 44 literals that have a t
 - Keep running text under 44–58 characters a line on the site and under 32 on a reel.
 
 **Don't**
-- No photos on the website (removed 7 November 2026, Boopathi's request). For content formats the face is a decision still open; see §5.
+- No photos on the website (removed 7 November 2026). Everywhere else the face is allowed and expected: thumbnails, title cards, posts use the cut-out or the 16:9 / 4:5 crops in `media/` (decided 9 November 2026).
 - No gradients as decoration (the two drawn exceptions: the key-phrase underline, which is a flat background, and the dot-grid backdrops behind screens). No shadows except under product screens.
 - No colour as text except black, quiet grey and white; teal as text is under review (2.06:1 on white).
 - No second accent, no second display face, no emoji, no icons where a word will do.
@@ -203,7 +201,7 @@ Scaling rule: **the site is the 1280 reference**. Gutter, inset and type scale b
 
 Colour on content: the canvas is `ground`, the words `ink`, labels `quiet`, the grid `line`. The product square and the status dot are the only colour. A dark-band variant exists for Boona Fit and for frames that show a dark product screen. Teal appears as an underline under one key phrase per surface at most.
 
-**Open decision — the face.** `BRAND.md` rule 2 removes photos from the website. The brand's content principle ("face first", `brand-context.md`) assumes the founder's face on thumbnails and in video. The two are compatible — the website is the exception — but it needs Boopathi's word before any thumbnail or title-card template carries the cut-out. Until then templates ship with a face slot that is empty by default.
+**The face (decided 9 November 2026).** The website is photo-free (`BRAND.md` rule 2); every other format may carry the founder's face. Thumbnails and title cards use the cut-out (`media/founder-cutout.png`), bottom-right, in front of the grid and the result row, never over the title; posts may use the 4:5 portrait or the cut-out; video uses the camera itself. One face per surface, never cropped at the chin.
 
 ---
 
@@ -229,4 +227,5 @@ Figma files in the Boona folder (683220504): **Boona — Design system (Grid v2)
 
 - 2026-11-06 — Grid v2 goes live on www.boona.in (website session).
 - 2026-11-08 — `tokens.json` written from `css/site.css`.
-- 2026-11-09 — `tokens.json` made the source of truth; `css/tokens.css` generated and loaded by the page (render diff 0); Figma file and Claude Design system built; this document written. Audit of `site.css` literals recorded in §2; normalisation proposed, not applied.
+- 2026-11-09 — `tokens.json` made the source of truth; `css/tokens.css` generated and loaded by the page (render diff 0); Figma file and Claude Design system built; this document written.
+- 2026-11-09 — Audit of `site.css` literals; normalisation approved by Boopathi and applied (12 new tokens, 237 alpha snaps per width, no layout change). Decision: photos stay off the website but are allowed everywhere else (thumbnails, title cards, posts); the cut-out and the 16:9 and 4:5 crops in `media/` are the approved assets.

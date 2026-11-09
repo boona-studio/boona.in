@@ -13,6 +13,9 @@
   "color.dark.band": "#0B0B0B",
   "color.dark.surface": "#111111",
   "color.dark.hover": "#222222",
+  "color.dark.backdrop": "#0A0A0A",
+  "color.dark.stage": "#2B2B2B",
+  "color.dark.stage-deep": "#0C0C0C",
   "color.surface.bubble": "#F1F1F1",
   "color.surface.lane": "#FAFAFA",
   "color.surface.lane-empty": "#FCFCFC",
@@ -23,10 +26,16 @@
   "color.on-dark.hairline": "#FFFFFF1F",
   "color.overlay.shade": "#00000059",
   "color.overlay.tint": "#0000000A",
+  "color.overlay.line": "#0000002E",
   "color.product.azhagi": "#E06A5F",
   "color.product.cue": "#A98BDC",
   "color.product.thali": "#3FC9B0",
   "color.product.fit": "#FFFFFF",
+  "color.ground-glass": "#FFFFFFDB",
+  "color.ink-muted": "#000000A6",
+  "color.teal-tint": "#3FC9B024",
+  "color.teal-pulse": "#3FC9B08C",
+  "color.violet-glow": "#A98BDC59",
   "font.family.sans": [
     "Geist",
     "system-ui",
@@ -430,5 +439,46 @@
   ],
   "motion.scroll.glide-time-constant": "160ms",
   "motion.scroll.reveal-offset": "14px",
-  "motion.reduced-motion": "still"
+  "motion.reduced-motion": "still",
+  "shadow.screen": [
+    {
+      "offsetX": "0px",
+      "offsetY": "1px",
+      "blur": "0px",
+      "spread": "0px",
+      "color": "#0000000A"
+    },
+    {
+      "offsetX": "0px",
+      "offsetY": "14px",
+      "blur": "36px",
+      "spread": "-20px",
+      "color": "#0000004D"
+    }
+  ],
+  "shadow.phone": [
+    {
+      "offsetX": "0px",
+      "offsetY": "1px",
+      "blur": "0px",
+      "spread": "0px",
+      "color": "#0000000A"
+    },
+    {
+      "offsetX": "0px",
+      "offsetY": "18px",
+      "blur": "40px",
+      "spread": "-20px",
+      "color": "#00000059"
+    }
+  ],
+  "shadow.cursor": [
+    {
+      "offsetX": "0px",
+      "offsetY": "2px",
+      "blur": "2px",
+      "spread": "0px",
+      "color": "#00000059"
+    }
+  ]
 }

@@ -16,6 +16,9 @@
   --color-dark-band: #0B0B0B;
   --color-dark-surface: #111111;
   --color-dark-hover: #222222;
+  --color-dark-backdrop: #0A0A0A;
+  --color-dark-stage: #2B2B2B;
+  --color-dark-stage-deep: #0C0C0C;
   --color-surface-bubble: #F1F1F1;
   --color-surface-lane: #FAFAFA;
   --color-surface-lane-empty: #FCFCFC;
@@ -26,10 +29,16 @@
   --color-on-dark-hairline: #FFFFFF1F;
   --color-overlay-shade: #00000059;
   --color-overlay-tint: #0000000A;
+  --color-overlay-line: #0000002E;
   --color-product-azhagi: #E06A5F;
   --color-product-cue: #A98BDC;
   --color-product-thali: #3FC9B0;
   --color-product-fit: #FFFFFF;
+  --color-ground-glass: #FFFFFFDB;
+  --color-ink-muted: #000000A6;
+  --color-teal-tint: #3FC9B024;
+  --color-teal-pulse: #3FC9B08C;
+  --color-violet-glow: #A98BDC59;
   /* type */
   --sans: Geist, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: "Geist Mono", Consolas, "Cascadia Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -120,6 +129,10 @@
   --radius-large: 10px;
   --radius-pill: 999px;
   --radius-circle: 50%;
+  /* shadow */
+  --shadow-screen: 0px 1px 0px #0000000A, 0px 14px 36px -20px #0000004D;
+  --shadow-phone: 0px 1px 0px #0000000A, 0px 18px 40px -20px #00000059;
+  --shadow-cursor: 0px 2px 2px #00000059;
   /* motion */
   --duration-instant: 120ms;
   --duration-quick: 200ms;
