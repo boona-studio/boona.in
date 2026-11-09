@@ -7,35 +7,9 @@
    ========================================================================== */
 
 /* 1 ▸ tokens ------------------------------------------------------------- */
-:root {
-  --ground: #FFFFFF;
-  --ink: #000000;
-  --quiet: #5A5A5A;
-  --line: #DEDEDE;
-  --bar: #000000;
-  --on-bar: #FFFFFF;
-  --teal: #3FC9B0;
-  --coral: #E06A5F;
-  --violet: #A98BDC;
-  --lost: #FF8A80;
-  --signal: #2F5BFF;           /* motion only: grid draw, dashed outlines, selection boxes */
-
-  --cols: 12;
-  --gutter: 24px;              /* page edge to the grid */
-  --inset: 12px;               /* half of the 24 px gutter between columns */
-  --max: 1280px;
-  --nav-h: 48px;
-  --stick: calc(var(--nav-h) + 32px);   /* where a pinned column rests under the top bar */
-
-  /* Geist and Geist Mono load from Google Fonts (the link is in the head of index.html);
-     offline, the device's own type stands in. */
-  --sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --mono: "Geist Mono", Consolas, "Cascadia Mono", ui-monospace, "SF Mono", Menlo, monospace;
-  --snap: cubic-bezier(.2, .9, .1, 1);
-  --ease: cubic-bezier(.16, 1, .3, 1);
-}
-@media (max-width: 1023px) { :root { --cols: 8; } }
-@media (max-width: 639px)  { :root { --cols: 4; --gutter: 16px; --inset: 8px; } }
+/* Every colour, type, grid, spacing, radius and motion value lives in tokens.json at the site root.
+   design/scripts/build-tokens.mjs turns it into css/tokens.css, which index.html loads just before this file;
+   this file only reads the variables. */
 
 /* 2 ▸ base + type -------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }

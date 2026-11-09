@@ -1,0 +1,1610 @@
+{
+  "$generated": "tokens.json updated 2026-11-09",
+  "fonts": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap",
+  "collections": [
+    {
+      "name": "Color",
+      "modes": [
+        "Light"
+      ],
+      "variables": [
+        {
+          "name": "ground",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "description": "Page background.",
+          "cssVar": "--ground",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "ink",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          },
+          "description": "Text, the rule under each section title, the top bar, the main button, the hover fill on writing rows.",
+          "cssVar": "--ink",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "quiet",
+          "type": "COLOR",
+          "value": {
+            "r": 0.35294117647058826,
+            "g": 0.35294117647058826,
+            "b": 0.35294117647058826,
+            "a": 1
+          },
+          "description": "Secondary text: small labels, section notes, case-study paragraphs.",
+          "cssVar": "--quiet",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "line",
+          "type": "COLOR",
+          "value": {
+            "r": 0.8705882352941177,
+            "g": 0.8705882352941177,
+            "b": 0.8705882352941177,
+            "a": 1
+          },
+          "description": "Hairlines: borders, table rules, the grid overlay.",
+          "cssVar": "--line",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "bar",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 1
+          },
+          "description": "Top bar background.",
+          "cssVar": "--bar",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "on-bar",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "description": "Text and icons on the top bar.",
+          "cssVar": "--on-bar",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "teal",
+          "type": "COLOR",
+          "value": {
+            "r": 0.24705882352941178,
+            "g": 0.788235294117647,
+            "b": 0.6901960784313725,
+            "a": 1
+          },
+          "description": "Automation teal, the brand accent. Underlined key phrases, the status dot, the quote mark, the open quarter, the current timeline dot, the signals in the landing field. Also Thali's product colour.",
+          "cssVar": "--teal",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "coral",
+          "type": "COLOR",
+          "value": {
+            "r": 0.8784313725490196,
+            "g": 0.41568627450980394,
+            "b": 0.37254901960784315,
+            "a": 1
+          },
+          "description": "Azhagi's product colour.",
+          "cssVar": "--coral",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "violet",
+          "type": "COLOR",
+          "value": {
+            "r": 0.6627450980392157,
+            "g": 0.5450980392156862,
+            "b": 0.8627450980392157,
+            "a": 1
+          },
+          "description": "Boona Cue's product colour.",
+          "cssVar": "--violet",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "lost",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 0.5411764705882353,
+            "b": 0.5019607843137255,
+            "a": 1
+          },
+          "description": "Red for ending or negative states in the product screens (end-call button, live dot) and the dashed outline on unfilled placeholders.",
+          "cssVar": "--lost",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "signal",
+          "type": "COLOR",
+          "value": {
+            "r": 0.1843137254901961,
+            "g": 0.3568627450980392,
+            "b": 1,
+            "a": 1
+          },
+          "description": "Signal blue. Motion and tool overlays only: the grid draw, dashed landing outlines, selection boxes, the crosshair, focus rings. Never a static accent.",
+          "cssVar": "--signal",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "dark/band",
+          "type": "COLOR",
+          "value": {
+            "r": 0.043137254901960784,
+            "g": 0.043137254901960784,
+            "b": 0.043137254901960784,
+            "a": 1
+          },
+          "description": "The black band behind Boona Fit and the dark product screens.",
+          "cssVar": "--color-dark-band",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "dark/surface",
+          "type": "COLOR",
+          "value": {
+            "r": 0.06666666666666667,
+            "g": 0.06666666666666667,
+            "b": 0.06666666666666667,
+            "a": 1
+          },
+          "description": "Dark mini surfaces and the phone frame.",
+          "cssVar": "--color-dark-surface",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "dark/hover",
+          "type": "COLOR",
+          "value": {
+            "r": 0.13333333333333333,
+            "g": 0.13333333333333333,
+            "b": 0.13333333333333333,
+            "a": 1
+          },
+          "description": "The main button while hovered.",
+          "cssVar": "--color-dark-hover",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "surface/bubble",
+          "type": "COLOR",
+          "value": {
+            "r": 0.9450980392156862,
+            "g": 0.9450980392156862,
+            "b": 0.9450980392156862,
+            "a": 1
+          },
+          "description": "Incoming chat bubble in the Azhagi screen.",
+          "cssVar": "--color-surface-bubble",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "surface/lane",
+          "type": "COLOR",
+          "value": {
+            "r": 0.9803921568627451,
+            "g": 0.9803921568627451,
+            "b": 0.9803921568627451,
+            "a": 1
+          },
+          "description": "Timeline lanes in the Cue screen.",
+          "cssVar": "--color-surface-lane",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "surface/lane-empty",
+          "type": "COLOR",
+          "value": {
+            "r": 0.9882352941176471,
+            "g": 0.9882352941176471,
+            "b": 0.9882352941176471,
+            "a": 1
+          },
+          "description": "Empty lanes in the Cue screen.",
+          "cssVar": "--color-surface-lane-empty",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "on-dark/strong",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.8588235294117647
+          },
+          "description": "86 %.",
+          "cssVar": "--color-on-dark-strong",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "on-dark/text",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.7215686274509804
+          },
+          "description": "72 %.",
+          "cssVar": "--color-on-dark-text",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "on-dark/muted",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.5490196078431373
+          },
+          "description": "55 %.",
+          "cssVar": "--color-on-dark-muted",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "on-dark/faint",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.25098039215686274
+          },
+          "description": "25 %.",
+          "cssVar": "--color-on-dark-faint",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "on-dark/hairline",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.12156862745098039
+          },
+          "description": "12 %. Borders on dark screens.",
+          "cssVar": "--color-on-dark-hairline",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "overlay/shade",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.34901960784313724
+          },
+          "description": "Black at 35 %, the dim behind the landing name.",
+          "cssVar": "--color-overlay-shade",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "overlay/tint",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.0392156862745098
+          },
+          "description": "Black at 4 %, the faintest fill.",
+          "cssVar": "--color-overlay-tint",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "product/azhagi",
+          "type": "COLOR",
+          "value": {
+            "r": 0.8784313725490196,
+            "g": 0.41568627450980394,
+            "b": 0.37254901960784315,
+            "a": 1
+          },
+          "description": "",
+          "cssVar": "--color-product-azhagi",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "product/cue",
+          "type": "COLOR",
+          "value": {
+            "r": 0.6627450980392157,
+            "g": 0.5450980392156862,
+            "b": 0.8627450980392157,
+            "a": 1
+          },
+          "description": "",
+          "cssVar": "--color-product-cue",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "product/thali",
+          "type": "COLOR",
+          "value": {
+            "r": 0.24705882352941178,
+            "g": 0.788235294117647,
+            "b": 0.6901960784313725,
+            "a": 1
+          },
+          "description": "",
+          "cssVar": "--color-product-thali",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "product/fit",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "description": "",
+          "cssVar": "--color-product-fit",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Type",
+      "modes": [
+        "Desktop"
+      ],
+      "variables": [
+        {
+          "name": "weight/regular",
+          "type": "FLOAT",
+          "value": 400,
+          "description": "",
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "weight/medium",
+          "type": "FLOAT",
+          "value": 500,
+          "description": "",
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "weight/semibold",
+          "type": "FLOAT",
+          "value": 600,
+          "description": "",
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "weight/bold",
+          "type": "FLOAT",
+          "value": 700,
+          "description": "Loaded for Geist only; Geist Mono stops at 600.",
+          "scopes": [
+            "FONT_WEIGHT"
+          ]
+        },
+        {
+          "name": "tracking/display-tight",
+          "type": "FLOAT",
+          "value": -6,
+          "description": "The big experience number. Percent of the size (-0.06em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/display",
+          "type": "FLOAT",
+          "value": -4.5,
+          "description": "Section titles. Percent of the size (-0.045em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/name",
+          "type": "FLOAT",
+          "value": -4,
+          "description": "The landing name and result numbers. Percent of the size (-0.04em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/heading",
+          "type": "FLOAT",
+          "value": -3,
+          "description": "Headings, the lede, the big quote, the email. Percent of the size (-0.03em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/subheading",
+          "type": "FLOAT",
+          "value": -2.5,
+          "description": " Percent of the size (-0.025em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/small-heading",
+          "type": "FLOAT",
+          "value": -2,
+          "description": " Percent of the size (-0.02em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/text",
+          "type": "FLOAT",
+          "value": -1,
+          "description": "Body-size text with a little pull-in: the intro, pills, buttons. Percent of the size (-0.01em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/label",
+          "type": "FLOAT",
+          "value": 8,
+          "description": "The 10 px uppercase mono label. Percent of the size (0.08em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "tracking/chip",
+          "type": "FLOAT",
+          "value": 6,
+          "description": "Uppercase chips and tags. Percent of the size (0.06em).",
+          "scopes": [
+            "LETTER_SPACING"
+          ]
+        },
+        {
+          "name": "leading/display",
+          "type": "FLOAT",
+          "value": 90,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/title",
+          "type": "FLOAT",
+          "value": 95,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/flush",
+          "type": "FLOAT",
+          "value": 100,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/heading",
+          "type": "FLOAT",
+          "value": 112,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/lede",
+          "type": "FLOAT",
+          "value": 115,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/quote",
+          "type": "FLOAT",
+          "value": 118,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/subheading",
+          "type": "FLOAT",
+          "value": 120,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/label",
+          "type": "FLOAT",
+          "value": 140,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/intro",
+          "type": "FLOAT",
+          "value": 145,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "leading/body",
+          "type": "FLOAT",
+          "value": 150,
+          "description": " Percent of the size.",
+          "scopes": [
+            "LINE_HEIGHT"
+          ]
+        },
+        {
+          "name": "size/name",
+          "type": "FLOAT",
+          "value": 121,
+          "description": "The landing name, 'Boopathi Thangamani'. Grows to 200 px on very wide screens. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/name",
+          "type": "FLOAT",
+          "value": 49,
+          "description": "name on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/section-title",
+          "type": "FLOAT",
+          "value": 96,
+          "description": "The large title at the head of each section ('Four products, all in beta.'). Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/section-title",
+          "type": "FLOAT",
+          "value": 43,
+          "description": "section-title on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/section-title-mid",
+          "type": "FLOAT",
+          "value": 70,
+          "description": "The smaller section title used where the words are longer. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/section-title-mid",
+          "type": "FLOAT",
+          "value": 33,
+          "description": "section-title-mid on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/big-number",
+          "type": "FLOAT",
+          "value": 120,
+          "description": "The years number pinned beside the timeline. Tabular figures. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/big-number",
+          "type": "FLOAT",
+          "value": 72,
+          "description": "big-number on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/big-number-unit",
+          "type": "FLOAT",
+          "value": 30,
+          "description": "The word 'years' beside the big number, in the quiet colour. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/big-number-unit",
+          "type": "FLOAT",
+          "value": 20,
+          "description": "big-number-unit on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/lede",
+          "type": "FLOAT",
+          "value": 40,
+          "description": "The opening sentence of the Approach section. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/lede",
+          "type": "FLOAT",
+          "value": 26,
+          "description": "lede on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/quote",
+          "type": "FLOAT",
+          "value": 38,
+          "description": "The big testimonial, with a teal opening quote mark hanging in the margin. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/quote",
+          "type": "FLOAT",
+          "value": 24,
+          "description": "quote on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/h2",
+          "type": "FLOAT",
+          "value": 31,
+          "description": "Case-study headlines and other second-level headings. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/h2",
+          "type": "FLOAT",
+          "value": 24,
+          "description": "h2 on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/h3",
+          "type": "FLOAT",
+          "value": 25,
+          "description": "Third-level headings, such as the approach rows. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/h3",
+          "type": "FLOAT",
+          "value": 20,
+          "description": "h3 on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/table-title",
+          "type": "FLOAT",
+          "value": 25,
+          "description": "Post titles in the Writing table. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/table-title",
+          "type": "FLOAT",
+          "value": 18,
+          "description": "table-title on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/email",
+          "type": "FLOAT",
+          "value": 26,
+          "description": "The email address in Contact. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/email",
+          "type": "FLOAT",
+          "value": 20,
+          "description": "email on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/result-number",
+          "type": "FLOAT",
+          "value": 36,
+          "description": "Result figures under each case study ('1.7 s'). Tabular figures; the unit is 45 % of the size, medium weight, quiet colour. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size-phone/result-number",
+          "type": "FLOAT",
+          "value": 28,
+          "description": "result-number on a 390 px phone.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/body",
+          "type": "FLOAT",
+          "value": 15,
+          "description": "The default: paragraphs, lists, form fields. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/intro",
+          "type": "FLOAT",
+          "value": 16,
+          "description": "The landing intro paragraph, 38 characters wide at most. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/label",
+          "type": "FLOAT",
+          "value": 10,
+          "description": "The small uppercase mono label (the .m class): section numbers, fact labels, meta bars, the footer. Quiet colour; bold parts switch to ink at 600. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/pill",
+          "type": "FLOAT",
+          "value": 13,
+          "description": "The 'Open to projects' pill in the top bar: 30 px tall, ink background, white text, pulsing teal dot. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        },
+        {
+          "name": "size/button",
+          "type": "FLOAT",
+          "value": 15,
+          "description": "The main button ('Send the brief'): ink background, white text, 16 px by 22 px padding, square corners. Desktop size.",
+          "scopes": [
+            "FONT_SIZE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Space",
+      "modes": [
+        "Desktop"
+      ],
+      "variables": [
+        {
+          "name": "grid/columns/desktop",
+          "type": "FLOAT",
+          "value": 12,
+          "description": "1024 px and wider.",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "grid/columns/tablet",
+          "type": "FLOAT",
+          "value": 8,
+          "description": "640 to 1023 px.",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "grid/columns/phone",
+          "type": "FLOAT",
+          "value": 4,
+          "description": "Up to 639 px.",
+          "scopes": [
+            "ALL_SCOPES"
+          ]
+        },
+        {
+          "name": "grid/max-width",
+          "type": "FLOAT",
+          "value": 1280,
+          "description": "The container. Centred, with the gutter on each side when the window is narrower.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/gutter/desktop",
+          "type": "FLOAT",
+          "value": 24,
+          "description": "Page edge to the grid.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/gutter/phone",
+          "type": "FLOAT",
+          "value": 16,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/column-gap/desktop",
+          "type": "FLOAT",
+          "value": 24,
+          "description": "Between columns, made of a 12 px inset on each side.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/column-gap/phone",
+          "type": "FLOAT",
+          "value": 16,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/inset/desktop",
+          "type": "FLOAT",
+          "value": 12,
+          "description": "Padding inside every grid cell.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/inset/phone",
+          "type": "FLOAT",
+          "value": 8,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/nav-height",
+          "type": "FLOAT",
+          "value": 48,
+          "description": "The top bar.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "grid/sticky-top",
+          "type": "FLOAT",
+          "value": 80,
+          "description": "Where a pinned column rests: the top bar plus 32 px.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "6",
+          "type": "FLOAT",
+          "value": 6,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "8",
+          "type": "FLOAT",
+          "value": 8,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "10",
+          "type": "FLOAT",
+          "value": 10,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "12",
+          "type": "FLOAT",
+          "value": 12,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "14",
+          "type": "FLOAT",
+          "value": 14,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "16",
+          "type": "FLOAT",
+          "value": 16,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "18",
+          "type": "FLOAT",
+          "value": 18,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "20",
+          "type": "FLOAT",
+          "value": 20,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "22",
+          "type": "FLOAT",
+          "value": 22,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "24",
+          "type": "FLOAT",
+          "value": 24,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "36",
+          "type": "FLOAT",
+          "value": 36,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "48",
+          "type": "FLOAT",
+          "value": 48,
+          "description": "",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "section/top",
+          "type": "FLOAT",
+          "value": 128,
+          "description": "Above each section's label.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "section/bottom",
+          "type": "FLOAT",
+          "value": 64,
+          "description": "Below each section.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "section/title-to-content",
+          "type": "FLOAT",
+          "value": 86,
+          "description": "From the rule under the title to the first content row.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "section/label-to-title",
+          "type": "FLOAT",
+          "value": 22,
+          "description": "From the small label to the big title.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        },
+        {
+          "name": "section/title-to-rule",
+          "type": "FLOAT",
+          "value": 16,
+          "description": "From the title's baseline area to the 1 px ink rule.",
+          "scopes": [
+            "GAP",
+            "WIDTH_HEIGHT"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Radius",
+      "modes": [
+        "Default"
+      ],
+      "variables": [
+        {
+          "name": "none",
+          "type": "FLOAT",
+          "value": 0,
+          "description": "Buttons, cards, screens, form fields.",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "hairline",
+          "type": "FLOAT",
+          "value": 2,
+          "description": "Tiny chips and the ends of bars.",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "label",
+          "type": "FLOAT",
+          "value": 3,
+          "description": "The crosshair label and other small tags.",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "small",
+          "type": "FLOAT",
+          "value": 4,
+          "description": "",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "medium",
+          "type": "FLOAT",
+          "value": 6,
+          "description": "",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "large",
+          "type": "FLOAT",
+          "value": 10,
+          "description": "",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "pill",
+          "type": "FLOAT",
+          "value": 999,
+          "description": "The status pill, chips, tags.",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        },
+        {
+          "name": "circle",
+          "type": "FLOAT",
+          "value": 9999,
+          "description": "Dots and avatars. (50 % in CSS; 9999 here makes any box a circle)",
+          "scopes": [
+            "CORNER_RADIUS"
+          ]
+        }
+      ]
+    }
+  ],
+  "textStyles": [
+    {
+      "name": "display/name",
+      "family": "Geist",
+      "style": "Bold",
+      "size": 121,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -4
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 95
+      },
+      "textCase": "ORIGINAL",
+      "description": "The landing name, 'Boopathi Thangamani'. Grows to 200 px on very wide screens. Phone: 49px.",
+      "bind": {
+        "size": "size/name"
+      }
+    },
+    {
+      "name": "display/section-title",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 96,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -4.5
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 95
+      },
+      "textCase": "ORIGINAL",
+      "description": "The large title at the head of each section ('Four products, all in beta.'). Phone: 43px.",
+      "bind": {
+        "size": "size/section-title"
+      }
+    },
+    {
+      "name": "display/section-title-mid",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 70,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -4.5
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 95
+      },
+      "textCase": "ORIGINAL",
+      "description": "The smaller section title used where the words are longer. Phone: 33px.",
+      "bind": {
+        "size": "size/section-title-mid"
+      }
+    },
+    {
+      "name": "display/big-number",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 120,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -6
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 90
+      },
+      "textCase": "ORIGINAL",
+      "description": "The years number pinned beside the timeline. Tabular figures. Phone: 72px.",
+      "bind": {
+        "size": "size/big-number"
+      }
+    },
+    {
+      "name": "display/big-number-unit",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 30,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 90
+      },
+      "textCase": "ORIGINAL",
+      "description": "The word 'years' beside the big number, in the quiet colour. Phone: 20px.",
+      "bind": {
+        "size": "size/big-number-unit"
+      }
+    },
+    {
+      "name": "heading/lede",
+      "family": "Geist",
+      "style": "Medium",
+      "size": 40,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -3
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 115
+      },
+      "textCase": "ORIGINAL",
+      "description": "The opening sentence of the Approach section. Phone: 26px.",
+      "bind": {
+        "size": "size/lede"
+      }
+    },
+    {
+      "name": "heading/quote",
+      "family": "Geist",
+      "style": "Medium",
+      "size": 38,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -3
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 118
+      },
+      "textCase": "ORIGINAL",
+      "description": "The big testimonial, with a teal opening quote mark hanging in the margin. Phone: 24px.",
+      "bind": {
+        "size": "size/quote"
+      }
+    },
+    {
+      "name": "heading/h2",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 31,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -3
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 112
+      },
+      "textCase": "ORIGINAL",
+      "description": "Case-study headlines and other second-level headings. Phone: 24px.",
+      "bind": {
+        "size": "size/h2"
+      }
+    },
+    {
+      "name": "heading/h3",
+      "family": "Geist",
+      "style": "Medium",
+      "size": 25,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2.5
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 120
+      },
+      "textCase": "ORIGINAL",
+      "description": "Third-level headings, such as the approach rows. Phone: 20px.",
+      "bind": {
+        "size": "size/h3"
+      }
+    },
+    {
+      "name": "heading/table-title",
+      "family": "Geist",
+      "style": "Medium",
+      "size": 25,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2.5
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 120
+      },
+      "textCase": "ORIGINAL",
+      "description": "Post titles in the Writing table. Phone: 18px.",
+      "bind": {
+        "size": "size/table-title"
+      }
+    },
+    {
+      "name": "heading/email",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 26,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -3
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "textCase": "ORIGINAL",
+      "description": "The email address in Contact. Phone: 20px.",
+      "bind": {
+        "size": "size/email"
+      }
+    },
+    {
+      "name": "heading/result-number",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 36,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -4
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "textCase": "ORIGINAL",
+      "description": "Result figures under each case study ('1.7 s'). Tabular figures; the unit is 45 % of the size, medium weight, quiet colour. Phone: 28px.",
+      "bind": {
+        "size": "size/result-number"
+      }
+    },
+    {
+      "name": "text/body",
+      "family": "Geist",
+      "style": "Regular",
+      "size": 15,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "textCase": "ORIGINAL",
+      "description": "The default: paragraphs, lists, form fields.",
+      "bind": {
+        "size": "size/body"
+      }
+    },
+    {
+      "name": "text/intro",
+      "family": "Geist",
+      "style": "Regular",
+      "size": 16,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -1
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 145
+      },
+      "textCase": "ORIGINAL",
+      "description": "The landing intro paragraph, 38 characters wide at most.",
+      "bind": {
+        "size": "size/intro"
+      }
+    },
+    {
+      "name": "text/label",
+      "family": "Geist Mono",
+      "style": "Regular",
+      "size": 10,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 8
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 140
+      },
+      "textCase": "UPPER",
+      "description": "The small uppercase mono label (the .m class): section numbers, fact labels, meta bars, the footer. Quiet colour; bold parts switch to ink at 600.",
+      "bind": {
+        "size": "size/label"
+      }
+    },
+    {
+      "name": "text/pill",
+      "family": "Geist",
+      "style": "Medium",
+      "size": 13,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -1
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "textCase": "ORIGINAL",
+      "description": "The 'Open to projects' pill in the top bar: 30 px tall, ink background, white text, pulsing teal dot.",
+      "bind": {
+        "size": "size/pill"
+      }
+    },
+    {
+      "name": "text/button",
+      "family": "Geist",
+      "style": "SemiBold",
+      "size": 15,
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -1
+      },
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "textCase": "ORIGINAL",
+      "description": "The main button ('Send the brief'): ink background, white text, 16 px by 22 px padding, square corners.",
+      "bind": {
+        "size": "size/button"
+      }
+    }
+  ]
+}

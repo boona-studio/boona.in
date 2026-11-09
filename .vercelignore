@@ -10,3 +10,5 @@ media/founder-portrait-4x5.jpg
 media/founder-camera-16x9.jpg
 .env.local
 .gitignore
+design
+package.json

@@ -1,0 +1,15 @@
+{
+  "name": "boona.in",
+  "private": true,
+  "version": "2.0.0",
+  "description": "www.boona.in: plain HTML, CSS and JavaScript. tokens.json is the design system's source of truth.",
+  "type": "module",
+  "scripts": {
+    "tokens": "node design/scripts/build-tokens.mjs",
+    "verify": "node design/scripts/verify-tokens.mjs",
+    "check": "npm run tokens && npm run verify"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
