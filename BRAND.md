@@ -1,7 +1,7 @@
 # Boona — brand brief for the design system
 
-A one-page handoff from the session that built www.boona.in to whoever builds the design system around it.
-The values are in `tokens.json`; this page holds the decisions and the reasons behind them.
+A one-page handoff from the session that built www.boona.in to whoever works on the design system around it.
+The values are in `tokens.json` and the system itself is documented in `design/README.md`; this page holds the decisions and the reasons behind them.
 Nothing here is a guess: every fact came from Boopathi, and anything still unknown is marked as a placeholder.
 
 ## Who and what
@@ -64,11 +64,15 @@ Years of experience, job titles and company types in the timeline, the first sta
 
 ## Where things live
 
-- Folder: `D:\Career\Product\boona-website` (the whole site; no build step).
+- Folder: `D:\Career\Product\boona-website` (the whole site; plain files, nothing to install).
 - GitHub: `github.com/boona-studio/boona.in`, branch `main`. Vercel project `boona-portfolio` publishes it to www.boona.in on every push.
-- Tokens: `tokens.json` in the folder, also at `https://raw.githubusercontent.com/boona-studio/boona.in/main/tokens.json` (pullable by Tokens Studio) and `https://www.boona.in/tokens.json`.
+- Tokens: `tokens.json` at the root, also at `https://raw.githubusercontent.com/boona-studio/boona.in/main/tokens.json` (pullable by Tokens Studio) and `https://www.boona.in/tokens.json`.
+- Design system: the `design/` folder. Its `README.md` describes the system (Grid v2), the components and the rules; `scripts/` builds the CSS variables, the Figma variables and a contrast report from `tokens.json`; `build/` holds the outputs. Not published.
+- Figma: "Boona — Design system (Grid v2)", with Cover, Foundations and Components pages, kept in sync from the build outputs. Claude Design: the "Boona Grid" design-system artifact, built from the same tokens. Both links are in `design/README.md`.
 - Notes for editing the site: `README.md`. Open items: `PLACEHOLDERS.md`.
 
 ## Keeping the site and the design system in step
 
-Today `css/site.css` is the source of truth and `tokens.json` mirrors it. If the design system changes a value, tell the website session and it will carry the change into the CSS and the tokens file together. If the design system should become the source instead, that is a decision for Boopathi; say so and the website will follow the tokens file.
+Since 9 November 2026, `tokens.json` is the single source of truth. `css/tokens.css` is generated from it and the page loads that file just before `css/site.css`, which only reads the variables.
+To change a colour, size or timing: edit `tokens.json`, run `npm run check` in the folder (it rebuilds the CSS variables, checks contrast and renders the page), then commit both files. Never edit a value by hand in `css/site.css`, in `css/tokens.css` or in Figma; they all follow the tokens file.
+Layout and copy still live in `index.html` and `css/site.css`; the website session changes those.
