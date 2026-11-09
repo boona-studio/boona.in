@@ -63,6 +63,7 @@ const dsTokens = {
   radius: { note: "Corners are mostly square. Rounded where something is a chip, a tag or a dot.", tokens: list("radius.", (k) => "radius-" + k.slice(7)).map((t) => (t.value === "50%" ? { ...t, value: "50%" } : t)) },
   grid: { note: "A 12-column grid in a 1280 px container, 24 px gutters and column gaps (16 px on phones).", tokens: list("grid.", (k) => "grid-" + k.slice(5).replace(/\./g, "-")).concat(list("breakpoint.", (k) => "breakpoint-" + k.slice(11))) },
   duration: { note: "Motion timings. Reduced motion turns every one of them off.", tokens: list("motion.duration.", (k) => "duration-" + k.split(".").pop()) },
+  shadow: { note: "The only shadows on the site: under the depicted devices.", tokens: Object.entries(flat).filter(([k]) => k.startsWith("shadow.")).map(([k, v]) => ({ name: "shadow-" + k.slice(7), value: v.map((sh) => (sh.spread === "0px" ? `${sh.offsetX} ${sh.offsetY} ${sh.blur} ${sh.color.toLowerCase()}` : `${sh.offsetX} ${sh.offsetY} ${sh.blur} ${sh.spread} ${sh.color.toLowerCase()}`)).join(", "), usage: desc(k) })) },
   easing: { note: "snap for screens, bars and chips; ease for reveals; scroll for menu links.", tokens: list("motion.easing.", (k) => "ease-" + k.split(".").pop()).map((t) => ({ ...t, value: `cubic-bezier(${flat["motion.easing." + t.name.slice(5)].join(", ")})` })) },
 };
 w("project/tokens.json", JSON.stringify(dsTokens, null, 2) + "\n");
