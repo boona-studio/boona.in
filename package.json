@@ -7,7 +7,8 @@
   "scripts": {
     "tokens": "node design/scripts/build-tokens.mjs",
     "verify": "node design/scripts/verify-tokens.mjs",
-    "check": "npm run tokens && npm run verify"
+    "check": "npm run tokens && npm run verify",
+    "audit": "node design/scripts/audit-css.mjs"
   },
   "engines": {
     "node": ">=18"
