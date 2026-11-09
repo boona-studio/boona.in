@@ -17,6 +17,7 @@ To see it, double-click `index.html`. It opens in any browser.
 | `design/` | The design system: `README.md` (the system, components, rules), `scripts/` (token build, Figma sync, Claude Design build, render check) and `build/` (generated outputs: Figma variables, contrast report). Not published. |
 | `package.json` | Only scripts: `npm run tokens`, `npm run verify`, `npm run check`. No dependencies to install. |
 | `PLACEHOLDERS.md` | The list of everything still to fill in. |
+| `BRAND.md` | A one-page brief of the brand decisions and the reasons behind them, for anyone building the design system or working on the brand elsewhere. Not published. |
 | `.vercelignore` | The list of files Vercel must not publish (this README, the placeholders list, the originals of the photos, tooling). |
 | `.vercel/`, `.env.local`, `.gitignore` | Created by Vercel when the folder was linked to your project. Leave them alone. `.env.local` holds a private token: do not share it or email it. |
 | `.claude/` | Preview tooling for the Claude app. You can ignore it. |
