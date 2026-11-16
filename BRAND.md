@@ -8,8 +8,8 @@ Nothing here is a guess: every fact came from Boopathi, and anything still unkno
 
 - **Person.** Boopathi Thangamani, who works as **Boona**. Title: **AI Solutions Architect**. Location shown publicly as **TN, India**. Email: studio.boona@gmail.com.
 - **What Boona does.** Designs and integrates AI into any business. The one-line promise on the site: *AI that runs every day and tells you when it's working.*
-- **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, X and YouTube (only the LinkedIn link is on the page; the X and YouTube links come back when there are addresses for them).
-- **Status.** Open to projects for Q4 2026. The next two quarters are placeholders.
+- **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, the one channel the page names and links.
+- **Status.** Open to projects. The page says so in the top bar and the landing section.
 
 ## The four products (all in beta, none released)
 
@@ -60,10 +60,9 @@ Two rules Boopathi states as learned the hard way, and which read as brand value
 
 ## Still placeholder (see `PLACEHOLDERS.md`)
 
-Only the Q1 and Q2 2027 availability.
-The X and YouTube links were taken off the page on 16 November 2026 until there are addresses for them.
-The Testimonials section and the table of posts were taken off the page on 16 November 2026 until there is real content for them; the quote and table components stay in the system.
-The experience timeline (10 years, the job titles, the 2015 start) and the LinkedIn link were filled from Boopathi's resume on 16 November 2026. Past employers are described, not named.
+Nothing. As of 16 November 2026 the page has no placeholders.
+Taken off the page that day until there is real content: the Testimonials section, the table of posts, the X and YouTube links and mentions, and the availability boxes by quarter. The quote, table and availability components stay in the system.
+The experience timeline (10 years, the job titles, the 2015 start) and the LinkedIn link were filled from Boopathi's resume the same day. Past employers are described, not named.
 
 ## Where things live
 

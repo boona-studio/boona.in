@@ -1,5 +1,7 @@
 # Placeholders to fill in
 
+**As of 16 November 2026 nothing on the page is waiting to be filled.** The lists below record what was filled and what was taken off the page, so each can come back when you have the content.
+
 Everything below is marked on the page with a dashed red outline and a tiny **FILL** tag.
 In `index.html` each one is a `<span class="ph">…</span>`. Search for the text in square brackets.
 When all are done, change `data-placeholders="show"` to `"hide"` in the first line of `index.html`.
@@ -43,6 +45,8 @@ Two calls I made, both easy to change:
 | Testimonials | Section taken off the page |
 | Writing | The three empty rows removed and the table of posts switched off |
 | Writing section and footer | The X and YouTube links removed. LinkedIn stays. |
+| Writing note and the current Experience chapter | Both now name LinkedIn only |
+| Contact | The Availability label and its boxes by quarter removed. "Open to projects" still shows in the top bar and the landing section. |
 
 ## Case studies
 
@@ -60,16 +64,15 @@ Send me three (the words, the name, the role and company) and I will put the sec
 ## Writing
 
 The X and YouTube links were removed on 16 November 2026, at your ask. Send me the addresses and I will put them back, in the Writing section and in the footer.
-Two sentences on the page still say you post on LinkedIn, X and YouTube: the note beside the Writing title and the current chapter in Experience.
+The two sentences that named X and YouTube now say LinkedIn only.
 
 The table of posts is switched off since 16 November 2026, at your ask, until there is a first post.
 Send me a date, a title, the channel and the link, and I will switch it on with that row. The README says how to do it by hand.
 
 ## Contact
 
-| Where | Placeholder | What to put |
-| --- | --- | --- |
-| Availability list | `[Open / Limited / Booked]` for the next two quarters | Your plan for those quarters |
+The availability boxes were removed on 16 November 2026, at your ask.
+Tell me Open, Limited or Booked for the coming quarters and I will put them back.
 
 ## Decisions you may want to change
 

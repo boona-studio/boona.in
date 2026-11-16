@@ -48,8 +48,7 @@ The full list is in `PLACEHOLDERS.md`.
 ## Common edits
 
 - **The big name.** The landing section shows "Boopathi Thangamani"; the menu, the page title and the link preview say "Boona". Search for `Boopathi` to change the name.
-- **Availability.** The words "Open to projects" appear three times: the pill in the top bar, the hero meta line, and the first box under Availability in Contact. Search for `Open to projects`.
-- **The next two quarters.** In the Contact section, the rows marked `[Open / Limited / Booked]`. The quarter names themselves update from the date on their own.
+- **Availability.** The words "Open to projects" show in two places on the page, the pill in the top bar and the Status line in the landing section, and they also sit in the two description lines near the top of `index.html` that search engines and link previews read. Search for `Open to projects`. The boxes that showed availability quarter by quarter in Contact were taken off the page on 16 November 2026; ask and I will put them back.
 - **Email address.** Search for `studio.boona@gmail.com` (it appears in the hero, the contact section, the form and the footer).
 - **Photos.** There are no photos on the page (removed on 7 November 2026). The web copies are still in `media/` if you ever want one back; ask and I will place it.
 - **Big section titles.** Each section starts with a small label, a large title and a short note at the right. Search for `shead__t` to find the titles.
