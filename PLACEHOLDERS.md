@@ -35,11 +35,18 @@ Two calls I made, both easy to change:
 - Past employers are described, not named. Your outline wrote them that way ("a product company"), and those two chapters tell the stories of an outage and of missed dates. Say the word and the names go in.
 - The resume names the 2018 – 2022 employer but not what kind of company it is, so that heading says what the work was instead.
 
+## Also on 16 November 2026 (from your messages)
+
+| Where | What changed |
+| --- | --- |
+| Boona Fit text | Now ends with your line: `AI-powered personalised fitness, meal and supplement planner.` |
+| Testimonials | Section taken off the page |
+| Writing | The three empty rows removed and the table of posts switched off |
+| Writing section and footer | The X and YouTube links removed. LinkedIn stays. |
+
 ## Case studies
 
-| Where | Placeholder | What to put |
-| --- | --- | --- |
-| Boona Fit text | `[One line on who it is for and what makes it different]` | One sentence |
+Nothing left to fill.
 
 ## Experience
 
@@ -52,9 +59,8 @@ Send me three (the words, the name, the role and company) and I will put the sec
 
 ## Writing
 
-| Where | Placeholder | What to put |
-| --- | --- | --- |
-| Channel links (top of the section and in the footer) | `[profile link]`, `[channel link]` | Your X and YouTube addresses (LinkedIn is in). Put them in the `href="#"` of each link too. |
+The X and YouTube links were removed on 16 November 2026, at your ask. Send me the addresses and I will put them back, in the Writing section and in the footer.
+Two sentences on the page still say you post on LinkedIn, X and YouTube: the note beside the Writing title and the current chapter in Experience.
 
 The table of posts is switched off since 16 November 2026, at your ask, until there is a first post.
 Send me a date, a title, the channel and the link, and I will switch it on with that row. The README says how to do it by hand.

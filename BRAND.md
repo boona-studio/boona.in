@@ -8,7 +8,7 @@ Nothing here is a guess: every fact came from Boopathi, and anything still unkno
 
 - **Person.** Boopathi Thangamani, who works as **Boona**. Title: **AI Solutions Architect**. Location shown publicly as **TN, India**. Email: studio.boona@gmail.com.
 - **What Boona does.** Designs and integrates AI into any business. The one-line promise on the site: *AI that runs every day and tells you when it's working.*
-- **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, X and YouTube (the LinkedIn link is on the page; X and YouTube are not filled in yet).
+- **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, X and YouTube (only the LinkedIn link is on the page; the X and YouTube links come back when there are addresses for them).
 - **Status.** Open to projects for Q4 2026. The next two quarters are placeholders.
 
 ## The four products (all in beta, none released)
@@ -18,7 +18,7 @@ Nothing here is a guess: every fact came from Boopathi, and anything still unkno
 | **Azhagi** | coral `#E06A5F` | A live MetaHuman on a video call. Sees you, hears you, talks back in real time, performs any move you ask for. An AI influencer an audience can call, not just watch. |
 | **Boona Cue** | violet `#A98BDC` | Turns words from any AI into animation for AI characters. "Blink twice, then nod three times" happens exactly, on any engine. The model decides what to say; Cue makes the body keep its word. |
 | **Thali** | teal `#3FC9B0` | React Native app. You set your meal rules; it turns them into a weekly South Indian meal plan sized for the people eating. On iPhone through TestFlight, not yet on the App Store. |
-| **Boona Fit** | none (white on black) | Personalised fitness app: plans the programme, guides the exercising, tracks what actually happened. One plan per person, not per template. Shown on a black band with the other three colours on its rings. |
+| **Boona Fit** | none (white on black) | AI-powered personalised fitness, meal and supplement planner. Plans the programme, guides the exercising, tracks what actually happened. One plan per person, not per template. Shown on a black band with the other three colours on its rings. |
 
 Say "Beta, in development" and "not yet released" for all four. No user counts, prices, launch dates or reviews exist yet; do not add any.
 
@@ -60,7 +60,8 @@ Two rules Boopathi states as learned the hard way, and which read as brand value
 
 ## Still placeholder (see `PLACEHOLDERS.md`)
 
-The X and YouTube links, the Q1 and Q2 2027 availability, and one line about who Boona Fit is for.
+Only the Q1 and Q2 2027 availability.
+The X and YouTube links were taken off the page on 16 November 2026 until there are addresses for them.
 The Testimonials section and the table of posts were taken off the page on 16 November 2026 until there is real content for them; the quote and table components stay in the system.
 The experience timeline (10 years, the job titles, the 2015 start) and the LinkedIn link were filled from Boopathi's resume on 16 November 2026. Past employers are described, not named.
 
