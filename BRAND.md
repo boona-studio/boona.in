@@ -6,7 +6,7 @@ Nothing here is a guess: every fact came from Boopathi, and anything still unkno
 
 ## Who and what
 
-- **Person.** Boopathi Thangamani, who works as **Boona**. Title: **AI Solutions Architect**. Location shown publicly as **TN, India**. Email: studio.boona@gmail.com.
+- **Person.** Boopathi Thangamani, who works as **Boona**. Title: **AI Solutions Architect**. On the landing section the labelled Role line is lighter by Boopathi's choice: "Engineer by training, AI nerd by choice" (16 November 2026); the formal title stays in the intro, the page title, the footer and link previews. Location shown publicly as **TN, India**. Email: studio.boona@gmail.com.
 - **What Boona does.** Designs and integrates AI into any business. The one-line promise on the site: *AI that runs every day and tells you when it's working.*
 - **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, the one channel the page names and links.
 - **Status.** Open to projects. The page says so in the top bar and the landing section.
