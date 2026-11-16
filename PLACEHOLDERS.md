@@ -47,16 +47,17 @@ Nothing left to fill. See "Done on 16 November 2026" above.
 
 ## Testimonials
 
-Three cards, each with `[One or two sentences from a client…]`, `[Name]` and `[Role, company]`.
-Ask three clients for a line each. If you would rather not show this section yet, delete everything between
-`<!-- ▸ TESTIMONIALS -->` and `<!-- ▸ WRITING -->` in `index.html` and I will tidy the numbering.
+Removed from the page on 16 November 2026, at your ask, until there are real lines from clients.
+Send me three (the words, the name, the role and company) and I will put the section back as it was.
 
 ## Writing
 
 | Where | Placeholder | What to put |
 | --- | --- | --- |
 | Channel links (top of the section and in the footer) | `[profile link]`, `[channel link]` | Your X and YouTube addresses (LinkedIn is in). Put them in the `href="#"` of each link too. |
-| Table rows | `[2026-00-00]`, `[Title of a …]`, `[link]` | Three real posts to start. Copy a row for more. |
+
+The table of posts is switched off since 16 November 2026, at your ask, until there is a first post.
+Send me a date, a title, the channel and the link, and I will switch it on with that row. The README says how to do it by hand.
 
 ## Contact
 

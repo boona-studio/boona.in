@@ -60,7 +60,8 @@ Two rules Boopathi states as learned the hard way, and which read as brand value
 
 ## Still placeholder (see `PLACEHOLDERS.md`)
 
-The three testimonials, the writing posts, the X and YouTube links, the Q1 and Q2 2027 availability, and one line about who Boona Fit is for.
+The X and YouTube links, the Q1 and Q2 2027 availability, and one line about who Boona Fit is for.
+The Testimonials section and the table of posts were taken off the page on 16 November 2026 until there is real content for them; the quote and table components stay in the system.
 The experience timeline (10 years, the job titles, the 2015 start) and the LinkedIn link were filled from Boopathi's resume on 16 November 2026. Past employers are described, not named.
 
 ## Where things live
