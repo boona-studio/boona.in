@@ -8,7 +8,7 @@ Nothing here is a guess: every fact came from Boopathi, and anything still unkno
 
 - **Person.** Boopathi Thangamani, who works as **Boona**. Title: **AI Solutions Architect**. Location shown publicly as **TN, India**. Email: studio.boona@gmail.com.
 - **What Boona does.** Designs and integrates AI into any business. The one-line promise on the site: *AI that runs every day and tells you when it's working.*
-- **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, X and YouTube (the links are not filled in yet).
+- **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, X and YouTube (the LinkedIn link is on the page; X and YouTube are not filled in yet).
 - **Status.** Open to projects for Q4 2026. The next two quarters are placeholders.
 
 ## The four products (all in beta, none released)
@@ -60,7 +60,8 @@ Two rules Boopathi states as learned the hard way, and which read as brand value
 
 ## Still placeholder (see `PLACEHOLDERS.md`)
 
-Years of experience, job titles and company types in the timeline, the first start year, the three testimonials, the writing posts and the LinkedIn, X and YouTube links, the Q1 and Q2 2027 availability, and one line about who Boona Fit is for.
+The three testimonials, the writing posts, the X and YouTube links, the Q1 and Q2 2027 availability, and one line about who Boona Fit is for.
+The experience timeline (10 years, the job titles, the 2015 start) and the LinkedIn link were filled from Boopathi's resume on 16 November 2026. Past employers are described, not named.
 
 ## Where things live
 

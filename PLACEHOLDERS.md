@@ -19,6 +19,22 @@ This file is only the checklist; the website itself reads `index.html`.
 All four products are shown as **Beta, in development** and "not yet released" (your words).
 When one of them launches, search `index.html` for `Beta` and update that product's meta bar, result and sentence.
 
+## Done on 16 November 2026 (from your resume)
+
+| Where | Now says |
+| --- | --- |
+| Experience, the big number | `10` years, as the resume's summary says |
+| Experience, 2022 – 2025 | `Lead Software Engineer` at a product company |
+| Experience, 2018 – 2022 | `Senior Software Engineer on a large e-commerce application` |
+| Experience, first chapter | `2015 — 2018`, `Trainee Software Developer, then Software Engineer` |
+| Experience, first chapter | The sentence about the 2018 food-ordering platform (48 hours to 24, team of eight) now sits here. The resume puts that work in the role that ended in early 2018, which answers the open question in your outline. |
+| Writing section and footer | The LinkedIn link, `linkedin.com/in/boopathit` |
+
+Two calls I made, both easy to change:
+
+- Past employers are described, not named. Your outline wrote them that way ("a product company"), and those two chapters tell the stories of an outage and of missed dates. Say the word and the names go in.
+- The resume names the 2018 – 2022 employer but not what kind of company it is, so that heading says what the work was instead.
+
 ## Case studies
 
 | Where | Placeholder | What to put |
@@ -27,14 +43,7 @@ When one of them launches, search `index.html` for `Beta` and update that produc
 
 ## Experience
 
-| Where | Placeholder | What to put |
-| --- | --- | --- |
-| Big number on the left | `[10]` years | How many years you have been working (it follows from the first chapter's start year) |
-| 2022 – 2025 | `[Senior / lead engineer]` | Your title |
-| 2018 – 2022 | `[Role]` | Your title |
-| 2018 – 2022 | `[company type]` | What kind of company (startup, fintech, agency…) |
-| First chapter | `[2016]` | The year you started |
-| First chapter | `[First role(s)]` | Your first title(s) |
+Nothing left to fill. See "Done on 16 November 2026" above.
 
 ## Testimonials
 
@@ -46,7 +55,7 @@ Ask three clients for a line each. If you would rather not show this section yet
 
 | Where | Placeholder | What to put |
 | --- | --- | --- |
-| Channel links (top of the section and in the footer) | `[profile link]`, `[channel link]` | Your LinkedIn, X and YouTube addresses. Put them in the `href="#"` of each link too. |
+| Channel links (top of the section and in the footer) | `[profile link]`, `[channel link]` | Your X and YouTube addresses (LinkedIn is in). Put them in the `href="#"` of each link too. |
 | Table rows | `[2026-00-00]`, `[Title of a …]`, `[link]` | Three real posts to start. Copy a row for more. |
 
 ## Contact
