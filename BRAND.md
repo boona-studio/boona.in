@@ -8,7 +8,7 @@ Nothing here is a guess: every fact came from Boopathi, and anything still unkno
 
 - **Person.** Boopathi Thangamani, who works as **Boona**. Title: **AI Solutions Architect**. On the landing section the labelled Role line is lighter by Boopathi's choice: "Engineer by training, AI nerd by choice" (16 November 2026); the formal title stays in the intro, the page title, the footer and link previews. Location shown publicly as **TN, India**. Email: studio.boona@gmail.com.
 - **What Boona does.** Designs and integrates AI into any business. The one-line promise on the site: *AI that runs every day and tells you when it's working.*
-- **Behind it.** Boona AI Agency is forming. Posts go out on LinkedIn, the one channel the page names and links.
+- **Behind it.** Boona AI Agency is forming. LinkedIn is the one channel the page names and links (the current Experience chapter and the footer). The page has no Writing section: it was taken off on 17 November 2026 until there is a first post.
 - **Status.** Open to projects. The page says so in the top bar and the landing section.
 
 ## The four products (all in beta, none released)
@@ -61,7 +61,7 @@ Two rules Boopathi states as learned the hard way, and which read as brand value
 ## Still placeholder (see `PLACEHOLDERS.md`)
 
 Nothing. As of 16 November 2026 the page has no placeholders.
-Taken off the page that day until there is real content: the Testimonials section, the table of posts, the X and YouTube links and mentions, and the availability boxes by quarter. The quote, table and availability components stay in the system.
+Taken off the page that day until there is real content: the Testimonials section, the table of posts, the X and YouTube links and mentions, and the availability boxes by quarter. The quote, table and availability components stay in the system. On 17 November 2026 the whole Writing section followed, with its menu and footer links, so the page runs Work, Approach, Experience, Contact and Contact is § 04; the channel-link and table components stay in the system too.
 The experience timeline (10 years, the job titles, the 2015 start) and the LinkedIn link were filled from Boopathi's resume the same day. Past employers are described, not named.
 
 ## Where things live

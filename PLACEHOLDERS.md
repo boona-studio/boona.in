@@ -48,6 +48,13 @@ Two calls I made, both easy to change:
 | Writing note and the current Experience chapter | Both now name LinkedIn only |
 | Contact | The Availability label and its boxes by quarter removed. "Open to projects" still shows in the top bar and the landing section. |
 
+## On 17 November 2026 (from your messages)
+
+| Where | What changed |
+| --- | --- |
+| Experience title | Now "Ten years, from web apps to AI.", which you picked from four options. See Decisions at the end. |
+| Writing | The whole section ("Notes from the work.") taken off the page, with its links in the menu and the footer. Contact is now section 04. The LinkedIn link stays in the footer. |
+
 ## Case studies
 
 Nothing left to fill.
@@ -63,11 +70,12 @@ Send me three (the words, the name, the role and company) and I will put the sec
 
 ## Writing
 
-The X and YouTube links were removed on 16 November 2026, at your ask. Send me the addresses and I will put them back, in the Writing section and in the footer.
-The two sentences that named X and YouTube now say LinkedIn only.
+The whole section ("Notes from the work.") was taken off the page on 17 November 2026, at your ask, because there is no post to show yet.
+Its links in the menu and the footer went with it, and Contact became section 04. The LinkedIn link stays in the footer.
 
-The table of posts is switched off since 16 November 2026, at your ask, until there is a first post.
-Send me a date, a title, the channel and the link, and I will switch it on with that row. The README says how to do it by hand.
+When you have a first post, send me a date, a title, the channel and the link, and I will put the section back with the table of posts switched on.
+
+The X and YouTube links were removed on 16 November 2026, at your ask. Send me the addresses and I will put them back in the footer.
 
 ## Contact
 

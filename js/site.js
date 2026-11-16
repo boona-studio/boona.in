@@ -355,7 +355,7 @@
   /* 11 ▸ side readout (which section, how far down) and the G key for the grid */
   var readout = $('.readout');
   if (readout) {
-    var marks = [['top', 'Index'], ['work', 'Work'], ['approach', 'Approach'], ['experience', 'Experience'], ['writing', 'Writing'], ['contact', 'Contact']];
+    var marks = [['top', 'Index'], ['work', 'Work'], ['approach', 'Approach'], ['experience', 'Experience'], ['contact', 'Contact']];
     var upd = function () {
       var y = window.scrollY || 0, idx = 0, line = y + (window.innerHeight || 800) * .4;
       marks.forEach(function (m, i) {
